@@ -204,7 +204,7 @@ export default function FinancialStatementsSection() {
 
           <FAQs
             title="We offer support to businesses of all types"
-            faqs={faqs}
+            ourApproach={faqs}
           />
 
           <ServicesFooter

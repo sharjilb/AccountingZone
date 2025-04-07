@@ -1,3 +1,5 @@
+"use client";
+
 import {
   ArrowRight,
   BarChart3,
@@ -14,11 +16,8 @@ import {
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { useState } from 'react';
 
 export default function TaxInsights() {
-  const [showPopup, setShowPopup] = useState(true);
-
   return (
     <div className="min-h-screen bg-background">
       {/* Top Padding Div */}
@@ -215,7 +214,7 @@ export default function TaxInsights() {
             <Card className="mb-6 shadow-sm">
               <CardContent className="p-8">
                 <p className="mb-6 text-base leading-relaxed">
-                  Timely filing and tax optimization directly influence a business's liquidity and operational health.
+                  Timely filing and tax optimization directly influence a business&apos;s liquidity and operational health.
                   Sophisticated tax management enhances organizational cash flow – a critical factor in operational
                   flexibility, investment capability, and competitive resilience.
                 </p>
@@ -289,8 +288,8 @@ export default function TaxInsights() {
                   </li>
                 </ul>
                 <blockquote className="border-l-4 border-[#fbc710] pl-6 py-2 italic bg-[#fbc710]/5 rounded-r-md">
-                  "Effective tax management directly impacts the most critical financial metric for growing businesses –
-                  available operating capital."
+                  &quot;Effective tax management directly impacts the most critical financial metric for growing businesses –
+                  available operating capital.&quot;
                 </blockquote>
               </CardContent>
             </Card>

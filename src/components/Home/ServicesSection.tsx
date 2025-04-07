@@ -39,15 +39,13 @@ export default function ServicesSection() {
     <section className="pt-10 lg:mx-auto flex flex-wrap px-8 container lg:w-2/3 mx-auto flex-col md:flex-row items-center">
       <div className="w-full md:w-1/2 md:order-1 mx-auto mb-8 md:mb-0">
         <h2
-          className="mb-4 md:mb-8 font-semibold tracking-widest text-sm lg:text-base text-[#fbc710] uppercase"
-          data-aos="fade"
+          className="mb-4 md:mb-8 font-semibold tracking-widest text-sm lg:text-base text-[#fbc710] uppercase fade-in"
         >
           SERVICES
         </h2>
 
         <h3
-          className="mb-6 sm:mb-14 text-3xl font-bold tracking-[0.02em] lg:text-4xl"
-          data-aos="fade"
+          className="mb-6 sm:mb-14 text-3xl font-bold tracking-[0.02em] lg:text-4xl fade-in"
         >
           To meet your needs <br />
           <span className="text-sm text-gray-500">
@@ -170,8 +168,7 @@ export default function ServicesSection() {
             width="426"
             height="573"
             alt="Accounting Section"
-            className="max-w-full h-auto"
-            data-aos="fade"
+            className="max-w-full h-auto fade-in"
           />
         </div>
       </div>

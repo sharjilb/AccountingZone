@@ -5,13 +5,12 @@ export default function WhyUs() {
   return (
     <section className="flex flex-wrap sm:flex-col mx-auto container">
       <h2
-        className="w-full md:w-1/2 flex lg:w-[60%] mx-auto mb-4 md:mb-8 text-[#fbc710] uppercase font-semibold tracking-widest text-sm lg:text-base"
-        data-aos="fade"
+        className="w-full md:w-1/2 flex lg:w-[60%] mx-auto mb-4 md:mb-8 text-[#fbc710] uppercase font-semibold tracking-widest text-sm lg:text-base fade-in"
       >
         WHY US
       </h2>
       <div className="w-full md:w-1/2 flex gap-20 lg:w-[60%] mx-auto mb-8 md:mb-0">
-        <div className="mb-6 sm:mb-14 flex flex-col gap-3" data-aos="fade">
+        <div className="mb-6 sm:mb-14 flex flex-col gap-3 fade-in fade-in-delay-1">
           <h3 className="text-2xl sm:text-3xl font-semibold lg:text-4xl">
             Trusted experts with
             <span className="text-[#fbc710]"> years of experience</span> and
@@ -40,8 +39,7 @@ export default function WhyUs() {
             width="800"
             height="800"
             alt="Why Us"
-            className="max-w-full h-auto"
-            data-aos="fade"
+            className="max-w-full h-auto fade-in fade-in-delay-2"
           />
         </div>
       </div>

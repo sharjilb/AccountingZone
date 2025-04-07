@@ -5,8 +5,7 @@ export default function TaxCalculation() {
   return (
     <section className="flex mx-10 flex-wrap md:mx-auto w-full text-center container">
       <header
-        className="font-bold mx-auto w-full container mb-8 md:mb-12 lg:mb-16"
-        data-aos="fade"
+        className="font-bold mx-auto w-full container mb-8 md:mb-12 lg:mb-16 fade-in"
       >
         <h2 className="text-4xl xl:text-5xl mb-4 md:mb-0">
           <span className="text-[#fbc710]">Tax Planning Software</span>
@@ -15,7 +14,7 @@ export default function TaxCalculation() {
         </h2>
       </header>
 
-      <div className="container max-w-full lg:max-w-[1830px]" data-aos="fade">
+      <div className="container max-w-full lg:max-w-[1830px] fade-in fade-in-delay-1">
         <div className="mx-auto relative overflow-hidden list-none p-0 z-10">
           <div className="relative w-full h-full z-10 flex justify-center transition-transform">
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-[100px]">

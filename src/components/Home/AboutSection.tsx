@@ -3,14 +3,6 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
-import "@/app/css/aos.css";
-
-AOS.init({
-  duration: 1000,
-});
-
 export default function AboutSection() {
   const router = useRouter();
 
@@ -18,20 +10,18 @@ export default function AboutSection() {
     <section className="flex flex-wrap px-8 container lg:ws-2/3 mx-auto flex-col items-center md:flex-row">
       <div className="mb-14 w-full ml-auto md:w-1/2">
         <h2
-          className="mb-4 md:mb-8 font-semibold tracking-widest text-sm lg:text-base text-[#fbc710] uppercase"
-          data-aos="fade"
+          className="mb-4 md:mb-8 font-semibold tracking-widest text-sm lg:text-base text-[#fbc710] uppercase fade-in"
         >
           ABOUT US
         </h2>
         <h3
-          className="mb-6 sm:mb-14 text-2xl tracking-[0.02em] font-bold sm:text-3xl lg:text-4xl"
-          data-aos="fade"
+          className="mb-6 sm:mb-14 text-2xl tracking-[0.02em] font-bold sm:text-3xl lg:text-4xl fade-in"
         >
           Guided by integrity, trust, and client-centricity our values drive
           everything we do.
         </h3>
 
-        <div className="mb-6 max-w-[700px] sm:mb-14" data-aos="fade">
+        <div className="mb-6 max-w-[700px] sm:mb-14 fade-in">
           <ul className="list-disc grid grid-cols-1 sm:grid-cols-2 gap-8">
             <li>
               <h4 className="font-bold text-lg">Integrity</h4>
@@ -82,9 +72,8 @@ export default function AboutSection() {
 
         <Button
           onClick={() => router.push("about")}
-          data-aos="fade"
+          className="text-lg rounded-none bg-[#fbc710] hover:bg-[#e2b512] duration-300 text-black font-normal uppercase fade-in"
           size="lg"
-          className="text-lg rounded-none bg-[#fbc710] hover:bg-[#e2b512] duration-300 text-black font-normal uppercase"
         >
           LEARN MORE
         </Button>
@@ -97,13 +86,12 @@ export default function AboutSection() {
             width="426"
             height="573"
             alt="About Us Section"
-            className="max-w-full h-auto"
-            data-aos="fade"
+            className="max-w-full h-auto fade-in"
           />
         </div>
         {/* <div className="relative">
           <blockquote className="max-w-[330px] top-16 lg:top-10 left-10 lg:left-20 xl:lefts-[100px] xl:ml-[140px] md:max-w-[360px] md:mx-auto m-0 md:pr-[130px] pr-[100px] italic text-gray-800 relative pl-[70px] sm:pl-4 before:content-[''] before:absolute before:-left-6 lg:before:-left-24 before:top-[10px] lg:before:top-[-15px] before:w-[83px] before:h-[50px] lg:before:h-[62px] before:bg-no-repeat before:bg-[url('/quote.svg')]">
-            “If you will be coping someone, you will never be the best”
+            "If you will be coping someone, you will never be the best"
           </blockquote>
           <cite className="-top-[120px] lg:-top-[150px] -left-[70px] sm:-left-[10px] md:-left-[20px] lg:-left-[50px] lg:px[76px] lg:py-[79px] px-[46px] py-[109px] text-2xl text-white relative pl-[94px] before:content-[''] before:absolute lg:before:top-10 before:left-16 lg:before:left-10 before:w-[100px] lg:before:w-[150px] before:h-[70%] lg:before:h-full before:border-[4px] before:border-solid before:border-[#fbc710] before:border-r-0">
             Paul. Designer

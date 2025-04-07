@@ -207,11 +207,11 @@ export default function FinancialAndLegalServices() {
             <Card className="border-none shadow-md">
               <CardContent className="pt-8 pb-8 px-6 md:px-8">
                 <div className="flex flex-col items-center text-center">
-                  <blockquote className="text-xl md:text-2xl font-medium italic mb-6">
-                    "The specialized banking knowledge Accounting Zone brings to our quarterly financial reporting
+                  <blockquote className="border-l-4 border-[#fbc710] pl-6 py-2 italic bg-[#fbc710]/5 rounded-r-md">
+                    &quot;The specialized banking knowledge Accounting Zone brings to our quarterly financial reporting
                     process has been transformative. Their team anticipates regulatory changes before they impact us and
                     ensures our financial reporting meets both compliance requirements and strategic objectives
-                    simultaneously."
+                    simultaneously.&quot;
                   </blockquote>
                   <div>
                     <p className="font-semibold">EVP & Chief Financial Officer</p>
