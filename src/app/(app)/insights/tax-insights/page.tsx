@@ -14,8 +14,11 @@ import {
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { useState } from 'react';
 
 export default function TaxInsights() {
+  const [showPopup, setShowPopup] = useState(true);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Top Padding Div */}
@@ -100,8 +103,8 @@ export default function TaxInsights() {
                   </li>
                 </ul>
                 <blockquote className="border-l-4 border-[#fbc710] pl-6 py-2 italic bg-[#fbc710]/5 rounded-r-md">
-                  "Compliance is not merely a defensive strategy but a proactive business asset that creates operational
-                  freedom through regulatory confidence."
+                  &quot;Compliance is not merely a defensive strategy but a proactive business asset that creates operational
+                  freedom through regulatory confidence.&quot;
                 </blockquote>
               </CardContent>
             </Card>
@@ -188,8 +191,8 @@ export default function TaxInsights() {
                   </li>
                 </ul>
                 <blockquote className="border-l-4 border-[#fbc710] pl-6 py-2 italic bg-[#fbc710]/5 rounded-r-md">
-                  "The difference between tax compliance and tax planning is the difference between recording history
-                  and shaping the future."
+                  &quot;The difference between tax compliance and tax planning is the difference between recording history
+                  and shaping the future.&quot;
                 </blockquote>
               </CardContent>
             </Card>
@@ -663,8 +666,8 @@ export default function TaxInsights() {
                 </Tabs>
 
                 <blockquote className="border-l-4 border-[#fbc710] pl-6 py-2 italic bg-[#fbc710]/5 rounded-r-md mt-8">
-                  "The most valuable tax strategies are not those applied universally, but those precision-crafted for
-                  the specific dynamics of your industry."
+                  &quot;The most valuable tax strategies are not those applied universally, but those precision-crafted for
+                  the specific dynamics of your industry.&quot;
                 </blockquote>
               </CardContent>
             </Card>
@@ -761,8 +764,8 @@ export default function TaxInsights() {
                   </li>
                 </ul>
                 <blockquote className="border-l-4 border-[#fbc710] pl-6 py-2 italic bg-[#fbc710]/5 rounded-r-md">
-                  "In global business, tax strategy is not merely about minimizing obligations but about creating
-                  certainty in an uncertain international environment."
+                  &quot;In global business, tax strategy is not merely about minimizing obligations but about creating
+                  certainty in an uncertain international environment.&quot;
                 </blockquote>
               </CardContent>
             </Card>

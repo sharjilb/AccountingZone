@@ -388,8 +388,8 @@ export default function HomePage() {
               <CardContent className="pt-6">
                 <div className="space-y-4">
                   <p className="italic">
-                    "The tax preparation software recommended by Accounting Zone reduced our filing time by 60% while
-                    identifying deductions we had missed for years. The ROI was evident immediately."
+                    &quot;The tax preparation software recommended by Accounting Zone reduced our filing time by 60% while
+                    identifying deductions we had missed for years. The ROI was evident immediately.&quot;
                   </p>
                   <p className="font-semibold">— Manufacturing Company CFO</p>
                 </div>
@@ -399,8 +399,8 @@ export default function HomePage() {
               <CardContent className="pt-6">
                 <div className="space-y-4">
                   <p className="italic">
-                    "As someone with income from multiple states, my taxes were always a nightmare. This system made
-                    everything clear and straightforward, saving me both money and stress."
+                    &quot;As someone with income from multiple states, my taxes were always a nightmare. This system made
+                    everything clear and straightforward, saving me both money and stress.&quot;
                   </p>
                   <p className="font-semibold">— Healthcare Professional</p>
                 </div>
@@ -410,8 +410,8 @@ export default function HomePage() {
               <CardContent className="pt-6">
                 <div className="space-y-4">
                   <p className="italic">
-                    "The collaborative features allowed our in-house team to work seamlessly with our external
-                    accountants. The efficiency gains were substantial."
+                    &quot;The collaborative features allowed our in-house team to work seamlessly with our external
+                    accountants. The efficiency gains were substantial.&quot;
                   </p>
                   <p className="font-semibold">— Regional Retail Chain Controller</p>
                 </div>
