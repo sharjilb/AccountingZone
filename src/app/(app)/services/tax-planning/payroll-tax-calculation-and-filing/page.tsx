@@ -1,191 +1,333 @@
-import React from "react";
-import ServicesGrid from "@/components/services/ServicesGrid";
-import ServicesFooter from "@/components/services/ServicesFooter";
-import OurApproach from "@/components/services/OurApproach";
-import Slider from "@/components/Slider";
+"use client"
 
-const KeyBenefitsCards = [
-  {
-    title: "Accurate Tax Calculation",
-    description:
-      "Ensures that employee wages and withholdings are accurately calculated, including federal income tax, Social Security, Medicare, and other deductions.",
-  },
-  {
-    title: "Timely Filing and Payments",
-    description:
-      "Guarantees that payroll tax filings are submitted on time, avoiding late fees, penalties, interest charges, and compliance issues.",
-  },
-  {
-    title: "Regulatory Compliance",
-    description:
-      "Keeps businesses compliant with the latest tax laws and regulations, ensuring that all payroll taxes are correctly reported and paid to the appropriate authorities.",
-  },
-  {
-    title: "Minimized Audit Risk",
-    description:
-      "Reduces the risk of IRS audits or tax issues by ensuring that all payroll tax forms are completed accurately and submitted according to legal requirements.",
-  },
-  {
-    title: "Employee Satisfaction",
-    description:
-      "Ensures accurate and timely payroll processing, improving employee satisfaction, trust, and overall operational efficiency in your business.",
-  },
-  {
-    title: "Streamlined Payroll Process",
-    description:
-      "Automates payroll tax calculations and filings, significantly reducing administrative workload, minimizing human error, and ensuring timely tax compliance.",
-  },
-];
+import {
+  ChevronRight,
+  DollarSign,
+  FileText,
+  ArrowRight,
+  Phone,
+  AlertTriangle,
+  ClipboardCheck,
+  Clock,
+  UserCheck,
+  Banknote,
+  Globe,
+  BookOpen,
+  Shield,
+} from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
 
-const CoreComponentsCards = [
-  {
-    title: "Payroll Tax Calculation",
-    description:
-      "We calculate employee wages, tax withholdings, and deductions, including federal income tax, state taxes, Social Security, and retirement contributions.",
-  },
-  {
-    title: "Quarterly and Annual Filings",
-    description:
-      "We prepare and file required payroll tax forms, such as IRS Form 941 and Form 940, along with state-specific filings, ensuring compliance with all deadlines.",
-  },
-  {
-    title: "W-2 and 1099 Forms Preparation",
-    description:
-      "We prepare and file W-2 forms for employees and 1099 forms for independent contractors, ensuring timely delivery to employees and filing with the IRS.",
-  },
-  {
-    title: "Direct Deposit Setup and Management",
-    description:
-      "We assist in setting up and managing direct deposit options for employees, ensuring efficient and secure payment processing for smooth payroll operations.",
-  },
-  {
-    title: "Tax Payment Remittance",
-    description:
-      "We remit the appropriate payroll taxes to the IRS, state, and local tax authorities on behalf of your business, ensuring that payments are made on time.",
-  },
-  {
-    title: "Record Keeping and Reporting",
-    description:
-      "We maintain thorough payroll tax records, including calculations, filings, and payment histories, and provide regular reports for your review.",
-  },
-];
-
-const WhyYouNeedCards = [
-  {
-    title: "Ensure Compliance",
-    description:
-      "Payroll tax laws and regulations are constantly changing. Accurate calculation and timely filing help ensure compliance with federal, state, and local requirements.",
-  },
-  {
-    title: "Avoid Penalties and Fines",
-    description:
-      "By meeting deadlines and submitting accurate forms, you avoid costly penalties and interest from tax authorities, ensuring compliance and financial stability.",
-  },
-  {
-    title: "Efficiency and Time Savings",
-    description:
-      "Automating the payroll tax process reduces administrative burden and the risk of manual errors, allowing your team to focus on more strategic tasks.",
-  },
-  {
-    title: "Employee Trust",
-    description:
-      "Timely and accurate payroll ensures that employees are paid correctly and on time, which fosters trust and improves employee retention.",
-  },
-  {
-    title: "Audit Protection",
-    description:
-      "Properly filed payroll taxes and accurate reporting reduce the likelihood of tax audits, protecting your business from unnecessary scrutiny.",
-  },
-];
-
-const OurApproachCards = [
-  {
-    heading: "Comprehensive Payroll Setup",
-    description:
-      "We assist with setting up your payroll system, ensuring all necessary tax rates, deduction categories, and payroll processes are accurately configured.",
-  },
-  {
-    heading: "Ongoing Payroll Tax Calculation",
-    description:
-      "We calculate and track all employee wages and deductions, ensuring tax compliance with every payroll cycle, including employee and employer contributions.",
-  },
-  {
-    heading: "Timely Filing and Payment Remittance",
-    description:
-      "We handle all filings and payments to the IRS, state, and local agencies, ensuring everything is submitted on time and in the correct format.",
-  },
-  {
-    heading: "Regular Reporting and Recordkeeping",
-    description:
-      "We provide regular reports on payroll taxes, filing statuses, and payment history, helping you stay informed and prepared for audits or future planning.",
-  },
-  {
-    heading: "Dedicated Support",
-    description:
-      "Our team is available to answer any questions and provide guidance on payroll tax-related issues, offering solutions tailored to your business’s specific needs.",
-  },
-];
-
-export default function PayrollTaxCalculationAndFiling() {
+export default function PayrollTaxCalculation() {
   return (
-    <main>
-      <Slider
-        images={["/consultation/consultation1.jpg"]}
-        title="Financial Clarity"
-        description="Simplifying Your Finances, Amplifying Your Growth."
-      />
+    <div className="min-h-screen bg-white">
+      <div className="h-16 md:h-20"></div>
+      <main className="container mx-auto px-4 max-w-7xl">
+        {/* Hero Section */}
+        <section className="pt-32 pb-16">
+          <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
+              Payroll Tax Calculation and Filing
+            </h1>
+            <p className="text-lg text-gray-600">
+              Ensure accurate, compliant management of your employment tax obligations while minimizing administrative
+              burden. Our comprehensive approach handles the complexity of multi-jurisdiction payroll taxation, allowing
+              you to focus on your core business.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+              <Button size="lg" className="bg-[#FFB800] hover:bg-[#FFB800]/90 text-black gap-2">
+                Get Started
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+              <Button variant="outline" size="lg" className="border-[#FFB800] text-black hover:bg-[#FFB800]/10 gap-2">
+                <Phone className="h-4 w-4" />
+                Call (555) 123-4567
+              </Button>
+            </div>
+          </div>
+        </section>
 
-      <article className="overflow-hidden mb-[80px] md:mb-[120px] lg:mb-[160px] xl:mb-[210px] mx-8 sm:mx-20 lg:mx-auto p-[40px_0_60px] md:p-[60px_0_80px] lg:p-[100px_0_120px] xl:p-[150px_0_200px]">
-        <div className="flex flex-col mst-7 dsm:mts-[150px] mx-auto overflow-hidden lg:flex-row lg:justify-between">
-          <section className="w-full">
-            <div className="lg:max-w-[1100px] mx-auto container">
-              <div className="flex flex-col lg:flex-row">
-                <div className="w-full order-1 mx-auto lg:order-none">
-                  <h2 className="text-2xl lg:text-3xl lg:mst-12 mb-[35px] lg:mb-[66px] font-bold text-black">
-                    Payroll Tax Calculation and Filing
-                  </h2>
+        {/* Services Section */}
+        <section className="py-12">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Our Payroll Tax Services</h2>
+            <p className="text-gray-600">
+              We provide comprehensive payroll tax solutions to ensure compliance and minimize your administrative
+              burden.
+            </p>
+          </div>
 
-                  <div className="text-sm text-gray-500 lg:text-base">
-                    <p className="mt-[15px] lg:mt-[26px]">
-                      Payroll Tax Calculation and Filing involves the accurate
-                      calculation of employee wages, withholding taxes, and the
-                      timely filing of all required payroll tax forms. This
-                      service ensures that businesses remain compliant with
-                      federal, state, and local tax regulations, avoiding
-                      penalties and fines. By outsourcing payroll tax
-                      calculation and filing, businesses can streamline their
-                      payroll processes, reduce the risk of errors, and focus on
-                      core operations.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <ClipboardCheck className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Tax Calculation Accuracy</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Precise computation of federal, state, and local withholding requirements for all employee types.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <FileText className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Quarterly and Annual Returns</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Timely preparation and filing of Forms 941, 940, W-2, W-3, and state/local equivalents.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Clock className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Tax Deposit Management</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Scheduling and execution of tax deposits in accordance with required frequency and methods.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Globe className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Multi-State Compliance</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Navigation of complex requirements for employees working across multiple tax jurisdictions.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <UserCheck className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Worker Classification Analysis</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Assessment of worker classifications with strategic recommendations to minimize risk.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <BookOpen className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Payroll Tax Audit Support</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">Expert representation and documentation during agency examinations.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-12 bg-muted/30 rounded-lg p-8">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Benefits of Our Payroll Tax Services</h2>
+            <p className="text-muted-foreground">
+              Our approach delivers significant advantages for employers of all sizes.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <AlertTriangle className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Penalty Elimination</h3>
+                <p className="text-muted-foreground">
+                  Elimination of costly penalties through accurate, timely compliance.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <ChevronRight className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Reduced Administrative Burden</h3>
+                <p className="text-muted-foreground">
+                  Reduced administrative burden through expert management of complex requirements.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <DollarSign className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Minimized Tax Liabilities</h3>
+                <p className="text-muted-foreground">
+                  Minimization of payroll tax liabilities through strategic planning approaches.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Banknote className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Special Situation Handling</h3>
+                <p className="text-muted-foreground">
+                  Confidence in proper handling of special situations (multi-state, bonus payments, etc.)
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <BookOpen className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Expert Guidance</h3>
+                <p className="text-muted-foreground">Expert guidance through changing regulations and requirements.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Shield className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Strategic Coordination</h3>
+                <p className="text-muted-foreground">Seamless coordination with overall tax planning strategies.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Methodology Section */}
+        <section className="py-16">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Methodology</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Our payroll tax specialists combine technical expertise with practical implementation knowledge to ensure
+              your employment tax obligations are handled with precision and strategic insight.
+            </p>
+          </div>
+
+          <div className="relative max-w-6xl mx-auto px-4">
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#FFB800] -translate-x-1/2"></div>
+
+            <div className="space-y-16 relative">
+              {/* Step 1 */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="lg:text-right mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">01</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Payroll Analysis</h3>
+                    <p className="text-gray-600 text-lg">
+                      Comprehensive review of your payroll structure, employee classifications, and jurisdictional
+                      requirements.
                     </p>
                   </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
 
-                  <ServicesGrid
-                    title="Key Benefits"
-                    gridCards={KeyBenefitsCards}
-                  />
+              {/* Step 2 */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="hidden lg:block"></div>
+                <div className="lg:text-left mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">02</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">System Implementation</h3>
+                    <p className="text-gray-600 text-lg">
+                      Setting up robust processes for accurate calculation, reporting, and payment of payroll taxes.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-                  <ServicesGrid
-                    title="Our Core Components"
-                    gridCards={CoreComponentsCards}
-                  />
+              {/* Step 3 */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="lg:text-right mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">03</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Regular Compliance</h3>
+                    <p className="text-gray-600 text-lg">
+                      Timely preparation and filing of all required payroll tax returns and deposits.
+                    </p>
+                  </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
 
-                  <ServicesGrid
-                    title="Why You Need Payroll Tax Calculation and Filing"
-                    gridCards={WhyYouNeedCards}
-                  />
-
-                  <OurApproach
-                    title="Our Approach"
-                    ourApproach={OurApproachCards}
-                  />
-
-                  <ServicesFooter text="We are here to address any questions you may have as you implement your plan. Additionally, for clients seeking an ongoing partnership." />
+              {/* Step 4 */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="hidden lg:block"></div>
+                <div className="lg:text-left mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">04</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Strategic Optimization</h3>
+                    <p className="text-gray-600 text-lg">
+                      Ongoing evaluation of payroll practices to identify opportunities for tax efficiency and risk
+                      reduction.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </section>
-        </div>
-      </article>
-    </main>
-  );
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 md:py-20 bg-[#fbc710] text-black w-full">
+          <div className="max-w-3xl mx-auto text-center space-y-6 px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Want to ensure payroll tax compliance?</h2>
+            <p className="text-lg text-black/90 max-w-2xl mx-auto">
+              Contact us to discuss how our Payroll Tax Calculation and Filing services can provide peace of mind while
+              freeing your team to focus on core business activities.
+            </p>
+            <Button size="lg" variant="secondary" className="group bg-black text-white hover:bg-black/90">
+              Schedule a Consultation
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="py-8 mt-12">
+          <Separator className="mb-8 bg-[#FFB800]/20" />
+          <div className="text-center text-sm text-gray-600">
+            <p>© {new Date().getFullYear()} AccountingZone. All rights reserved.</p>
+            <p className="mt-2">
+              123 Financial District, New York, NY 10001 | (555) 123-4567 | info@accountingzone.com
+            </p>
+          </div>
+        </footer>
+      </main>
+    </div>
+  )
 }

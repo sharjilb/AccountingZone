@@ -1,204 +1,378 @@
-import React from "react";
-import ServicesGrid from "@/components/services/ServicesGrid";
-import ServicesFooter from "@/components/services/ServicesFooter";
-import Slider from "@/components/Slider";
-import OurApproach from "@/components/services/OurApproach";
+"use client"
 
-const KeyBenefitsCards = [
-  {
-    title: "Improved Accountability",
-    description:
-      "Strengthens the company's leadership structures, ensuring that decision-making is transparent and accountability is maintained at all levels of the organization.",
-  },
-  {
-    title: "Risk Mitigation",
-    description:
-      "Helps businesses identify and address governance-related risks, such as conflicts of interest or regulatory non-compliance, reducing legal or financial challenges.",
-  },
-  {
-    title: "Enhanced Investor Confidence",
-    description:
-      "Strong corporate governance practices increase investor trust by showing the company is well-managed and committed to long-term value.",
-  },
-  {
-    title: "Regulatory Compliance",
-    description:
-      "Ensures the company's governance practices align with local and international laws, regulations, and standards, reducing the risk of legal issues and fines.",
-  },
-  {
-    title: "Effective Decision-Making",
-    description:
-      "Provides a framework for clear decision-making, ensuring that business strategies are well-aligned with corporate values, goals, and stakeholder expectations.",
-  },
-  {
-    title: "Sustainable Long-Term Growth",
-    description:
-      "Strong governance practices support strategic planning, ensuring decisions benefit both the company and stakeholders, contributing to growth.",
-  },
-];
-
-const CoreComponentsCards = [
-  {
-    title: "Board Structure & Composition",
-    description:
-      "We assist in defining the appropriate structure and composition of the board of directors, ensuring diversity, independence, and expertise to guide strategic decision-making.",
-  },
-  {
-    title: "Governance Policies & Procedures",
-    description:
-      "We help create and implement corporate governance policies and procedures that cover areas such as risk management, ethics, compliance, and conflict resolution, ensuring alignment with best practices.",
-  },
-  {
-    title: "Stakeholder Engagement",
-    description:
-      "We develop strategies for effective engagement with key stakeholders, such as investors, employees, regulators, and customers, ensuring transparency and alignment of interests.",
-  },
-  {
-    title: "Risk Management & Internal Controls",
-    description:
-      "We advise on establishing effective risk management frameworks and internal controls that help mitigate financial, operational, and reputational risks for business stability.",
-  },
-  {
-    title: "Ethical & Social Responsibility Practices",
-    description:
-      "We help businesses implement ethical practices and corporate social responsibility (CSR) programs that align with stakeholder expectations, enhance brand image, and build a positive reputation.",
-  },
-  {
-    title: "Compliance & Regulatory Standards",
-    description:
-      "We ensure that corporate governance practices align with local, regional, and international regulations, helping businesses stay compliant with laws, rules, and corporate governance codes.",
-  },
-];
-
-const WhyYouNeedCards = [
-  {
-    title: "Build Trust and Credibility",
-    description:
-      "Strong governance structures instill confidence in investors, partners, and customers, reinforcing the company’s reputation as trustworthy.",
-  },
-  {
-    title: "Risk Reduction",
-    description:
-      "Helps identify and mitigate risks early, ensuring the company’s operations are secure and compliant with legal and regulatory standards.",
-  },
-  {
-    title: "Effective Leadership",
-    description:
-      "Ensures that the board and executive management are aligned, resulting in better decision-making and leadership that drives sustainable growth.",
-  },
-  {
-    title: "Compliance & Accountability",
-    description:
-      "Ensures compliance with evolving governance regulations, reducing the risk of legal challenges, regulatory fines, and operational disruptions.",
-  },
-  {
-    title: "Investor Relations",
-    description:
-      "Investors and stakeholders are more likely to invest in businesses that have strong governance practices, as they demonstrate stability, transparency, and strategic vision.",
-  },
-  {
-    title: "Long-Term Success",
-    description:
-      "By embedding sound corporate governance practices, businesses are better equipped to adapt to challenges, seize opportunities, and maintain long-term value creation.",
-  },
-];
-
-const OurApproachCards = [
-  {
-    heading: "Initial Governance Assessment",
-    description:
-      "We conduct a thorough review of your company’s existing governance structures, practices, and policies, identifying areas for improvement and alignment with best practices.",
-  },
-  {
-    heading: "Custom Governance Framework",
-    description:
-      "Based on our assessment, we design and implement a tailored corporate governance framework that addresses your business needs, stakeholder interests, and compliance requirements.",
-  },
-  {
-    heading: "Board Composition and Role Definition",
-    description:
-      "We help define the optimal board structure, roles, and responsibilities, ensuring the right mix of skills, experience, and independence to guide decision-making effectively.",
-  },
-  {
-    heading: "Risk and Compliance Strategy Development",
-    description:
-      "We assist in creating a comprehensive risk management and compliance strategy, including governance controls, internal auditing, and regulatory reporting to safeguard the company.",
-  },
-  {
-    heading: "Ongoing Monitoring and Review",
-    description:
-      "We provide continuous monitoring of governance practices, ensuring they evolve in response to changing business environments, legal frameworks, and stakeholder expectations.",
-  },
-  {
-    heading: "Training and Education",
-    description:
-      "We offer training sessions for board members and senior leadership on corporate governance best practices, helping them stay informed and equipped to lead the company effectively.",
-  },
-];
+import {
+  ArrowRight,
+  Phone,
+  Landmark,
+  Users,
+  FileText,
+  Layers,
+  BarChart4,
+  ArrowUpDown,
+  MessageSquare,
+  Shield,
+  Target,
+  TrendingUp,
+  Briefcase,
+  Award,
+  CheckCircle,
+  Lock,
+} from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
 
 export default function CorporateGovernanceAdvisory() {
   return (
-    <main>
-      <Slider
-        images={["/consultation/consultation1.jpg"]}
-        title="Financial Clarity"
-        description="Simplifying Your Finances, Amplifying Your Growth."
-      />
+    <div className="min-h-screen bg-white">
+      <div className="h-16 md:h-20"></div>
+      <main className="container mx-auto px-4 max-w-7xl">
+        {/* Hero Section */}
+        <section className="pt-32 pb-16">
+          <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
+              Corporate Governance Advisory
+            </h1>
+            <p className="text-lg text-gray-600">
+              Strengthen organizational oversight, accountability, and strategic direction through implementation of
+              best-practice governance frameworks. Our comprehensive approach enhances board effectiveness, executive
+              alignment, and stakeholder confidence while mitigating governance-related risks.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+              <Button size="lg" className="bg-[#FFB800] hover:bg-[#FFB800]/90 text-black gap-2">
+                Get Started
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+              <Button variant="outline" size="lg" className="border-[#FFB800] text-black hover:bg-[#FFB800]/10 gap-2">
+                <Phone className="h-4 w-4" />
+                Call (555) 123-4567
+              </Button>
+            </div>
+          </div>
+        </section>
 
-      <article className="overflow-hidden mb-[80px] md:mb-[120px] lg:mb-[160px] xl:mb-[210px] mx-8 sm:mx-20 lg:mx-auto p-[40px_0_60px] md:p-[60px_0_80px] lg:p-[100px_0_120px] xl:p-[150px_0_200px]">
-        <div className="flex flex-col mst-7 dsm:mts-[150px] mx-auto overflow-hidden lg:flex-row lg:justify-between">
-          <section className="w-full">
-            <div className="lg:max-w-[1100px] mx-auto container">
-              <div className="flex flex-col lg:flex-row">
-                <div className="w-full order-1 mx-auto lg:order-none">
-                  <h2 className="text-2xl lg:text-3xl lg:mst-12 mb-[35px] lg:mb-[66px] font-bold text-black">
-                    Corporate Governance Advisory
-                  </h2>
+        {/* Services Section */}
+        <section className="py-12">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Our Comprehensive Services</h2>
+            <p className="text-gray-600">
+              We offer a complete range of corporate governance advisory services tailored to your business needs.
+            </p>
+          </div>
 
-                  <div className="text-sm text-gray-500 lg:text-base">
-                    <p className="mt-[15px] lg:mt-[26px]">
-                      Corporate Governance Advisory focuses on providing
-                      strategic guidance to businesses to help them establish
-                      and maintain strong governance frameworks. Corporate
-                      governance is critical for ensuring that businesses
-                      operate transparently, ethically, and in compliance with
-                      legal and regulatory requirements. This service helps
-                      businesses implement best practices in corporate
-                      governance, aligning leadership with the company&apos;s
-                      values, stakeholders&apos; interests, and long-term goals.
-                      Effective corporate governance enhances decision-making,
-                      reduces risks, and builds investor confidence, ensuring
-                      the business is well-positioned for sustainable success.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Landmark className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Governance Structure Assessment</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Evaluation of board composition, committee structure, and oversight mechanisms against best practices.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Target className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Board Effectiveness Enhancement</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Development of optimized processes for board operations, information flow, and decision-making.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <FileText className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Policy Framework Development</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Creation of comprehensive governance policies addressing ethics, conflicts, and decision authorities.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Lock className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Board Information Systems</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Implementation of secure, efficient platforms for board materials and communications.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <BarChart4 className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Executive Compensation Governance</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Design of structures that align management incentives with organizational objectives and stakeholder
+                  interests.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <ArrowUpDown className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Succession Planning Frameworks</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Establishment of systematic approaches to leadership continuity and talent development.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <MessageSquare className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Shareholder Communication Strategies</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Development of transparent, effective stakeholder engagement approaches.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Shield className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Governance Risk Mitigation</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Identification and remediation of potential governance vulnerabilities before they impact the
+                  organization.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-12 bg-muted/30 rounded-lg p-8">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Benefits of Our Governance Services</h2>
+            <p className="text-muted-foreground">Our approach delivers tangible advantages for your business.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <TrendingUp className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Enhanced Strategic Decision-Making</h3>
+                <p className="text-muted-foreground">
+                  Enhanced strategic decision-making through optimized board operations.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Shield className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Strengthened Oversight</h3>
+                <p className="text-muted-foreground">Strengthened oversight capabilities and risk management.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Users className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Improved Stakeholder Confidence</h3>
+                <p className="text-muted-foreground">
+                  Improved stakeholder confidence through transparent governance practices.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Briefcase className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Talent Attraction & Retention</h3>
+                <p className="text-muted-foreground">
+                  Attraction and retention of high-quality directors and executives.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <CheckCircle className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Reduced Governance Risks</h3>
+                <p className="text-muted-foreground">Reduced governance-related risks and potential liabilities.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Award className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Competitive Advantage</h3>
+                <p className="text-muted-foreground">
+                  Competitive advantage through superior organizational leadership.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Layers className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Aligned Governance Standards</h3>
+                <p className="text-muted-foreground">Alignment of governance practices with recognized standards.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Methodology Section */}
+        <section className="py-16">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Governance Advisory Approach</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Our governance specialists combine regulatory knowledge with practical board experience to deliver
+              governance frameworks that strengthen oversight while enabling effective strategic leadership.
+            </p>
+          </div>
+
+          <div className="relative max-w-6xl mx-auto px-4">
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#FFB800] -translate-x-1/2"></div>
+
+            <div className="space-y-16 relative">
+              {/* Assessment Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="lg:text-right mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">01</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Governance Assessment</h3>
+                    <p className="text-gray-600 text-lg">
+                      Comprehensive evaluation of current governance structures, board composition, and oversight
+                      mechanisms against best practices.
                     </p>
                   </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
 
-                  <ServicesGrid
-                    title="Key Benefits"
-                    gridCards={KeyBenefitsCards}
-                  />
+              {/* Framework Development Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="hidden lg:block"></div>
+                <div className="lg:text-left mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">02</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Governance Framework Design</h3>
+                    <p className="text-gray-600 text-lg">
+                      Development of comprehensive governance structures, policies, and processes tailored to your
+                      organization's specific needs.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-                  <ServicesGrid
-                    title="Our Core Components"
-                    gridCards={CoreComponentsCards}
-                  />
+              {/* Implementation Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="lg:text-right mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">03</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Implementation & Training</h3>
+                    <p className="text-gray-600 text-lg">
+                      Systematic rollout of governance enhancements with comprehensive education for board members and
+                      executives.
+                    </p>
+                  </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
 
-                  <ServicesGrid
-                    title="Why You Need Corporate Governance Advisory"
-                    gridCards={WhyYouNeedCards}
-                  />
-
-                  <OurApproach
-                    title="Our Approach"
-                    ourApproach={OurApproachCards}
-                  />
-
-                  <ServicesFooter text="No matter what your tax, accounting, business, or financial issue is, feel free to give us a call so we can get started helping you today with our accounting advisory services for businesses and individuals." />
+              {/* Ongoing Support Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="hidden lg:block"></div>
+                <div className="lg:text-left mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">04</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Evaluation & Refinement</h3>
+                    <p className="text-gray-600 text-lg">
+                      Ongoing assessment of governance effectiveness with continuous improvement to address evolving
+                      organizational needs.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </section>
-        </div>
-      </article>
-    </main>
-  );
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 md:py-20 bg-[#fbc710] text-black w-full">
+          <div className="max-w-3xl mx-auto text-center space-y-6 px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+              Ready to strengthen your organizational governance?
+            </h2>
+            <p className="text-lg text-black/90 max-w-2xl mx-auto">
+              Contact Accounting Zone to discuss how our Corporate Governance Advisory services can enhance your board
+              effectiveness, executive alignment, and stakeholder confidence through best-practice governance
+              structures.
+            </p>
+            <Button size="lg" variant="secondary" className="group bg-black text-white hover:bg-black/90">
+              Schedule a Consultation
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="py-8 mt-12">
+          <Separator className="mb-8 bg-[#FFB800]/20" />
+          <div className="text-center text-sm text-gray-600">
+            <p>© {new Date().getFullYear()} AccountingZone. All rights reserved.</p>
+            <p className="mt-2">
+              123 Financial District, New York, NY 10001 | (555) 123-4567 | info@accountingzone.com
+            </p>
+          </div>
+        </footer>
+      </main>
+    </div>
+  )
 }

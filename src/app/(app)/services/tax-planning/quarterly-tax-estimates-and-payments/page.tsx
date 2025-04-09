@@ -1,191 +1,328 @@
-import React from "react";
-import ServicesGrid from "@/components/services/ServicesGrid";
-import ServicesFooter from "@/components/services/ServicesFooter";
-import OurApproach from "@/components/services/OurApproach";
-import Slider from "@/components/Slider";
+"use client"
 
-const KeyBenefitsCards = [
-  {
-    title: "Avoidance of Penalties and Interest",
-    description:
-      "Ensures timely payments to the IRS, avoiding late payment penalties and interest charges for underpayment of taxes, safeguarding your business's financial health.",
-  },
-  {
-    title: "Cash Flow Management",
-    description:
-      "Spreads the tax liability throughout the year, helping businesses manage cash flow more effectively by paying taxes in installments rather than one lump sum.",
-  },
-  {
-    title: "Accurate Tax Estimates",
-    description:
-      "Helps businesses and individuals accurately calculate their quarterly tax payments, ensuring they do not overpay or underpay their estimated taxes.",
-  },
-  {
-    title: "Improved Tax Planning",
-    description:
-      "Provides a structured approach to tax planning, allowing businesses to better understand their tax obligations and adjust business strategies.",
-  },
-  {
-    title: "Efficient Tax Filing Process",
-    description:
-      "By keeping track of quarterly payments, businesses reduce the likelihood of errors during annual tax filings, making the tax preparation process more efficient.",
-  },
-  {
-    title: "Reduced Audit Risk",
-    description:
-      "Managing and submitting estimated quarterly payments ensures tax obligations are met, reducing the risk of IRS audits for underpayment or non-payment.",
-  },
-];
+import {
+  ChevronRight,
+  DollarSign,
+  TrendingUp,
+  ArrowRight,
+  Phone,
+  AlertTriangle,
+  CalendarClock,
+  Calculator,
+  Shield,
+  Clock,
+  LineChart,
+  Globe,
+  CreditCard,
+} from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
 
-const CoreComponentsCards = [
-  {
-    title: "Quarterly Tax Calculation",
-    description:
-      "We calculate the correct quarterly tax payment based on your projected income, deductions, and credits, ensuring that you pay the appropriate amount each quarter.",
-  },
-  {
-    title: "Filing and Submission of Payments",
-    description:
-      "We assist with the timely submission of quarterly estimated tax payments to the IRS, ensuring that payments are made on time to avoid penalties.",
-  },
-  {
-    title: "Income and Expense Projections",
-    description:
-      "We review your income and expenses for the quarter to ensure your estimates are accurate and reflect any changes in your business operations or tax situation.",
-  },
-  {
-    title: "Tax Deduction Review",
-    description:
-      "We help identify available deductions and credits that can reduce your quarterly tax liability, ensuring you maximize savings and avoid overpayment.",
-  },
-  {
-    title: "Payment Reminders and Tracking",
-    description:
-      "We send timely reminders and accurately track your quarterly payments, ensuring they are submitted before deadlines and properly recorded to avoid any issues.",
-  },
-  {
-    title: "End-of-Year Tax Reconciliation",
-    description:
-      "At year-end, we reconcile your estimated payments with actual tax liability, ensuring accurate filings and that any overpayment is refunded or applied to future taxes.",
-  },
-];
-
-const WhyYouNeedCards = [
-  {
-    title: "Avoid Penalties",
-    description:
-      "Making quarterly payments helps you stay compliant and avoid the IRS's penalties for underpayment or late payments, which accumulate quickly.",
-  },
-  {
-    title: "Smooth Cash Flow",
-    description:
-      "Spreading tax payments throughout the year improves cash flow management, ensuring that a large tax bill does not disrupt your business operations at year-end.",
-  },
-  {
-    title: "Accurate Tax Compliance",
-    description:
-      "Ensures that you stay on top of your tax obligations, reducing the risk of errors during annual filings and preventing surprises when tax season arrives.",
-  },
-  {
-    title: "Strategic Tax Planning",
-    description:
-      "Helps you plan your finances by providing clear visibility into your expected tax liability, allowing you to adjust business strategies or expenses if needed.",
-  },
-  {
-    title: "Audit Protection",
-    description:
-      "By consistently making your quarterly tax payments, you minimize the chances of being flagged for underpayment, reducing your audit risk.",
-  },
-];
-
-const OurApproachCards = [
-  {
-    heading: "Comprehensive Tax Assessment",
-    description:
-      "We assess your business's income, expenses, and other financial factors to determine accurate quarterly tax estimates, taking into account your specific situation and tax obligations.",
-  },
-  {
-    heading: "Timely Payment Assistance",
-    description:
-      "We manage the submission of your quarterly tax payments, ensuring they are filed accurately and on time to avoid penalties and interest.",
-  },
-  {
-    heading: "Ongoing Monitoring and Adjustments",
-    description:
-      "We monitor changes in your business income and expenses and adjust your quarterly tax estimates as needed to keep them aligned with actual financial performance.",
-  },
-  {
-    heading: "Year-End Reconciliation and Reporting",
-    description:
-      "We ensure that all quarterly payments are properly recorded and applied to your end-of-year tax return, ensuring accuracy and minimizing surprises during tax filing.",
-  },
-  {
-    heading: "Education and Support",
-    description:
-      "We offer guidance on tax-saving strategies, deductions, and credits to reduce your overall tax liability, providing continuous support for your tax planning needs.",
-  },
-];
-
-export default function QuarterlyTaxEstimatesAndPayments() {
+export default function QuarterlyTaxEstimates() {
   return (
-    <main>
-      <Slider
-        images={["/consultation/consultation1.jpg"]}
-        title="Financial Clarity"
-        description="Simplifying Your Finances, Amplifying Your Growth."
-      />
+    <div className="min-h-screen bg-white">
+      <div className="h-16 md:h-20"></div>
+      <main className="container mx-auto px-4 max-w-7xl">
+        {/* Hero Section */}
+        <section className="pt-32 pb-16">
+          <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
+              Quarterly Tax Estimates and Payments
+            </h1>
+            <p className="text-lg text-gray-600">
+              Transform the challenge of irregular income streams into manageable, strategic tax planning. Our
+              comprehensive approach ensures timely compliance while optimizing cash flow and avoiding penalties for
+              business owners, self-employed individuals, and those with significant investment income.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+              <Button size="lg" className="bg-[#FFB800] hover:bg-[#FFB800]/90 text-black gap-2">
+                Get Started
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+              <Button variant="outline" size="lg" className="border-[#FFB800] text-black hover:bg-[#FFB800]/10 gap-2">
+                <Phone className="h-4 w-4" />
+                Call (555) 123-4567
+              </Button>
+            </div>
+          </div>
+        </section>
 
-      <article className="overflow-hidden mb-[80px] md:mb-[120px] lg:mb-[160px] xl:mb-[210px] mx-8 sm:mx-20 lg:mx-auto p-[40px_0_60px] md:p-[60px_0_80px] lg:p-[100px_0_120px] xl:p-[150px_0_200px]">
-        <div className="flex flex-col mst-7 dsm:mts-[150px] mx-auto overflow-hidden lg:flex-row lg:justify-between">
-          <section className="w-full">
-            <div className="lg:max-w-[1100px] mx-auto container">
-              <div className="flex flex-col lg:flex-row">
-                <div className="w-full order-1 mx-auto lg:order-none">
-                  <h2 className="text-2xl lg:text-3xl lg:mst-12 mb-[35px] lg:mb-[66px] font-bold text-black">
-                    Quarterly Tax Estimates and Payments
-                  </h2>
+        {/* Services Section */}
+        <section className="py-12">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Our Quarterly Tax Services</h2>
+            <p className="text-gray-600">
+              We provide comprehensive quarterly tax management to keep you compliant and optimize your cash flow.
+            </p>
+          </div>
 
-                  <div className="text-sm text-gray-500 lg:text-base">
-                    <p className="mt-[15px] lg:mt-[26px]">
-                      Quarterly Tax Estimates and Payments are required by the
-                      IRS for businesses and individuals who expect to owe a
-                      significant amount of tax at the end of the year. This
-                      service helps businesses and self-employed individuals
-                      calculate and submit estimated quarterly tax payments
-                      based on their expected income, deductions, and credits.
-                      By making these payments on time, businesses can avoid
-                      penalties and ensure they meet their tax obligations
-                      throughout the year.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Calculator className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Personalized Payment Calculation</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Development of quarterly tax projections based on actual and anticipated income.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Shield className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Safe Harbor Analysis</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Strategic planning to meet threshold requirements while optimizing cash retention.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <CalendarClock className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Payment Scheduling</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">Calendar management ensuring all federal and state deadlines are met.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <LineChart className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Income Fluctuation Planning</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Adaptive strategies for businesses and individuals with seasonal or irregular income patterns.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Globe className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Multi-State Obligation Management</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">Coordination of requirements across multiple tax jurisdictions.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <CreditCard className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Cash Flow Optimization</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Strategic timing of payments to balance compliance with business liquidity needs.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-12 bg-muted/30 rounded-lg p-8">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Benefits of Our Quarterly Tax Services</h2>
+            <p className="text-muted-foreground">
+              Our approach delivers meaningful advantages for businesses and individuals.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <AlertTriangle className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Penalty Elimination</h3>
+                <p className="text-muted-foreground">Elimination of underpayment penalties and interest charges.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <DollarSign className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Enhanced Cash Flow</h3>
+                <p className="text-muted-foreground">
+                  Enhanced cash flow through optimized payment timing and amounts.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Clock className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Reduced Financial Stress</h3>
+                <p className="text-muted-foreground">
+                  Reduced financial stress through predictable, manageable tax payments.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <ChevronRight className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">No Tax Surprises</h3>
+                <p className="text-muted-foreground">
+                  Prevention of year-end tax surprises through regular projection updates.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Shield className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Compliance Confidence</h3>
+                <p className="text-muted-foreground">
+                  Confidence that all obligations are being met across multiple jurisdictions.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <TrendingUp className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Strategic Integration</h3>
+                <p className="text-muted-foreground">Strategic integration with overall tax planning objectives.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Methodology Section */}
+        <section className="py-16">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Process</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Our estimated tax specialists combine forecasting expertise with deep tax knowledge to ensure your
+              quarterly obligations are managed precisely while supporting your broader financial goals.
+            </p>
+          </div>
+
+          <div className="relative max-w-6xl mx-auto px-4">
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#FFB800] -translate-x-1/2"></div>
+
+            <div className="space-y-16 relative">
+              {/* Step 1 */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="lg:text-right mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">01</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Income Analysis</h3>
+                    <p className="text-gray-600 text-lg">
+                      Comprehensive review of income sources, seasonal patterns, and tax liabilities.
                     </p>
                   </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
 
-                  <ServicesGrid
-                    title="Key Benefits"
-                    gridCards={KeyBenefitsCards}
-                  />
+              {/* Step 2 */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="hidden lg:block"></div>
+                <div className="lg:text-left mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">02</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Payment Strategy</h3>
+                    <p className="text-gray-600 text-lg">
+                      Creating a customized quarterly payment plan that balances compliance with cash flow needs.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-                  <ServicesGrid
-                    title="Our Core Components"
-                    gridCards={CoreComponentsCards}
-                  />
+              {/* Step 3 */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="lg:text-right mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">03</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Implementation</h3>
+                    <p className="text-gray-600 text-lg">
+                      Setting up systems for timely reminders, payment processing, and documentation.
+                    </p>
+                  </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
 
-                  <ServicesGrid
-                    title="Why You Need Quarterly Tax Estimates and Payments"
-                    gridCards={WhyYouNeedCards}
-                  />
-
-                  <OurApproach
-                    title="Our Approach"
-                    ourApproach={OurApproachCards}
-                  />
-
-                  <ServicesFooter text="We are here to address any questions you may have as you implement your plan. Additionally, for clients seeking an ongoing partnership." />
+              {/* Step 4 */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="hidden lg:block"></div>
+                <div className="lg:text-left mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">04</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Ongoing Adjustments</h3>
+                    <p className="text-gray-600 text-lg">
+                      Regular updates to quarterly projections based on actual results and changing circumstances.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </section>
-        </div>
-      </article>
-    </main>
-  );
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 md:py-20 bg-[#fbc710] text-black w-full">
+          <div className="max-w-3xl mx-auto text-center space-y-6 px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Tired of year-end tax surprises?</h2>
+            <p className="text-lg text-black/90 max-w-2xl mx-auto">
+              Contact us to discuss how our Quarterly Tax Estimates and Payments services can bring predictability to
+              your tax situation while optimizing cash flow throughout the year.
+            </p>
+            <Button size="lg" variant="secondary" className="group bg-black text-white hover:bg-black/90">
+              Schedule a Consultation
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="py-8 mt-12">
+          <Separator className="mb-8 bg-[#FFB800]/20" />
+          <div className="text-center text-sm text-gray-600">
+            <p>© {new Date().getFullYear()} AccountingZone. All rights reserved.</p>
+            <p className="mt-2">
+              123 Financial District, New York, NY 10001 | (555) 123-4567 | info@accountingzone.com
+            </p>
+          </div>
+        </footer>
+      </main>
+    </div>
+  )
 }

@@ -1,203 +1,339 @@
-import React from "react";
-import ServicesGrid from "@/components/services/ServicesGrid";
-import ServicesFooter from "@/components/services/ServicesFooter";
-import Slider from "@/components/Slider";
-import OurApproach from "@/components/services/OurApproach";
+"use client"
 
-const KeyBenefitsCards = [
-  {
-    title: "Improved Profit Margins",
-    description:
-      "By reducing unnecessary costs and improving operational efficiency, businesses can increase their profit margins and financial health.",
-  },
-  {
-    title: "Sustainable Growth",
-    description:
-      "Cost reductions provide businesses with the resources to reinvest in growth opportunities, such as expanding product lines, increasing marketing efforts, or entering new markets.",
-  },
-  {
-    title: "Enhanced Competitiveness",
-    description:
-      "Lower operating costs allow businesses to offer more competitive pricing, increase market share, and outperform competitors in terms of both cost and value.",
-  },
-  {
-    title: "Better Resource Allocation",
-    description:
-      "Optimizing operational costs ensures that resources are being allocated effectively, allowing businesses to focus on high-impact areas that drive growth and value creation.",
-  },
-  {
-    title: "Financial Flexibility",
-    description:
-      "With reduced operational costs, businesses gain greater financial flexibility, allowing for better cash flow management and the ability to respond to market fluctuations.",
-  },
-  {
-    title: "Long-Term Sustainability",
-    description:
-      "By identifying and implementing cost-saving initiatives, businesses can ensure sustainability and reduce vulnerability to economic downturns or disruptions.",
-  },
-];
+import {
+  TrendingUp,
+  FileText,
+  ArrowRight,
+  Phone,
+  Shield,
+  Target,
+  LineChart,
+  BarChart3,
+  Layers,
+  Repeat,
+  ArrowUpDown,
+  Settings,
+  Search,
+  Server,
+} from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
 
-const CoreComponentsCards = [
-  {
-    title: "Operational Efficiency Analysis",
-    description:
-      "Conducting a detailed review of operations to identify inefficiencies, redundant processes, and underutilized resources, with improvement recommendations.",
-  },
-  {
-    title: "Expense Audit and Optimization",
-    description:
-      "Analyzing existing expenses, including overhead, operational costs, and supply chain expenses, to identify opportunities for cost savings and efficiency.",
-  },
-  {
-    title: "Outsourcing and Automation",
-    description:
-      "Evaluating opportunities for outsourcing non-core functions or automating repetitive tasks to reduce labor costs and increase operational efficiency.",
-  },
-  {
-    title: "Lean Process Implementation",
-    description:
-      "Implementing lean principles, such as reducing waste, improving workflow, and optimizing production processes, to increase efficiency and reduce operational costs.",
-  },
-  {
-    title: "Supplier and Vendor Negotiations",
-    description:
-      "Assessing supplier relationships and renegotiating contracts to obtain better pricing, payment terms, or discounts, thereby reducing the cost of goods and services.",
-  },
-  {
-    title: "Technology Integration",
-    description:
-      "Recommending and implementing technology solutions that streamline operations, improve communication, increase productivity, and reduce costs.",
-  },
-];
-
-const WhyYouNeedCards = [
-  {
-    title: "Increased Profitability",
-    description:
-      "By reducing operational costs and improving efficiency, businesses can maximize profitability, ensure financial health, and support long-term growth.",
-  },
-  {
-    title: "Operational Agility",
-    description:
-      "A more efficient business can respond quicker to market changes, new opportunities, and potential challenges, ensuring greater business resilience.",
-  },
-  {
-    title: "Resource Optimization",
-    description:
-      "Streamlining processes ensures that resources—whether human, financial, or technological—are allocated to areas that drive the most value for the business.",
-  },
-  {
-    title: "Financial Flexibility",
-    description:
-      "Lower costs create room for reinvestment, enabling businesses to pursue growth opportunities, improve cash flow, or cushion against economic uncertainties.",
-  },
-  {
-    title: "Long-Term Success",
-    description:
-      "By continuously optimizing processes and reducing costs, businesses can build a more sustainable model that thrives in competitive, changing markets.",
-  },
-  {
-    title: "Scalability",
-    description:
-      "Efficient operations enable businesses to scale more easily without proportionally increasing costs, allowing for faster and more cost-effective growth.",
-  },
-];
-
-const OurApproachCards = [
-  {
-    heading: "Comprehensive Efficiency Audit",
-    description:
-      "We start by conducting a thorough audit of your current operations, financials, and cost structures to identify key areas where efficiency improvements can be made.",
-  },
-  {
-    heading: "Cost Reduction Strategy Development",
-    description:
-      "Based on our audit, we develop a tailored cost reduction strategy focused on eliminating waste, optimizing processes, and reducing expenditures while maintaining effectiveness.",
-  },
-  {
-    heading: "Implementation of Lean Principles",
-    description:
-      "We introduce lean methodologies to streamline workflows, minimize redundancies, and enhance productivity, all while reducing operating costs.",
-  },
-  {
-    heading: "Technology and Automation Integration",
-    description:
-      "We explore and implement technology solutions to automate manual processes, improve efficiency, and reduce labor costs, helping your business become more agile and cost-effective.",
-  },
-  {
-    heading: "Supplier and Vendor Optimization",
-    description:
-      "We help renegotiate supplier agreements, identify better sourcing options, and manage supplier relationships to ensure the best pricing, terms, and conditions.",
-  },
-  {
-    heading: "Ongoing Monitoring and Adjustment",
-    description:
-      "We continuously monitor your cost-saving initiatives, track performance, and make adjustments as needed to ensure sustained cost reduction and long-term efficiency gains.",
-  },
-];
-
-export default function CostReductionAndEfficiencyPlanning() {
+export default function CostReductionEfficiencyPlanning() {
   return (
-    <main>
-      <Slider
-        images={["/consultation/consultation1.jpg"]}
-        title="Financial Clarity"
-        description="Simplifying Your Finances, Amplifying Your Growth."
-      />
+    <div className="min-h-screen bg-white">
+      <div className="h-16 md:h-20"></div>
+      <main className="container mx-auto px-4 max-w-7xl">
+        {/* Hero Section */}
+        <section className="pt-32 pb-16">
+          <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
+              Cost Reduction and Efficiency Planning
+            </h1>
+            <p className="text-lg text-gray-600">
+              Systematically enhance profitability and competitive position through strategic expense management and
+              operational optimization. Our structured approach identifies meaningful savings opportunities while
+              preserving business capabilities and supporting strategic objectives.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+              <Button size="lg" className="bg-[#FFB800] hover:bg-[#FFB800]/90 text-black gap-2">
+                Get Started
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+              <Button variant="outline" size="lg" className="border-[#FFB800] text-black hover:bg-[#FFB800]/10 gap-2">
+                <Phone className="h-4 w-4" />
+                Call (555) 123-4567
+              </Button>
+            </div>
+          </div>
+        </section>
 
-      <article className="overflow-hidden mb-[80px] md:mb-[120px] lg:mb-[160px] xl:mb-[210px] mx-8 sm:mx-20 lg:mx-auto p-[40px_0_60px] md:p-[60px_0_80px] lg:p-[100px_0_120px] xl:p-[150px_0_200px]">
-        <div className="flex flex-col mst-7 dsm:mts-[150px] mx-auto overflow-hidden lg:flex-row lg:justify-between">
-          <section className="w-full">
-            <div className="lg:max-w-[1100px] mx-auto container">
-              <div className="flex flex-col lg:flex-row">
-                <div className="w-full order-1 mx-auto lg:order-none">
-                  <h2 className="text-2xl lg:text-3xl lg:mst-12 mb-[35px] lg:mb-[66px] font-bold text-black">
-                    Cost Reduction and Efficiency Planning
-                  </h2>
+        {/* Services Section */}
+        <section className="py-12">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Our Comprehensive Services</h2>
+            <p className="text-gray-600">
+              We offer a complete range of cost reduction and efficiency services tailored to your business needs.
+            </p>
+          </div>
 
-                  <div className="text-sm text-gray-500 lg:text-base">
-                    <p className="mt-[15px] lg:mt-[26px]">
-                      Cost Reduction and Efficiency Planning focuses on
-                      identifying opportunities to reduce expenses while
-                      maintaining or improving business operations. This service
-                      helps businesses streamline processes, eliminate waste,
-                      and implement strategies that lower costs and increase
-                      overall efficiency. By enhancing operational performance,
-                      businesses can maximize profitability, improve cash flow,
-                      and invest savings back into growth initiatives. Effective
-                      cost reduction strategies ensure that every dollar spent
-                      contributes to the business&apos;s bottom line, creating a
-                      more sustainable and competitive business model.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <BarChart3 className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Cost Structure Analysis</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Detailed examination of direct, indirect, fixed, and variable expenses across the organization.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <LineChart className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Benchmark Comparison</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Assessment of cost performance against industry standards and best practices.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <FileText className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Zero-Based Budgeting</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Clean-slate budgeting approaches that justify all expenses rather than incremental changes.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Search className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Procurement Optimization</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Strategic sourcing initiatives and vendor consolidation to leverage spending power.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Settings className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Process Reengineering</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Elimination of redundancies and non-value-added activities in business operations.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Server className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Technology Utilization Review</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Identification of automation opportunities and technology-enabled efficiency enhancements.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-12 bg-muted/30 rounded-lg p-8">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Benefits of Our Cost Reduction Services</h2>
+            <p className="text-muted-foreground">Our approach delivers tangible advantages for your business.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <TrendingUp className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Enhanced Profitability</h3>
+                <p className="text-muted-foreground">
+                  Significant enhancement of bottom-line profitability through strategic cost management.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Target className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Improved Competitive Position</h3>
+                <p className="text-muted-foreground">
+                  Enhanced market position through optimal cost structures and operational efficiency.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <ArrowUpDown className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Strategic Resource Reallocation</h3>
+                <p className="text-muted-foreground">
+                  Reallocation of resources from low-value to high-value activities for maximum impact.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Layers className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Enhanced Operational Discipline</h3>
+                <p className="text-muted-foreground">
+                  Improved business discipline through systematic expense management.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Repeat className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Sustainable Improvements</h3>
+                <p className="text-muted-foreground">
+                  Long-term efficiency gains rather than short-term cost-cutting measures.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Shield className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Preserved Strategic Capabilities</h3>
+                <p className="text-muted-foreground">
+                  Maintenance of core business capabilities while eliminating true waste.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Methodology Section */}
+        <section className="py-16">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Cost Optimization Approach</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Our cost optimization specialists combine analytical rigor with operational expertise to identify and
+              implement efficiency improvements that enhance profitability while supporting your strategic objectives.
+            </p>
+          </div>
+
+          <div className="relative max-w-6xl mx-auto px-4">
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#FFB800] -translate-x-1/2"></div>
+
+            <div className="space-y-16 relative">
+              {/* Analysis Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="lg:text-right mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">01</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Comprehensive Analysis</h3>
+                    <p className="text-gray-600 text-lg">
+                      Detailed assessment of current cost structures, operational processes, and efficiency metrics.
                     </p>
                   </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
 
-                  <ServicesGrid
-                    title="Key Benefits"
-                    gridCards={KeyBenefitsCards}
-                  />
+              {/* Opportunity Identification Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="hidden lg:block"></div>
+                <div className="lg:text-left mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">02</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Opportunity Identification</h3>
+                    <p className="text-gray-600 text-lg">
+                      Prioritization of cost reduction and efficiency enhancement opportunities based on impact and
+                      feasibility.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-                  <ServicesGrid
-                    title="Our Core Components"
-                    gridCards={CoreComponentsCards}
-                  />
+              {/* Strategy Development Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="lg:text-right mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">03</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Strategy Development</h3>
+                    <p className="text-gray-600 text-lg">
+                      Creation of detailed implementation plans for selected cost optimization initiatives.
+                    </p>
+                  </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
 
-                  <ServicesGrid
-                    title="Why You Need Cost Reduction and Efficiency Planning"
-                    gridCards={WhyYouNeedCards}
-                  />
-
-                  <OurApproach
-                    title="Our Approach"
-                    ourApproach={OurApproachCards}
-                  />
-
-                  <ServicesFooter text="No matter what your tax, accounting, business, or financial issue is, feel free to give us a call so we can get started helping you today with our accounting advisory services for businesses and individuals." />
+              {/* Implementation Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="hidden lg:block"></div>
+                <div className="lg:text-left mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">04</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Implementation & Monitoring</h3>
+                    <p className="text-gray-600 text-lg">
+                      Execution of cost reduction initiatives with ongoing measurement and sustainability planning.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </section>
-        </div>
-      </article>
-    </main>
-  );
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 md:py-20 bg-[#fbc710] text-black w-full">
+          <div className="max-w-3xl mx-auto text-center space-y-6 px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+              Ready to strategically enhance your bottom line?
+            </h2>
+            <p className="text-lg text-black/90 max-w-2xl mx-auto">
+              Contact Accounting Zone to discuss how our Cost Reduction and Efficiency Planning services can help your
+              organization achieve sustainable profitability improvements while maintaining strategic capabilities and
+              service quality.
+            </p>
+            <Button size="lg" variant="secondary" className="group bg-black text-white hover:bg-black/90">
+              Schedule a Consultation
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="py-8 mt-12">
+          <Separator className="mb-8 bg-[#FFB800]/20" />
+          <div className="text-center text-sm text-gray-600">
+            <p>© {new Date().getFullYear()} AccountingZone. All rights reserved.</p>
+            <p className="mt-2">
+              123 Financial District, New York, NY 10001 | (555) 123-4567 | info@accountingzone.com
+            </p>
+          </div>
+        </footer>
+      </main>
+    </div>
+  )
 }

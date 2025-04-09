@@ -1,198 +1,337 @@
-import React from "react";
-import ServicesGrid from "@/components/services/ServicesGrid";
-import ServicesFooter from "@/components/services/ServicesFooter";
-import OurApproach from "@/components/services/OurApproach";
-import Slider from "@/components/Slider";
+"use client"
 
-const KeyBenefitsCards = [
-  {
-    title: "Minimized Estate Taxes",
-    description:
-      "Reduces estate tax liability through strategies like gifting, trusts, and other tax-saving techniques, ensuring more of your estate is passed on to beneficiaries.",
-  },
-  {
-    title: "Optimized Wealth Transfer",
-    description:
-      "Develops strategies to efficiently transfer assets to heirs, avoiding unnecessary delays, costs, or disputes, and ensuring the smooth transfer of wealth according to your wishes.",
-  },
-  {
-    title: "Protection of Family Wealth",
-    description:
-      "Protects your family's wealth from heavy taxation or external claims, ensuring assets are preserved and passed on to future generations.",
-  },
-  {
-    title: "Philanthropic Giving",
-    description:
-      "Offers strategies for charitable giving that reduce estate taxes and benefit meaningful causes, such as charitable trusts or donations to nonprofit organizations.",
-  },
-  {
-    title: "Financial Security for Heirs",
-    description:
-      "Ensures your heirs are financially secure by minimizing tax liabilities, avoiding probate, and preserving the value of inherited assets for future generations.",
-  },
-  {
-    title: "Avoidance of Family Disputes",
-    description:
-      "Helps avoid disputes among heirs by clearly outlining your wishes, using tools such as wills, trusts, and other legal instruments to make your intentions clear.",
-  },
-];
+import {
+  ChevronRight,
+  DollarSign,
+  FileText,
+  Calendar,
+  ArrowRight,
+  Phone,
+  AlertTriangle,
+  Heart,
+  Home,
+  HandHeart,
+  Users,
+  Scale,
+  Shield,
+  Target,
+} from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
 
-const CoreComponentsCards = [
-  {
-    title: "Estate Tax Minimization",
-    description:
-      "Implements strategies to minimize estate taxes, such as gifting, establishing trusts, utilizing exemptions and deductions, and other methods to reduce the taxable value of the estate and preserve wealth.",
-  },
-  {
-    title: "Trusts and Trust Planning",
-    description:
-      "Assists in creating and managing various types of trusts, including revocable living trusts, irrevocable trusts, and charitable trusts, to help pass on assets while minimizing taxes and avoiding probate.",
-  },
-  {
-    title: "Gifting Strategies",
-    description:
-      "Advises on gifting strategies to reduce the overall size of the taxable estate, including annual gifting limits, lifetime gifting, and charitable gifts that benefit both the donor and the recipient.",
-  },
-  {
-    title: "Generation-Skipping Planning",
-    description:
-      "Helps plan for the transfer of wealth to grandchildren or other generations, minimizing generation-skipping transfer taxes (GSTT) and ensuring the preservation of family wealth.",
-  },
-  {
-    title: "Life Insurance Strategies",
-    description:
-      "Uses life insurance policies as part of estate planning to provide liquidity for paying estate taxes, debts, or other expenses, ensuring that heirs do not have to liquidate valuable assets to cover these costs.",
-  },
-  {
-    title: "Legal Documentation and Will Creation",
-    description:
-      "Assists with creating wills, power of attorney documents, living wills, and healthcare directives, ensuring that your estate plan reflects your wishes and avoids probate issues.",
-  },
-];
-
-const WhyYouNeedCards = [
-  {
-    title: "Preservation of Wealth",
-    description:
-      "Estate and inheritance tax planning ensures that more of your assets are preserved for future generations, rather than being significantly reduced by taxes.",
-  },
-  {
-    title: "Smooth Wealth Transfer",
-    description:
-      "Proper planning allows for a seamless transfer of wealth, avoiding delays, disputes, or complications that could arise without an estate plan.",
-  },
-  {
-    title: "Reduced Family Burden",
-    description:
-      "By minimizing estate taxes and ensuring that your heirs are financially secure, you reduce the burden on family members during an already emotional and stressful time.",
-  },
-  {
-    title: "Charitable Giving",
-    description:
-      "Strategically incorporating charitable donations can reduce taxes while benefiting causes you care about, creating a legacy that aligns with your values.",
-  },
-  {
-    title: "Avoid Probate",
-    description:
-      "With the right estate planning tools, such as trusts, your estate can avoid the lengthy and costly probate process, allowing for faster distribution of assets to heirs.",
-  },
-  {
-    title: "Peace of Mind",
-    description:
-      "Knowing that your estate plan is in place, reflects your wishes, and will be executed as intended provides peace of mind for both you and your family members.",
-  },
-];
-
-const OurApproachCards = [
-  {
-    heading: "Comprehensive Estate Review",
-    description:
-      "We begin by thoroughly reviewing your assets, liabilities, and goals to create a customized estate plan that minimizes taxes, protects wealth, and ensures smooth asset distribution.",
-  },
-  {
-    heading: "Personalized Tax Strategies",
-    description:
-      "Based on your financial situation, we develop personalized tax-saving strategies, including gifting, trusts, and charitable contributions, to optimize the transfer of wealth.",
-  },
-  {
-    heading: "Trust and Will Preparation",
-    description:
-      "We help create legally binding wills and trusts that reflect your desires, ensuring the proper management and distribution of your assets according to your instructions.",
-  },
-  {
-    heading: "Regular Monitoring and Updates",
-    description:
-      "We provide ongoing monitoring and adjustments to your estate plan, ensuring it remains aligned with your goals, as tax laws and family circumstances change.",
-  },
-  {
-    heading: "Education and Guidance",
-    description:
-      "We offer guidance on how to navigate the complexities of estate and inheritance tax planning, empowering you to make informed decisions and secure your legacy.",
-  },
-];
-
-export default function EstateAndInheritanceTaxPlanning() {
+export default function EstateInheritanceTaxPlanning() {
   return (
-    <main>
-      <Slider
-        images={["/consultation/consultation1.jpg"]}
-        title="Financial Clarity"
-        description="Simplifying Your Finances, Amplifying Your Growth."
-      />
+    <div className="min-h-screen bg-white">
+      <div className="h-16 md:h-20"></div>
+      <main className="container mx-auto px-4 max-w-7xl">
+        {/* Hero Section */}
+        <section className="pt-32 pb-16">
+          <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
+              Estate and Inheritance Tax Planning
+            </h1>
+            <p className="text-lg text-gray-600">
+              Preserve family wealth through sophisticated strategies that minimize transfer tax exposure while
+              achieving personal legacy objectives. Our comprehensive approach addresses federal and state tax
+              obligations while ensuring your assets transfer according to your wishes with minimal tax erosion.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+              <Button size="lg" className="bg-[#FFB800] hover:bg-[#FFB800]/90 text-black gap-2">
+                Get Started
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+              <Button variant="outline" size="lg" className="border-[#FFB800] text-black hover:bg-[#FFB800]/10 gap-2">
+                <Phone className="h-4 w-4" />
+                Call (555) 123-4567
+              </Button>
+            </div>
+          </div>
+        </section>
 
-      <article className="overflow-hidden mb-[80px] md:mb-[120px] lg:mb-[160px] xl:mb-[210px] mx-8 sm:mx-20 lg:mx-auto p-[40px_0_60px] md:p-[60px_0_80px] lg:p-[100px_0_120px] xl:p-[150px_0_200px]">
-        <div className="flex flex-col mst-7 dsm:mts-[150px] mx-auto overflow-hidden lg:flex-row lg:justify-between">
-          <section className="w-full">
-            <div className="lg:max-w-[1100px] mx-auto container">
-              <div className="flex flex-col lg:flex-row">
-                <div className="w-full order-1 mx-auto lg:order-none">
-                  <h2 className="text-2xl lg:text-3xl lg:mst-12 mb-[35px] lg:mb-[66px] font-bold text-black">
-                    Estate and Inheritance Tax Planning
-                  </h2>
+        {/* Services Section */}
+        <section className="py-12">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Our Estate Tax Planning Services</h2>
+            <p className="text-gray-600">
+              We provide comprehensive solutions to help preserve your wealth for future generations.
+            </p>
+          </div>
 
-                  <div className="text-sm text-gray-500 lg:text-base">
-                    <p className="mt-[15px] lg:mt-[26px]">
-                      Estate and Inheritance Tax Planning involves strategic
-                      planning and management of an individual&apos;s or
-                      family&apos;s wealth to minimize the tax burden on their
-                      estate upon death and ensure a smooth transfer of assets
-                      to heirs. This service helps individuals structure their
-                      estates to minimize estate taxes, optimize asset
-                      distribution, and ensure that their wealth is passed on
-                      according to their wishes. Effective planning can
-                      significantly reduce the financial impact on
-                      beneficiaries, maximize the value of inherited assets, and
-                      prevent legal disputes.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <FileText className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Wealth Transfer Analysis</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Comprehensive assessment of potential estate, gift, and generation-skipping transfer tax liabilities.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Heart className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Lifetime Gifting Strategies</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Development of structured approaches to utilize annual and lifetime exemptions effectively.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Shield className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Trust Structure Implementation</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Design and establishment of appropriate vehicles including revocable, irrevocable, grantor, and
+                  dynasty trusts.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Users className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Family Limited Partnership</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Creation of entities that facilitate tax-advantaged wealth transfers while maintaining control.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <HandHeart className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Charitable Planning</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Incorporation of philanthropic objectives to reduce transfer taxes while supporting meaningful causes.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Home className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Business Succession Planning</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Development of tax-efficient strategies for transferring family business interests to the next
+                  generation.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-12 bg-muted/30 rounded-lg p-8">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Benefits of Our Estate Planning</h2>
+            <p className="text-muted-foreground">Our approach delivers lasting advantages for your family wealth.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <DollarSign className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Maximized Wealth Preservation</h3>
+                <p className="text-muted-foreground">
+                  Ensuring your hard-earned assets are preserved for future generations.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <ChevronRight className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Strategic Exemption Utilization</h3>
+                <p className="text-muted-foreground">
+                  Making the most of available exemptions and deductions in the tax code.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Calendar className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Coordinated Transfer Approach</h3>
+                <p className="text-muted-foreground">Balanced approach to lifetime and testamentary transfers.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Target className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Balanced Legacy Objectives</h3>
+                <p className="text-muted-foreground">Achieving both tax efficiency and personal legacy goals.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Scale className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Reduced Probate Complexity</h3>
+                <p className="text-muted-foreground">Minimizing probate complexities and associated costs.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <AlertTriangle className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Peace of Mind</h3>
+                <p className="text-muted-foreground">
+                  Confidence that your wealth transfer plan is comprehensive and secure.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Methodology Section */}
+        <section className="py-16">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Planning Process</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Our estate planning specialists combine technical tax expertise with sensitivity to family dynamics to
+              create plans that preserve both wealth and harmony across generations.
+            </p>
+          </div>
+
+          <div className="relative max-w-6xl mx-auto px-4">
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#FFB800] -translate-x-1/2"></div>
+
+            <div className="space-y-16 relative">
+              {/* Step 1 */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="lg:text-right mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">01</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Family Wealth Assessment</h3>
+                    <p className="text-gray-600 text-lg">
+                      Comprehensive review of assets, family structure, and legacy objectives to establish planning
+                      priorities. family structure, and legacy objectives to establish planning priorities.
                     </p>
                   </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
 
-                  <ServicesGrid
-                    title="Key Benefits"
-                    gridCards={KeyBenefitsCards}
-                  />
+              {/* Step 2 */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="hidden lg:block"></div>
+                <div className="lg:text-left mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">02</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Strategy Development</h3>
+                    <p className="text-gray-600 text-lg">
+                      Creating customized estate planning strategies tailored to your specific family situation and
+                      objectives.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-                  <ServicesGrid
-                    title="Our Core Components"
-                    gridCards={CoreComponentsCards}
-                  />
+              {/* Step 3 */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="lg:text-right mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">03</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Implementation</h3>
+                    <p className="text-gray-600 text-lg">
+                      Establishing trusts, executing gifting plans, and implementing other structures to minimize tax
+                      exposure.
+                    </p>
+                  </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
 
-                  <ServicesGrid
-                    title="Why You Need Estate and Inheritance Tax Planning"
-                    gridCards={WhyYouNeedCards}
-                  />
-
-                  <OurApproach
-                    title="Our Approach"
-                    ourApproach={OurApproachCards}
-                  />
-
-                  <ServicesFooter text="We are here to address any questions you may have as you implement your plan. Additionally, for clients seeking an ongoing partnership." />
+              {/* Step 4 */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="hidden lg:block"></div>
+                <div className="lg:text-left mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">04</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Ongoing Review</h3>
+                    <p className="text-gray-600 text-lg">
+                      Regular monitoring and adjustment of your estate plan to account for tax law changes and family
+                      developments.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </section>
-        </div>
-      </article>
-    </main>
-  );
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 md:py-20 bg-[#fbc710] text-black w-full">
+          <div className="max-w-3xl mx-auto text-center space-y-6 px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+              Ready to protect your family's financial legacy?
+            </h2>
+            <p className="text-lg text-black/90 max-w-2xl mx-auto">
+              Our team is ready to help you preserve your wealth for future generations while fulfilling your personal
+              legacy objectives.
+            </p>
+            <Button size="lg" variant="secondary" className="group bg-black text-white hover:bg-black/90">
+              Schedule a Consultation
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="py-8 mt-12">
+          <Separator className="mb-8 bg-[#FFB800]/20" />
+          <div className="text-center text-sm text-gray-600">
+            <p>© {new Date().getFullYear()} AccountingZone. All rights reserved.</p>
+            <p className="mt-2">
+              123 Financial District, New York, NY 10001 | (555) 123-4567 | info@accountingzone.com
+            </p>
+          </div>
+        </footer>
+      </main>
+    </div>
+  )
 }

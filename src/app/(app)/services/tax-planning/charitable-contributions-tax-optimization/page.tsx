@@ -1,186 +1,344 @@
-import React from "react";
-import ServicesGrid from "@/components/services/ServicesGrid";
-import ServicesFooter from "@/components/services/ServicesFooter";
-import OurApproach from "@/components/services/OurApproach";
-import Slider from "@/components/Slider";
+"use client"
 
-const KeyBenefitsCards = [
-  {
-    title: "Maximized Tax Deductions",
-    description:
-      "Ensures that charitable contributions are fully optimized for tax savings by helping individuals and businesses claim the maximum allowable deductions on their tax returns.",
-  },
-  {
-    title: "Enhanced Giving Strategy",
-    description:
-      "Guides on how to structure charitable donations in ways that provide the most significant tax benefits while supporting causes that align with personal or business values.",
-  },
-  {
-    title: "Increased Cash Flow",
-    description:
-      "By reducing taxable income, charitable contributions lower tax liability, freeing up additional cash that can be reinvested in other business initiatives or personal financial goals.",
-  },
-  {
-    title: "Long-Term Financial Planning",
-    description:
-      "Helps incorporate charitable giving into long-term tax and financial planning strategies, providing a consistent and tax-efficient way of supporting charitable organizations.",
-  },
-  {
-    title: "Compliance with IRS Guidelines",
-    description:
-      "Ensures that charitable donations comply with IRS regulations, including record-keeping requirements, eligible charity qualifications, and limitations on deductions, to avoid penalties or disallowed deductions.",
-  },
-  {
-    title: "Improved Reputation and Branding",
-    description:
-      "By reducing taxable income, charitable contributions lower tax liability, freeing up additional cash that can be reinvested in other business initiatives or personal financial goals.",
-  },
-];
-
-const CoreComponentsCards = [
-  {
-    title: "Tax-Effective Donation Planning",
-    description:
-      "Identifies and implements strategies to maximize tax deductions, such as timing donations, using appreciated assets, or donating through tax-advantaged accounts like donor-advised funds.",
-  },
-  {
-    title: "Donor-Advised Funds (DAFs)",
-    description:
-      "By reducing taxable income, charitable contributions lower tax liability, freeing up additional cash that can be reinvested in other business initiatives or personal financial goals.",
-  },
-  {
-    title: "Appreciated Asset Donations",
-    description:
-      "Encourages the donation of appreciated assets (stocks, real estate, etc.) instead of cash, which can result in both a charitable deduction and the avoidance of capital gains tax.",
-  },
-  {
-    title: "Corporate Giving Programs",
-    description:
-      "Assists businesses in establishing formal corporate giving programs that align with business goals and offer tax benefits, such as matching employee donations or sponsoring charitable events.",
-  },
-  {
-    title: "Charitable Remainder Trusts (CRTs)",
-    description:
-      "For larger gifts, helps individuals use charitable remainder trusts, which allow for tax savings, income generation, and a final charitable donation upon the trust’s termination.",
-  },
-  {
-    title: "Documentation and Recordkeeping",
-    description:
-      "Ensures that all charitable contributions are properly documented with receipts, acknowledgment letters, and other necessary records to meet IRS requirements and ensure maximum deductions.",
-  },
-];
-
-const WhyYouNeedCards = [
-  {
-    title: "Maximized Tax Benefits",
-    description:
-      "Helps you leverage charitable donations to reduce taxable income and maximize tax deductions, ultimately lowering your overall tax burden.",
-  },
-  {
-    title: "Effective Philanthropy",
-    description:
-      "Optimizes your charitable contributions strategy, ensuring that you give in a way that provides the most benefit to both the recipient and your financial situation.",
-  },
-  {
-    title: "Increased Savings and Liquidity",
-    description:
-      "Reducing taxable income can increase available funds for personal or business use, enhancing cash flow and supporting other financial goals.",
-  },
-  {
-    title: "Compliance and Peace of Mind",
-    description:
-      "Ensures all donations are compliant with IRS rules and regulations, protecting you from potential audits, fines, and other tax-related penalties.",
-  },
-  {
-    title: "Strategic Financial Integration",
-    description:
-      "Charitable contributions can be integrated into your broader tax strategy, providing long-term financial benefits and aligning with your personal or business goals.",
-  },
-];
-
-const OurApproachCards = [
-  {
-    heading: "Custom Charitable Giving Strategy",
-    description:
-      "We assess your financial situation and philanthropic goals to develop a tailored giving strategy that optimizes your tax benefits, aligns with your objectives, and supports the causes you care about.",
-  },
-  {
-    heading: "Tax-Efficient Donation Planning",
-    description:
-      "We help you structure charitable donations using tax-advantaged methods, such as donor-advised funds, appreciated asset gifts, and charitable remainder trusts, to maximize tax deductions.",
-  },
-  {
-    heading: "Ongoing Monitoring and Adjustments",
-    description:
-      "As your financial situation evolves, we provide ongoing guidance to adjust your charitable giving strategy, ensuring that your donations remain tax-efficient and aligned with your long-term financial plans.",
-  },
-  {
-    heading: "Full Documentation and Reporting",
-    description:
-      "We assist with gathering and organizing all required documentation for charitable contributions, ensuring accuracy and that you are fully prepared for tax filing and IRS reporting requirements.",
-  },
-];
+import {
+  ChevronRight,
+  DollarSign,
+  Heart,
+  ArrowRight,
+  Phone,
+  AlertTriangle,
+  HandHeart,
+  Calendar,
+  FileText,
+  BarChart,
+  Clock,
+  Target,
+  Building,
+} from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
 
 export default function CharitableContributionsTaxOptimization() {
   return (
-    <main>
-      <Slider
-        images={["/consultation/consultation1.jpg"]}
-        title="Financial Clarity"
-        description="Simplifying Your Finances, Amplifying Your Growth."
-      />
+    <div className="min-h-screen bg-white">
+      <div className="h-16 md:h-20"></div>
+      <main className="container mx-auto px-4 max-w-7xl">
+        {/* Hero Section */}
+        <section className="pt-32 pb-16">
+          <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
+              Charitable Contributions Tax Optimization
+            </h1>
+            <p className="text-lg text-gray-600">
+              Maximize the tax benefits of your philanthropic activities through strategic planning and structured
+              giving approaches. Our comprehensive strategies help align your charitable goals with optimal tax
+              outcomes, enhancing the impact of your generosity while reducing your tax burden.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+              <Button size="lg" className="bg-[#FFB800] hover:bg-[#FFB800]/90 text-black gap-2">
+                Get Started
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+              <Button variant="outline" size="lg" className="border-[#FFB800] text-black hover:bg-[#FFB800]/10 gap-2">
+                <Phone className="h-4 w-4" />
+                Call (555) 123-4567
+              </Button>
+            </div>
+          </div>
+        </section>
 
-      <article className="overflow-hidden mb-[80px] md:mb-[120px] lg:mb-[160px] xl:mb-[210px] mx-8 sm:mx-20 lg:mx-auto p-[40px_0_60px] md:p-[60px_0_80px] lg:p-[100px_0_120px] xl:p-[150px_0_200px]">
-        <div className="flex flex-col mst-7 dsm:mts-[150px] mx-auto overflow-hidden lg:flex-row lg:justify-between">
-          <section className="w-full">
-            <div className="lg:max-w-[1100px] mx-auto container">
-              <div className="flex flex-col lg:flex-row">
-                <div className="w-full order-1 mx-auto lg:order-none">
-                  <h2 className="text-2xl lg:text-3xl lg:mst-12 mb-[35px] lg:mb-[66px] font-bold text-black">
-                    Charitable Contributions Tax Optimization
-                  </h2>
+        {/* Services Section */}
+        <section className="py-12">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Our Charitable Tax Services</h2>
+            <p className="text-gray-600">
+              We provide comprehensive strategies to maximize the tax benefits of your charitable giving.
+            </p>
+          </div>
 
-                  <div className="text-sm text-gray-500 lg:text-base">
-                    <p className="mt-[15px] lg:mt-[26px]">
-                      Charitable Contributions Tax Optimization focuses on
-                      helping businesses and individuals make the most of
-                      charitable donations while maximizing their tax benefits.
-                      Charitable contributions are often tax-deductible,
-                      allowing taxpayers to reduce their taxable income. This
-                      service involves strategically planning charitable giving,
-                      ensuring that donations align with financial goals, while
-                      ensuring compliance with tax regulations to optimize tax
-                      savings and philanthropic impact.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <HandHeart className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Donation Strategy Development</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Creation of personalized giving plans that align with both philanthropic goals and tax optimization
+                  objectives.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Building className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Charitable Vehicle Selection</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Analysis and recommendation of optimal charitable structures including donor-advised funds, private
+                  foundations, and charitable trusts.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Calendar className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Timing Optimization</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Strategic planning of contribution timing to maximize tax benefits across tax years.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <BarChart className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Asset Selection Analysis</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Evaluation of various asset types (cash, securities, property) to determine optimal donation
+                  strategies.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <FileText className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Documentation and Substantiation</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Guidance on required documentation and valuation approaches to support charitable deductions.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Target className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Deduction Limitation Planning</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Strategic approaches to navigate AGI limitations and maximize allowable charitable deductions.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-12 bg-muted/30 rounded-lg p-8">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Benefits of Charitable Tax Planning</h2>
+            <p className="text-muted-foreground">
+              Our approach delivers significant advantages for philanthropically-minded individuals and businesses.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <DollarSign className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Maximized Tax Benefits</h3>
+                <p className="text-muted-foreground">
+                  Significantly increased tax benefits from charitable activities through strategic planning.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Heart className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Enhanced Giving Impact</h3>
+                <p className="text-muted-foreground">
+                  Greater philanthropic impact through tax-efficient giving strategies.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <ChevronRight className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Integrated Tax Planning</h3>
+                <p className="text-muted-foreground">
+                  Seamless integration of charitable giving with overall tax and financial planning.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Clock className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Long-term Legacy Planning</h3>
+                <p className="text-muted-foreground">
+                  Establishment of sustainable giving approaches that create lasting philanthropic impact.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <AlertTriangle className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Audit Risk Reduction</h3>
+                <p className="text-muted-foreground">
+                  Reduced audit risk through proper documentation and compliance with IRS requirements.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Building className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Structured Giving Vehicles</h3>
+                <p className="text-muted-foreground">
+                  Access to sophisticated charitable vehicles that provide both tax and philanthropic benefits.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Methodology Section */}
+        <section className="py-16">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Approach</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Our charitable giving specialists combine tax expertise with philanthropic planning knowledge to develop
+              strategies that maximize both tax benefits and charitable impact.
+            </p>
+          </div>
+
+          <div className="relative max-w-6xl mx-auto px-4">
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#FFB800] -translate-x-1/2"></div>
+
+            <div className="space-y-16 relative">
+              {/* Step 1 */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="lg:text-right mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">01</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Philanthropic Assessment</h3>
+                    <p className="text-gray-600 text-lg">
+                      Comprehensive review of your charitable goals, tax situation, and potential giving assets.
                     </p>
                   </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
 
-                  <ServicesGrid
-                    title="Key Benefits"
-                    gridCards={KeyBenefitsCards}
-                  />
+              {/* Step 2 */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="hidden lg:block"></div>
+                <div className="lg:text-left mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">02</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Strategy Development</h3>
+                    <p className="text-gray-600 text-lg">
+                      Creating customized charitable giving strategies that optimize both philanthropic impact and tax
+                      benefits.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-                  <ServicesGrid
-                    title="Our Core Components"
-                    gridCards={CoreComponentsCards}
-                  />
+              {/* Step 3 */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="lg:text-right mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">03</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Implementation</h3>
+                    <p className="text-gray-600 text-lg">
+                      Executing charitable giving plans including establishment of appropriate vehicles and coordination
+                      with financial advisors.
+                    </p>
+                  </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
 
-                  <ServicesGrid
-                    title="Why You Need Charitable Contributions Tax Optimization"
-                    gridCards={WhyYouNeedCards}
-                  />
-
-                  <OurApproach
-                    title="Our Approach"
-                    ourApproach={OurApproachCards}
-                  />
-
-                  <ServicesFooter text="We are here to address any questions you may have as you implement your plan. Additionally, for clients seeking an ongoing partnership." />
+              {/* Step 4 */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="hidden lg:block"></div>
+                <div className="lg:text-left mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">04</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Ongoing Optimization</h3>
+                    <p className="text-gray-600 text-lg">
+                      Regular review and refinement of charitable strategies to adapt to changing tax laws and personal
+                      circumstances.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </section>
-        </div>
-      </article>
-    </main>
-  );
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 md:py-20 bg-[#fbc710] text-black w-full">
+          <div className="max-w-3xl mx-auto text-center space-y-6 px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+              Ready to maximize the impact of your charitable giving?
+            </h2>
+            <p className="text-lg text-black/90 max-w-2xl mx-auto">
+              Contact us to discuss how our Charitable Contributions Tax Optimization services can help you achieve your
+              philanthropic goals while maximizing tax benefits.
+            </p>
+            <Button size="lg" variant="secondary" className="group bg-black text-white hover:bg-black/90">
+              Schedule a Consultation
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="py-8 mt-12">
+          <Separator className="mb-8 bg-[#FFB800]/20" />
+          <div className="text-center text-sm text-gray-600">
+            <p>© {new Date().getFullYear()} AccountingZone. All rights reserved.</p>
+            <p className="mt-2">
+              123 Financial District, New York, NY 10001 | (555) 123-4567 | info@accountingzone.com
+            </p>
+          </div>
+        </footer>
+      </main>
+    </div>
+  )
 }

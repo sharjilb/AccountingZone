@@ -1,204 +1,382 @@
-import React from "react";
-import ServicesGrid from "@/components/services/ServicesGrid";
-import ServicesFooter from "@/components/services/ServicesFooter";
-import Slider from "@/components/Slider";
-import OurApproach from "@/components/services/OurApproach";
+"use client"
 
-const KeyBenefitsCards = [
-  {
-    title: "Regulatory Compliance Assurance",
-    description:
-      "Ensures that all industry-specific filings are completed accurately and on time, reducing the risk of non-compliance and associated fines or penalties.",
-  },
-  {
-    title: "Risk Mitigation",
-    description:
-      "Helps businesses identify and mitigate potential risks associated with non-compliance, such as operational disruptions, legal challenges, or reputational damage.",
-  },
-  {
-    title: "Improved Operational Efficiency",
-    description:
-      "Streamlines the process of gathering, preparing, and submitting required documents, freeing up resources and time for other critical business functions.",
-  },
-  {
-    title: "Enhanced Reputation",
-    description:
-      "Demonstrates to stakeholders, regulators, and customers that the business adheres to industry regulations and best practices, fostering trust and credibility.",
-  },
-  {
-    title: "Reduced Legal and Financial Exposure",
-    description:
-      "Ensures that the business is operating within the bounds of industry-specific regulations, reducing the risk of legal or financial repercussions due to improper filings.",
-  },
-  {
-    title: "Timely Filing",
-    description:
-      "Provides a system for tracking deadlines and submission schedules, ensuring that filings are completed on time and avoiding late fees or penalties.",
-  },
-];
-
-const CoreComponentsCards = [
-  {
-    title: "Industry-Specific Compliance Review",
-    description:
-      "We conduct a comprehensive review of your industry’s regulatory requirements to identify necessary filings, ensuring your business is aware of every obligation and remains compliant with all regulations and standards.",
-  },
-  {
-    title: "Document Preparation and Submission",
-    description:
-      "We assist with the preparation and submission of required regulatory filings, such as environmental reports, financial disclosures, health and safety compliance forms, and more.",
-  },
-  {
-    title: "Compliance Monitoring and Tracking",
-    description:
-      "We track and monitor regulatory deadlines to ensure that all filings are completed on time, helping you avoid missed deadlines, associated penalties, and potential disruptions to your business operations.",
-  },
-  {
-    title: "Industry-Specific Reporting",
-    description:
-      "We prepare and submit specialized reports, such as environmental impact assessments, labor reports, and financial disclosures, depending on the requirements of your industry.",
-  },
-  {
-    title: "Audit and Inspection Support",
-    description:
-      "We support businesses in preparation for audits or inspections related to regulatory compliance, ensuring that all necessary documentation and records are readily available.",
-  },
-  {
-    title: "Regulatory Update Alerts",
-    description:
-      "We monitor changes in industry-specific regulations and keep you updated on new or amended laws, ensuring that your business is always in compliance with the latest requirements.",
-  },
-];
-
-const WhyYouNeedCards = [
-  {
-    title: "Avoid Penalties",
-    description:
-      "Ensures that your business stays compliant with industry regulations, avoiding costly fines, penalties, legal issues, and reputational damage that could harm your operations.",
-  },
-  {
-    title: "Risk Reduction",
-    description:
-      "Identifies and mitigates risks related to non-compliance, protecting your business from potential legal, financial, and reputational repercussions.",
-  },
-  {
-    title: "Operational Focus",
-    description:
-      "By outsourcing the task of regulatory filings, you can focus on your business's core operations while ensuring full compliance with industry regulations and standards.",
-  },
-  {
-    title: "Stakeholder Trust",
-    description:
-      "Demonstrates to investors, customers, and regulators that your business is dedicated to operating ethically and in compliance with all relevant laws.",
-  },
-  {
-    title: "Timely Compliance",
-    description:
-      "Ensures that your business consistently meets regulatory deadlines, preventing late fees and keeping your operations running smoothly.",
-  },
-  {
-    title: "Peace of Mind",
-    description:
-      "Provides confidence that your business is fully compliant with industry-specific regulations, reducing the stress of managing complex legal requirements.",
-  },
-];
-
-const OurApproachCards = [
-  {
-    heading: "Industry-Specific Regulatory Assessment",
-    description:
-      "We begin by assessing your business's specific industry regulations to identify all applicable filing requirements and deadlines.",
-  },
-  {
-    heading: "Customized Filing Solutions",
-    description:
-      "Based on your industry's needs, we tailor a compliance strategy that ensures accurate, timely filings and reporting in line with the regulatory bodies governing your sector.",
-  },
-  {
-    heading: "Document Preparation and Filing",
-    description:
-      "We handle the preparation and submission of all necessary regulatory filings, ensuring that each document is compliant with the relevant industry standards and legal requirements.",
-  },
-  {
-    heading: "Deadline Management and Alerts",
-    description:
-      "We track regulatory deadlines and provide reminders, ensuring that filings are submitted on time to avoid penalties and maintain compliance.",
-  },
-  {
-    heading: "Ongoing Monitoring and Updates",
-    description:
-      "We continuously monitor changes in industry regulations and keep you informed of any updates, ensuring that your business is always prepared for new compliance requirements.",
-  },
-  {
-    heading: "Audit and Inspection Support",
-    description:
-      "We provide assistance during audits or inspections, helping ensure that your business's compliance documentation is in order and readily available for review.",
-  },
-];
+import {
+  ArrowRight,
+  Phone,
+  Landmark,
+  Calendar,
+  FileText,
+  Database,
+  Globe,
+  Radio,
+  Search,
+  Users,
+  ClipboardCheck,
+  Scale,
+  Award,
+  Shield,
+  Target,
+  TrendingUp,
+  Zap,
+} from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
 
 export default function IndustrySpecificRegulatoryFilings() {
   return (
-    <main>
-      <Slider
-        images={["/consultation/consultation1.jpg"]}
-        title="Financial Clarity"
-        description="Simplifying Your Finances, Amplifying Your Growth."
-      />
+    <div className="min-h-screen bg-white">
+      <div className="h-16 md:h-20"></div>
+      <main className="container mx-auto px-4 max-w-7xl">
+        {/* Hero Section */}
+        <section className="pt-32 pb-16">
+          <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
+              Industry-Specific Regulatory Filings
+            </h1>
+            <p className="text-lg text-gray-600">
+              Ensure your organization meets the unique compliance requirements of your sector while minimizing
+              regulatory risk. Our specialized approach addresses the complex, evolving demands of industry-specific
+              regulators through expert knowledge and systematic filing management.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+              <Button size="lg" className="bg-[#FFB800] hover:bg-[#FFB800]/90 text-black gap-2">
+                Get Started
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+              <Button variant="outline" size="lg" className="border-[#FFB800] text-black hover:bg-[#FFB800]/10 gap-2">
+                <Phone className="h-4 w-4" />
+                Call (555) 123-4567
+              </Button>
+            </div>
+          </div>
+        </section>
 
-      <article className="overflow-hidden mb-[80px] md:mb-[120px] lg:mb-[160px] xl:mb-[210px] mx-8 sm:mx-20 lg:mx-auto p-[40px_0_60px] md:p-[60px_0_80px] lg:p-[100px_0_120px] xl:p-[150px_0_200px]">
-        <div className="flex flex-col mst-7 dsm:mts-[150px] mx-auto overflow-hidden lg:flex-row lg:justify-between">
-          <section className="w-full">
-            <div className="lg:max-w-[1100px] mx-auto container">
-              <div className="flex flex-col lg:flex-row">
-                <div className="w-full order-1 mx-auto lg:order-none">
-                  <h2 className="text-2xl lg:text-3xl lg:mst-12 mb-[35px] lg:mb-[66px] font-bold text-black">
-                    Industry-Specific Regulatory Filings
-                  </h2>
+        {/* Services Section */}
+        <section className="py-12">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Our Comprehensive Services</h2>
+            <p className="text-gray-600">
+              We offer a complete range of industry-specific regulatory filing services tailored to your business needs.
+            </p>
+          </div>
 
-                  <div className="text-sm text-gray-500 lg:text-base">
-                    <p className="mt-[15px] lg:mt-[26px]">
-                      Industry-Specific Regulatory Filings involve the
-                      submission of reports and documents required by regulatory
-                      bodies within a particular industry. Each industry is
-                      subject to unique rules and regulations that govern its
-                      operations, including safety, environmental impact,
-                      financial disclosures, and operational practices. This
-                      service helps businesses ensure that they are in full
-                      compliance with their industry&apos;s regulatory
-                      requirements, avoiding penalties, legal challenges, and
-                      reputational damage. By managing these filings, businesses
-                      can focus on their core operations while ensuring they
-                      meet the necessary legal obligations.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Search className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Regulatory Landscape Assessment</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Comprehensive identification of all industry-specific filing requirements applicable to your
+                  operations.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Calendar className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Specialized Compliance Calendar</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Development of detailed schedules tracking industry-specific deadlines and requirements.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <FileText className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Technical Filing Preparation</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Expert development of complex regulatory submissions requiring specialized industry knowledge.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Database className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Data Collection Systematization</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Implementation of efficient processes to gather required information from across the organization.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Globe className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Cross-Jurisdictional Compliance</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Management of varying requirements across different geographic operating locations.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Radio className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Regulatory Change Monitoring</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Continuous tracking of evolving requirements with proactive adaptation of compliance approaches.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <ClipboardCheck className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Pre-Submission Review</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Thorough analysis of filings to ensure technical compliance and strategic alignment.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Users className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Examiner Relationship Management</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Professional interaction with regulatory examiners and information requests.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-12 bg-muted/30 rounded-lg p-8">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Benefits of Our Regulatory Filing Services</h2>
+            <p className="text-muted-foreground">Our approach delivers tangible advantages for your business.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Scale className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Compliance Confidence</h3>
+                <p className="text-muted-foreground">
+                  Confidence in compliance with complex, technical regulatory requirements.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Shield className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Reduced Risk</h3>
+                <p className="text-muted-foreground">
+                  Reduced risk of regulatory penalties, sanctions, or operational restrictions.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Award className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Enhanced Credibility</h3>
+                <p className="text-muted-foreground">Enhanced credibility with specialized industry regulators.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Target className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Efficient Resource Allocation</h3>
+                <p className="text-muted-foreground">
+                  Efficient resource allocation through optimized compliance processes.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <TrendingUp className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Competitive Advantage</h3>
+                <p className="text-muted-foreground">
+                  Competitive advantage through superior regulatory intelligence and execution.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Zap className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Minimized Business Disruption</h3>
+                <p className="text-muted-foreground">
+                  Minimized business disruption from regulatory examinations and inquiries.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Landmark className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Strategic Alignment</h3>
+                <p className="text-muted-foreground">
+                  Strategic alignment of regulatory submissions with business objectives.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Methodology Section */}
+        <section className="py-16">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Regulatory Compliance Approach</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Our industry specialists combine deep sector-specific knowledge with regulatory expertise to transform
+              complex compliance obligations into manageable, efficient processes tailored to your specific industry
+              requirements.
+            </p>
+          </div>
+
+          <div className="relative max-w-6xl mx-auto px-4">
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#FFB800] -translate-x-1/2"></div>
+
+            <div className="space-y-16 relative">
+              {/* Assessment Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="lg:text-right mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">01</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Regulatory Assessment</h3>
+                    <p className="text-gray-600 text-lg">
+                      Comprehensive identification and evaluation of all industry-specific regulatory requirements
+                      applicable to your operations.
                     </p>
                   </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
 
-                  <ServicesGrid
-                    title="Key Benefits"
-                    gridCards={KeyBenefitsCards}
-                  />
+              {/* Planning Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="hidden lg:block"></div>
+                <div className="lg:text-left mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">02</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Compliance Planning</h3>
+                    <p className="text-gray-600 text-lg">
+                      Development of tailored compliance calendars and data collection systems to support regulatory
+                      requirements.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-                  <ServicesGrid
-                    title="Our Core Components"
-                    gridCards={CoreComponentsCards}
-                  />
+              {/* Execution Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="lg:text-right mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">03</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Filing Preparation & Submission</h3>
+                    <p className="text-gray-600 text-lg">
+                      Expert development of regulatory submissions with thorough pre-submission review for technical
+                      compliance and strategic alignment.
+                    </p>
+                  </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
 
-                  <ServicesGrid
-                    title="Why You Need Industry-Specific Regulatory Filings"
-                    gridCards={WhyYouNeedCards}
-                  />
-
-                  <OurApproach
-                    title="Our Approach"
-                    ourApproach={OurApproachCards}
-                  />
-
-                  <ServicesFooter text="No matter what your tax, accounting, business, or financial issue is, feel free to give us a call so we can get started helping you today with our accounting advisory services for businesses and individuals." />
+              {/* Monitoring Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="hidden lg:block"></div>
+                <div className="lg:text-left mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">04</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Ongoing Management & Monitoring</h3>
+                    <p className="text-gray-600 text-lg">
+                      Continuous tracking of regulatory changes, management of examiner relationships, and adaptation of
+                      compliance approaches as requirements evolve.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </section>
-        </div>
-      </article>
-    </main>
-  );
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 md:py-20 bg-[#fbc710] text-black w-full">
+          <div className="max-w-3xl mx-auto text-center space-y-6 px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+              Struggling with complex industry regulations?
+            </h2>
+            <p className="text-lg text-black/90 max-w-2xl mx-auto">
+              Contact Accounting Zone to discuss how our Industry-Specific Regulatory Filings services can help your
+              organization navigate sector-specific compliance requirements with confidence and efficiency.
+            </p>
+            <Button size="lg" variant="secondary" className="group bg-black text-white hover:bg-black/90">
+              Schedule a Consultation
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="py-8 mt-12">
+          <Separator className="mb-8 bg-[#FFB800]/20" />
+          <div className="text-center text-sm text-gray-600">
+            <p>© {new Date().getFullYear()} AccountingZone. All rights reserved.</p>
+            <p className="mt-2">
+              123 Financial District, New York, NY 10001 | (555) 123-4567 | info@accountingzone.com
+            </p>
+          </div>
+        </footer>
+      </main>
+    </div>
+  )
 }

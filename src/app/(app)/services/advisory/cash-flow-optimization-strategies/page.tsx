@@ -1,197 +1,339 @@
-import React from "react";
-import ServicesGrid from "@/components/services/ServicesGrid";
-import ServicesFooter from "@/components/services/ServicesFooter";
-import Slider from "@/components/Slider";
-import OurApproach from "@/components/services/OurApproach";
+"use client"
 
-const KeyBenefitsCards = [
-  {
-    title: "Improved Liquidity",
-    description:
-      "Optimizing cash flow ensures that businesses have sufficient liquidity to meet day-to-day operational needs, avoiding disruptions due to cash shortages.",
-  },
-  {
-    title: "Debt Management",
-    description:
-      "Helps businesses better manage their debt obligations, ensuring that they can meet payment schedules without compromising other business activities.",
-  },
-  {
-    title: "Maximized Profitability",
-    description:
-      "By reducing cash cycle inefficiencies, businesses can reinvest available funds into high-return opportunities, maximizing profitability and growth.",
-  },
-  {
-    title: "Risk Reduction",
-    description:
-      "Cash flow optimization minimizes the risk of shortfalls, ensuring businesses remain solvent and operational during challenging financial periods.",
-  },
-  {
-    title: "Better Financial Planning",
-    description:
-      "Provides businesses with a clear view of their cash position, enabling more accurate financial forecasting, budgeting, and strategic decision-making.",
-  },
-  {
-    title: "Enhanced Vendor & Customer Relationships",
-    description:
-      "Timely payments and improved cash management strengthen relationships with suppliers and customers, potentially earning better terms or discounts.",
-  },
-];
-
-const CoreComponentsCards = [
-  {
-    title: "Cash Flow Forecasting and Planning",
-    description:
-      "Developing detailed cash flow projections that help businesses plan for future cash needs and surpluses, ensuring that funds are available when required.",
-  },
-  {
-    title: "Accounts Receivable Management",
-    description:
-      "Improving the efficiency of receivables collection, reducing the time it takes to collect outstanding invoices, and minimizing overdue payments that strain cash flow.",
-  },
-  {
-    title: "Accounts Payable Optimization",
-    description:
-      "Strategically managing payables to extend payment terms without damaging supplier relationships, allowing businesses to keep more cash on hand for reinvestment.",
-  },
-  {
-    title: "Inventory Management",
-    description:
-      "Optimizing inventory levels to reduce excess stock, which ties up capital unnecessarily, while ensuring that enough inventory is available to meet customer demand.",
-  },
-  {
-    title: "Expense Management",
-    description:
-      "Identifying and eliminating unnecessary expenses, improving cost efficiency across operations, and redirecting savings into areas that can improve cash flow.",
-  },
-  {
-    title: "Financing Options",
-    description:
-      "Reviewing financing options, such as lines of credit or short-term loans, to cover temporary cash flow gaps without compromising business operations or growth.",
-  },
-];
-
-const WhyYouNeedCards = [
-  {
-    title: "Sustained Liquidity",
-    description:
-      "Cash flow optimization ensures that your business has enough liquidity to operate smoothly, pay employees, and meet financial obligations on time.",
-  },
-  {
-    title: "Financial Stability",
-    description:
-      "By managing cash flow effectively, businesses can avoid liquidity crises, reducing the likelihood of having to take on expensive debt or make rushed financial decisions.",
-  },
-  {
-    title: "Reinvestment and Growth",
-    description:
-      "Optimized cash flow provides the capital needed to reinvest in growth opportunities, new product development, and market expansion.",
-  },
-  {
-    title: "Cost Savings",
-    description:
-      "Improved cash flow management helps businesses negotiate better terms with suppliers, take early payment discounts, and reduce spending.",
-  },
-  {
-    title: "Strategic Decision-Making",
-    description:
-      "Cash flow optimization provides businesses with a clear financial picture, making it easier to plan for the future and make informed business decisions.",
-  },
-];
-
-const OurApproachCards = [
-  {
-    heading: "Cash Flow Assessment and Analysis",
-    description:
-      "We start by assessing your current cash flow situation, analyzing your income and expenses, and identifying areas where inefficiencies or bottlenecks may exist.",
-  },
-  {
-    heading: "Customized Cash Flow Forecasting",
-    description:
-      "We help create a tailored cash flow forecast that aligns with your business goals, providing clear visibility into future cash needs and helping you plan for potential shortfalls.",
-  },
-  {
-    heading: "Receivables and Payables Strategy",
-    description:
-      "We develop strategies to optimize both your accounts receivable and accounts payable cycles, improving collection times and extending payment terms to enhance liquidity.",
-  },
-  {
-    heading: "Inventory and Expense Optimization",
-    description:
-      "We review your inventory levels and expenses, helping reduce excess stock and eliminate unnecessary costs, freeing up cash for more productive uses.",
-  },
-  {
-    heading: "Access to Financing Solutions",
-    description:
-      "We help you explore financing options that can provide quick access to capital when necessary, without over-leveraging your business or risking financial stability.",
-  },
-  {
-    heading: "Ongoing Monitoring and Adjustments",
-    description:
-      "We provide continuous monitoring of your cash flow management strategies, making adjustments as needed to respond to changing business conditions or market factors.",
-  },
-];
+import {
+  TrendingUp,
+  Calendar,
+  ArrowRight,
+  Phone,
+  BrainCircuit,
+  CoinsIcon,
+  Shield,
+  Target,
+  LineChart,
+  Zap,
+  Repeat,
+  CreditCard,
+  Package,
+  Building2,
+} from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
 
 export default function CashFlowOptimizationStrategies() {
   return (
-    <main>
-      <Slider
-        images={["/consultation/consultation1.jpg"]}
-        title="Financial Clarity"
-        description="Simplifying Your Finances, Amplifying Your Growth."
-      />
+    <div className="min-h-screen bg-white">
+      <div className="h-16 md:h-20"></div>
+      <main className="container mx-auto px-4 max-w-7xl">
+        {/* Hero Section */}
+        <section className="pt-32 pb-16">
+          <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
+              Cash Flow Optimization Strategies
+            </h1>
+            <p className="text-lg text-gray-600">
+              Transform your business's liquidity management from reactive to strategic, enhancing financial stability
+              and operational flexibility. Our comprehensive approach addresses the entire cash conversion cycle to
+              accelerate collections, optimize disbursements, and maximize the productive use of available funds.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+              <Button size="lg" className="bg-[#FFB800] hover:bg-[#FFB800]/90 text-black gap-2">
+                Get Started
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+              <Button variant="outline" size="lg" className="border-[#FFB800] text-black hover:bg-[#FFB800]/10 gap-2">
+                <Phone className="h-4 w-4" />
+                Call (555) 123-4567
+              </Button>
+            </div>
+          </div>
+        </section>
 
-      <article className="overflow-hidden mb-[80px] md:mb-[120px] lg:mb-[160px] xl:mb-[210px] mx-8 sm:mx-20 lg:mx-auto p-[40px_0_60px] md:p-[60px_0_80px] lg:p-[100px_0_120px] xl:p-[150px_0_200px]">
-        <div className="flex flex-col mst-7 dsm:mts-[150px] mx-auto overflow-hidden lg:flex-row lg:justify-between">
-          <section className="w-full">
-            <div className="lg:max-w-[1100px] mx-auto container">
-              <div className="flex flex-col lg:flex-row">
-                <div className="w-full order-1 mx-auto lg:order-none">
-                  <h2 className="text-2xl lg:text-3xl lg:mst-12 mb-[35px] lg:mb-[66px] font-bold text-black">
-                    Cash Flow Optimization Strategies
-                  </h2>
+        {/* Services Section */}
+        <section className="py-12">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Our Comprehensive Services</h2>
+            <p className="text-gray-600">
+              We offer a complete range of cash flow optimization services tailored to your business needs.
+            </p>
+          </div>
 
-                  <div className="text-sm text-gray-500 lg:text-base">
-                    <p className="mt-[15px] lg:mt-[26px]">
-                      Cash Flow Optimization Strategies are designed to help
-                      businesses effectively manage their incoming and outgoing
-                      cash flows to ensure liquidity, profitability, and
-                      long-term sustainability. This service focuses on
-                      improving the management of cash reserves, minimizing
-                      operational inefficiencies, and maximizing the cash
-                      conversion cycle. By optimizing cash flow, businesses can
-                      better navigate periods of economic uncertainty, reinvest
-                      in growth opportunities, and meet their financial
-                      obligations on time, avoiding potential cash shortfalls.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Repeat className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Cash Conversion Cycle Analysis</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Detailed assessment of days sales outstanding, inventory turnover, and days payable outstanding.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <LineChart className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Working Capital Requirement Modeling</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Development of forecasting tools to predict and plan for changing capital needs.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <CreditCard className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Accounts Receivable Acceleration</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Implementation of streamlined invoicing, proactive collection practices, and early payment incentives.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Package className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Inventory Management Enhancement</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Optimization of inventory levels to balance customer service with capital efficiency.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Building2 className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Vendor Payment Strategy</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Development of approaches that preserve supplier relationships while extending payment cycles.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Calendar className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Seasonal Cash Flow Management</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Creation of strategies to address cyclical business fluctuations and peak capital requirements.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-12 bg-muted/30 rounded-lg p-8">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Benefits of Our Cash Flow Optimization</h2>
+            <p className="text-muted-foreground">Our approach delivers tangible advantages for your business.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Zap className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Improved Operational Flexibility</h3>
+                <p className="text-muted-foreground">
+                  Enhanced business agility through improved liquidity and cash availability.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <CoinsIcon className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Reduced Financing Needs</h3>
+                <p className="text-muted-foreground">
+                  Lower reliance on external financing and associated interest costs.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Target className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Enhanced Growth Capacity</h3>
+                <p className="text-muted-foreground">
+                  Greater ability to capitalize on growth opportunities and vendor discounts.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Shield className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Increased Business Resilience</h3>
+                <p className="text-muted-foreground">
+                  Greater resilience during economic downturns or business disruptions.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <TrendingUp className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Improved Profitability</h3>
+                <p className="text-muted-foreground">
+                  Enhanced bottom line through reduced carrying costs and financing expenses.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <BrainCircuit className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Informed Strategic Decisions</h3>
+                <p className="text-muted-foreground">
+                  Better business decisions through accurate cash projections and visibility.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Methodology Section */}
+        <section className="py-16">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Cash Flow Optimization Approach</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Our cash flow specialists combine financial expertise with practical business knowledge to deliver
+              customized strategies that enhance your organization's financial agility and strength.
+            </p>
+          </div>
+
+          <div className="relative max-w-6xl mx-auto px-4">
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#FFB800] -translate-x-1/2"></div>
+
+            <div className="space-y-16 relative">
+              {/* Assessment Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="lg:text-right mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">01</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Cash Flow Assessment</h3>
+                    <p className="text-gray-600 text-lg">
+                      Comprehensive analysis of current cash flow patterns, bottlenecks, and optimization opportunities.
                     </p>
                   </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
 
-                  <ServicesGrid
-                    title="Key Benefits"
-                    gridCards={KeyBenefitsCards}
-                  />
+              {/* Strategy Development Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="hidden lg:block"></div>
+                <div className="lg:text-left mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">02</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Strategy Development</h3>
+                    <p className="text-gray-600 text-lg">
+                      Creation of tailored cash flow optimization strategies for each component of the cash conversion
+                      cycle.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-                  <ServicesGrid
-                    title="Our Core Components"
-                    gridCards={CoreComponentsCards}
-                  />
+              {/* Implementation Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="lg:text-right mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">03</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Implementation</h3>
+                    <p className="text-gray-600 text-lg">
+                      Execution of cash flow enhancement initiatives with clear metrics and accountability.
+                    </p>
+                  </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
 
-                  <ServicesGrid
-                    title="Why You Need Cash Flow Optimization Strategies"
-                    gridCards={WhyYouNeedCards}
-                  />
-
-                  <OurApproach
-                    title="Our Approach"
-                    ourApproach={OurApproachCards}
-                  />
-
-                  <ServicesFooter text="No matter what your tax, accounting, business, or financial issue is, feel free to give us a call so we can get started helping you today with our accounting advisory services for businesses and individuals." />
+              {/* Monitoring Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="hidden lg:block"></div>
+                <div className="lg:text-left mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">04</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Ongoing Optimization</h3>
+                    <p className="text-gray-600 text-lg">
+                      Continuous monitoring and refinement of cash flow strategies to adapt to changing business
+                      conditions.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </section>
-        </div>
-      </article>
-    </main>
-  );
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 md:py-20 bg-[#fbc710] text-black w-full">
+          <div className="max-w-3xl mx-auto text-center space-y-6 px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+              Ready to transform your cash flow into a strategic advantage?
+            </h2>
+            <p className="text-lg text-black/90 max-w-2xl mx-auto">
+              Contact Accounting Zone to discuss how our Cash Flow Optimization Strategies can enhance your
+              organization's financial flexibility while improving operational performance.
+            </p>
+            <Button size="lg" variant="secondary" className="group bg-black text-white hover:bg-black/90">
+              Schedule a Consultation
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="py-8 mt-12">
+          <Separator className="mb-8 bg-[#FFB800]/20" />
+          <div className="text-center text-sm text-gray-600">
+            <p>© {new Date().getFullYear()} AccountingZone. All rights reserved.</p>
+            <p className="mt-2">
+              123 Financial District, New York, NY 10001 | (555) 123-4567 | info@accountingzone.com
+            </p>
+          </div>
+        </footer>
+      </main>
+    </div>
+  )
 }

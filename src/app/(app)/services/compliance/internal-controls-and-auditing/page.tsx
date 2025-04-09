@@ -1,203 +1,373 @@
-import React from "react";
-import ServicesGrid from "@/components/services/ServicesGrid";
-import ServicesFooter from "@/components/services/ServicesFooter";
-import Slider from "@/components/Slider";
-import OurApproach from "@/components/services/OurApproach";
+"use client"
 
-const KeyBenefitsCards = [
-  {
-    title: "Enhanced Risk Management",
-    description:
-      "Strengthens risk management by identifying and mitigating financial, operational, and compliance risks through proactive internal control systems.",
-  },
-  {
-    title: "Fraud Prevention",
-    description:
-      "Helps detect and prevent fraud, mismanagement, and errors by implementing effective checks and balances across business operations and financial processes.",
-  },
-  {
-    title: "Accurate Financial Reporting",
-    description:
-      "Ensures that financial reporting is accurate, transparent, and compliant with industry regulations, reducing the risk of errors or omissions in financial statements.",
-  },
-  {
-    title: "Operational Efficiency",
-    description:
-      "Improves business operations by identifying inefficiencies, streamlining processes, and reducing resource wastage, contributing to better profitability and performance.",
-  },
-  {
-    title: "Regulatory Compliance",
-    description:
-      "Assists in meeting legal and regulatory requirements, ensuring compliance with tax laws, financial standards, and regulations, reducing penalties risk.",
-  },
-  {
-    title: "Stakeholder Confidence",
-    description:
-      "Strengthens stakeholder trust by demonstrating commitment to transparency, governance, and sound financial practices for investors and customers.",
-  },
-];
-
-const CoreComponentsCards = [
-  {
-    title: "Internal Control Design & Implementation",
-    description:
-      "We help design and implement internal controls, including segregation of duties, access controls, and financial authorization protocols, safeguarding assets and ensuring process integrity.",
-  },
-  {
-    title: "Risk Assessment & Mitigation",
-    description:
-      "We conduct risk assessments to identify potential areas of vulnerability within business operations, advising on strategies to mitigate risks through stronger internal controls and procedures.",
-  },
-  {
-    title: "Financial & Operational Audits",
-    description:
-      "We perform thorough financial and operational audits to assess the effectiveness of internal controls, detect any inefficiencies or discrepancies, and recommend corrective actions.",
-  },
-  {
-    title: "Compliance Audits",
-    description:
-      "We ensure that your business complies with industry regulations and standards by conducting compliance audits, including reviewing adherence to tax laws, labor regulations, environmental laws, and more.",
-  },
-  {
-    title: "Fraud Detection & Prevention",
-    description:
-      "We implement fraud detection tools and techniques, such as data analytics and forensic auditing, to identify and prevent fraudulent activities in financial transactions and business operations.",
-  },
-  {
-    title: "Internal Control Monitoring & Reporting",
-    description:
-      "We provide ongoing monitoring and reporting of internal control effectiveness, ensuring that controls are functioning as intended and recommending improvements where necessary.",
-  },
-];
-
-const WhyYouNeedCards = [
-  {
-    title: "Fraud Prevention and Protection",
-    description:
-      "Effective internal controls and auditing help prevent fraudulent activities, safeguarding your business from financial losses and reputational damage.",
-  },
-  {
-    title: "Improved Financial Accuracy",
-    description:
-      "Ensures the accuracy of financial reports, enabling more informed decision-making and better financial forecasting for business growth.",
-  },
-  {
-    title: "Enhanced Risk Management",
-    description:
-      "Helps identify potential risks early, enabling you to proactively address vulnerabilities and minimize disruptions, operational failures, and any negative impacts on performance.",
-  },
-  {
-    title: "Regulatory Compliance",
-    description:
-      "Helps businesses stay compliant with industry regulations and standards, avoiding costly penalties and maintaining a good reputation with regulators.",
-  },
-  {
-    title: "Increased Operational Efficiency",
-    description:
-      "By optimizing internal processes, businesses can reduce inefficiencies, improve productivity, and significantly enhance profitability.",
-  },
-  {
-    title: "Investor and Stakeholder Trust",
-    description:
-      "Strong internal controls and audits build confidence among investors and stakeholders, demonstrating your commitment to governance.",
-  },
-];
-
-const OurApproachCards = [
-  {
-    heading: "Comprehensive Internal Control Evaluation",
-    description:
-      "We begin by assessing your existing internal control framework, identifying areas of weakness or vulnerability, and developing an action plan to strengthen controls across your organization.",
-  },
-  {
-    heading: "Tailored Risk Management Strategy",
-    description:
-      "Based on the risk assessment, we design a customized risk management strategy, implementing measures to reduce potential risks and enhance overall business resilience.",
-  },
-  {
-    heading: "Financial and Operational Auditing",
-    description:
-      "We conduct thorough audits of your financial statements, operations, and internal controls to ensure accuracy and compliance with applicable regulations and best practices.",
-  },
-  {
-    heading: "Fraud Prevention Systems",
-    description:
-      "We implement fraud prevention mechanisms, including regular monitoring, fraud detection tools, and training, to reduce the likelihood of fraudulent activities within the business.",
-  },
-  {
-    heading: "Ongoing Internal Control Monitoring",
-    description:
-      "We provide continuous monitoring of your internal controls to ensure that they remain effective, adjusting and improving systems as your business evolves and grows.",
-  },
-  {
-    heading: "Audit Support and Reporting",
-    description:
-      "We offer detailed audit reports and guidance during external audits, helping you understand findings, address discrepancies, and ensure legal compliance.",
-  },
-];
+import {
+  ArrowRight,
+  Phone,
+  ClipboardCheck,
+  FileCheck,
+  Settings,
+  FileText,
+  Users,
+  BarChartIcon as Bar,
+  LineChartIcon as ChartLineUp,
+  Wrench,
+  Shield,
+  TrendingUp,
+  Target,
+  Layers,
+} from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
 
 export default function InternalControlsAndAuditing() {
   return (
-    <main>
-      <Slider
-        images={["/consultation/consultation1.jpg"]}
-        title="Financial Clarity"
-        description="Simplifying Your Finances, Amplifying Your Growth."
-      />
+    <div className="min-h-screen bg-white">
+      <div className="h-16 md:h-20"></div>
+      <main className="container mx-auto px-4 max-w-7xl">
+        {/* Hero Section */}
+        <section className="pt-32 pb-16">
+          <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
+              Internal Controls and Auditing
+            </h1>
+            <p className="text-lg text-gray-600">
+              Strengthen organizational governance and operational integrity through systematic evaluation and
+              enhancement of control environments. Our comprehensive approach addresses financial, operational, and
+              compliance controls to mitigate risks while improving process efficiency and reliability.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+              <Button size="lg" className="bg-[#FFB800] hover:bg-[#FFB800]/90 text-black gap-2">
+                Get Started
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+              <Button variant="outline" size="lg" className="border-[#FFB800] text-black hover:bg-[#FFB800]/10 gap-2">
+                <Phone className="h-4 w-4" />
+                Call (555) 123-4567
+              </Button>
+            </div>
+          </div>
+        </section>
 
-      <article className="overflow-hidden mb-[80px] md:mb-[120px] lg:mb-[160px] xl:mb-[210px] mx-8 sm:mx-20 lg:mx-auto p-[40px_0_60px] md:p-[60px_0_80px] lg:p-[100px_0_120px] xl:p-[150px_0_200px]">
-        <div className="flex flex-col mst-7 dsm:mts-[150px] mx-auto overflow-hidden lg:flex-row lg:justify-between">
-          <section className="w-full">
-            <div className="lg:max-w-[1100px] mx-auto container">
-              <div className="flex flex-col lg:flex-row">
-                <div className="w-full order-1 mx-auto lg:order-none">
-                  <h2 className="text-2xl lg:text-3xl lg:mst-12 mb-[35px] lg:mb-[66px] font-bold text-black">
-                    Internal Controls and Auditing
-                  </h2>
+        {/* Services Section */}
+        <section className="py-12">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Our Comprehensive Services</h2>
+            <p className="text-gray-600">
+              We offer a complete range of internal control and auditing services tailored to your business needs.
+            </p>
+          </div>
 
-                  <div className="text-sm text-gray-500 lg:text-base">
-                    <p className="mt-[15px] lg:mt-[26px]">
-                      Internal Controls and Auditing are critical components of
-                      a robust financial and operational governance framework.
-                      Internal controls help businesses safeguard their assets,
-                      ensure the accuracy and reliability of financial
-                      reporting, and prevent fraud and errors. Auditing, on the
-                      other hand, provides an independent evaluation of the
-                      effectiveness of these controls and assesses compliance
-                      with regulatory standards. This service helps businesses
-                      enhance their internal processes, identify weaknesses, and
-                      implement strategies to ensure operational efficiency and
-                      financial integrity.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <ClipboardCheck className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Control Environment Assessment</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Comprehensive evaluation of existing controls against recognized frameworks (COSO, COBIT, etc.)
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Target className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Key Control Identification</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Determination of critical control points that mitigate significant organizational risks.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Settings className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Control Design Optimization</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Enhancement of control procedures to increase effectiveness while minimizing operational burden.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <FileText className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Control Documentation</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Development of clear, thorough descriptions of control objectives, activities, and responsibilities.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Users className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Internal Audit Function Development</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Establishment or enhancement of internal audit capabilities and methodologies.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Bar className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Risk-Based Audit Planning</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Creation of comprehensive audit schedules focused on areas of greatest organizational risk.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <ChartLineUp className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Audit Execution and Reporting</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Professional conduct of audit procedures with clear, actionable findings.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Wrench className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Remediation Support</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Practical assistance implementing improvements to address identified control deficiencies.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-12 bg-muted/30 rounded-lg p-8">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Benefits of Our Control Services</h2>
+            <p className="text-muted-foreground">Our approach delivers tangible advantages for your business.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Shield className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Risk Reduction</h3>
+                <p className="text-muted-foreground">Significant reduction in operational and financial risks.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <FileCheck className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Enhanced Information Reliability</h3>
+                <p className="text-muted-foreground">Enhanced reliability of financial and operational information.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Target className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Improved Resource Utilization</h3>
+                <p className="text-muted-foreground">
+                  Improved resource utilization through elimination of control redundancies.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Layers className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Asset Safeguarding</h3>
+                <p className="text-muted-foreground">Strengthened safeguarding of organizational assets.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Users className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Stakeholder Confidence</h3>
+                <p className="text-muted-foreground">
+                  Increased stakeholder confidence through demonstrable governance.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <ClipboardCheck className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">External Audit Readiness</h3>
+                <p className="text-muted-foreground">
+                  Preparation for successful external audits and regulatory examinations.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <TrendingUp className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Process Improvement</h3>
+                <p className="text-muted-foreground">
+                  Identification of process improvement opportunities through control evaluation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Methodology Section */}
+        <section className="py-16">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Controls & Audit Approach</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Our internal control specialists combine audit expertise with practical business knowledge to deliver
+              control frameworks that protect your organization while supporting operational effectiveness.
+            </p>
+          </div>
+
+          <div className="relative max-w-6xl mx-auto px-4">
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#FFB800] -translate-x-1/2"></div>
+
+            <div className="space-y-16 relative">
+              {/* Assessment Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="lg:text-right mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">01</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Control Environment Assessment</h3>
+                    <p className="text-gray-600 text-lg">
+                      Comprehensive evaluation of existing controls against recognized frameworks to identify strengths
+                      and improvement opportunities.
                     </p>
                   </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
 
-                  <ServicesGrid
-                    title="Key Benefits"
-                    gridCards={KeyBenefitsCards}
-                  />
+              {/* Design Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="hidden lg:block"></div>
+                <div className="lg:text-left mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">02</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Control Design & Documentation</h3>
+                    <p className="text-gray-600 text-lg">
+                      Development of optimized control procedures and thorough documentation of control activities and
+                      responsibilities.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-                  <ServicesGrid
-                    title="Our Core Components"
-                    gridCards={CoreComponentsCards}
-                  />
+              {/* Testing Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="lg:text-right mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">03</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Audit & Testing</h3>
+                    <p className="text-gray-600 text-lg">
+                      Professional conduct of risk-based audit procedures with clear, actionable findings and
+                      recommendations.
+                    </p>
+                  </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
 
-                  <ServicesGrid
-                    title="Why You Need Internal Controls and Auditing"
-                    gridCards={WhyYouNeedCards}
-                  />
-
-                  <OurApproach
-                    title="Our Approach"
-                    ourApproach={OurApproachCards}
-                  />
-
-                  <ServicesFooter text="No matter what your tax, accounting, business, or financial issue is, feel free to give us a call so we can get started helping you today with our accounting advisory services for businesses and individuals." />
+              {/* Improvement Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="hidden lg:block"></div>
+                <div className="lg:text-left mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">04</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Continuous Improvement</h3>
+                    <p className="text-gray-600 text-lg">
+                      Implementation of remediation plans and ongoing monitoring to ensure sustainable control
+                      effectiveness and operational efficiency.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </section>
-        </div>
-      </article>
-    </main>
-  );
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 md:py-20 bg-[#fbc710] text-black w-full">
+          <div className="max-w-3xl mx-auto text-center space-y-6 px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+              Want to strengthen your control environment while improving efficiency?
+            </h2>
+            <p className="text-lg text-black/90 max-w-2xl mx-auto">
+              Contact Accounting Zone to discuss how our Internal Controls and Auditing services can help your
+              organization mitigate risks while enhancing operational performance through optimized control structures.
+            </p>
+            <Button size="lg" variant="secondary" className="group bg-black text-white hover:bg-black/90">
+              Schedule a Consultation
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="py-8 mt-12">
+          <Separator className="mb-8 bg-[#FFB800]/20" />
+          <div className="text-center text-sm text-gray-600">
+            <p>© {new Date().getFullYear()} AccountingZone. All rights reserved.</p>
+            <p className="mt-2">
+              123 Financial District, New York, NY 10001 | (555) 123-4567 | info@accountingzone.com
+            </p>
+          </div>
+        </footer>
+      </main>
+    </div>
+  )
 }

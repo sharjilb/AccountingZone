@@ -1,25 +1,25 @@
 "use client"
 
 import {
-  CreditCard,
+  FileCheck,
   ArrowRight,
   Phone,
+  AlertTriangle,
   BrainCircuit,
   Shield,
+  LineChart,
+  ClipboardList,
+  Layers,
+  Calculator,
   Users,
-  Clock,
   BarChart,
   FileText,
-  Banknote,
-  Landmark,
-  LineChart,
-  TrendingUp,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 
-export default function AccountsReceivablePayable() {
+export default function AccountsPayableReceivableReconciliation() {
   return (
     <div className="min-h-screen bg-white">
       <div className="h-16 md:h-20"></div>
@@ -28,19 +28,20 @@ export default function AccountsReceivablePayable() {
         <section className="pt-32 pb-16">
           <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
-              Accounts Receivable and Payable Management
+              Accounts Payable/Receivable Reconciliation
             </h1>
             <p className="text-lg text-gray-600">
-              Accounts Receivable and Payable Management optimizes your cash conversion cycle through strategic
-              oversight of customer and vendor transactions. Our comprehensive systems accelerate collections, optimize
-              disbursements, and enhance financial relationships to improve working capital efficiency.
+              Accounts Payable/Receivable Reconciliation ensures the integrity and accuracy of your financial records
+              through systematic verification of transaction data. Our meticulous reconciliation process identifies
+              discrepancies, resolves inconsistencies, and maintains alignment between your accounting records and
+              supporting documentation.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-              <Button size="lg" className="bg-[#FFB800] hover:bg-[#FFB800]/90 text-black gap-2">
+              <Button size="lg" className="bg-[#fbc710] hover:bg-[#fbc710]/90 text-black gap-2">
                 Get Started
                 <ArrowRight className="h-4 w-4" />
               </Button>
-              <Button variant="outline" size="lg" className="border-[#FFB800] text-black hover:bg-[#FFB800]/10 gap-2">
+              <Button variant="outline" size="lg" className="border-[#fbc710] text-black hover:bg-[#fbc710]/10 gap-2">
                 <Phone className="h-4 w-4" />
                 Call (555) 123-4567
               </Button>
@@ -53,79 +54,84 @@ export default function AccountsReceivablePayable() {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-gray-900">Our Comprehensive Services</h2>
             <p className="text-gray-600">
-              We offer a complete range of receivable and payable management solutions tailored to your business needs.
+              We offer a complete range of reconciliation services tailored to ensure accuracy and integrity in your
+              financial records.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+            <Card className="hover:shadow-md transition-all border-[#fbc710]/20">
               <CardHeader>
-                <TrendingUp className="h-8 w-8 text-[#FFB800] mb-2" />
-                <CardTitle className="text-gray-900">Receivables Process Optimization</CardTitle>
+                <FileCheck className="h-8 w-8 text-[#fbc710] mb-2" />
+                <CardTitle className="text-gray-900">Accounts Payable Verification</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Design of streamlined invoicing, collection, and cash application procedures to accelerate cash flow.
+                  Systematic comparison of vendor statements with internal AP ledgers to identify discrepancies and
+                  ensure complete capture of liabilities.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+            <Card className="hover:shadow-md transition-all border-[#fbc710]/20">
               <CardHeader>
-                <BarChart className="h-8 w-8 text-[#FFB800] mb-2" />
-                <CardTitle className="text-gray-900">Aging Analysis & Collections</CardTitle>
+                <ClipboardList className="h-8 w-8 text-[#fbc710] mb-2" />
+                <CardTitle className="text-gray-900">Accounts Receivable Validation</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Development of structured approaches to manage overdue accounts and minimize bad debt exposure.
+                  Detailed reconciliation of customer accounts with general ledger balances to verify accuracy of
+                  outstanding receivables.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+            <Card className="hover:shadow-md transition-all border-[#fbc710]/20">
               <CardHeader>
-                <Shield className="h-8 w-8 text-[#FFB800] mb-2" />
-                <CardTitle className="text-gray-900">Customer Credit Management</CardTitle>
+                <Layers className="h-8 w-8 text-[#fbc710] mb-2" />
+                <CardTitle className="text-gray-900">Unrecorded Liability Identification</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Implementation of systematic credit evaluation processes to minimize default risk.
+                  Thorough review to capture any unrecorded vendor invoices or obligations.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+            <Card className="hover:shadow-md transition-all border-[#fbc710]/20">
               <CardHeader>
-                <CreditCard className="h-8 w-8 text-[#FFB800] mb-2" />
-                <CardTitle className="text-gray-900">Electronic Payment Implementation</CardTitle>
+                <Calculator className="h-8 w-8 text-[#fbc710] mb-2" />
+                <CardTitle className="text-gray-900">Credit Balance Analysis</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Integration of digital payment solutions to accelerate collections and improve customer convenience.
+                  Investigation of customer overpayments or vendor credits with appropriate resolution recommendations.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+            <Card className="hover:shadow-md transition-all border-[#fbc710]/20">
               <CardHeader>
-                <Clock className="h-8 w-8 text-[#FFB800] mb-2" />
-                <CardTitle className="text-gray-900">Vendor Payment Scheduling</CardTitle>
+                <BarChart className="h-8 w-8 text-[#fbc710] mb-2" />
+                <CardTitle className="text-gray-900">Aging Report Verification</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Strategic timing of disbursements to optimize cash utilization while maintaining vendor relationships.
+                  Validation of aging reports against source documents to ensure accurate classification of outstanding
+                  items.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+            <Card className="hover:shadow-md transition-all border-[#fbc710]/20">
               <CardHeader>
-                <LineChart className="h-8 w-8 text-[#FFB800] mb-2" />
-                <CardTitle className="text-gray-900">Performance Metrics & Reporting</CardTitle>
+                <FileText className="h-8 w-8 text-[#fbc710] mb-2" />
+                <CardTitle className="text-gray-900">Transaction Tracing</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Implementation of key indicators to monitor receivables and payables effectiveness.
+                  Detailed tracing of selected transactions from initiation through posting with supporting
+                  documentation.
                 </p>
               </CardContent>
             </Card>
@@ -143,13 +149,13 @@ export default function AccountsReceivablePayable() {
             <div className="flex gap-5">
               <div className="flex-shrink-0">
                 <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
-                  <Banknote className="h-8 w-8 text-[#fbc710]" />
+                  <Shield className="h-8 w-8 text-[#fbc710]" />
                 </div>
               </div>
               <div>
-                <h3 className="font-medium text-lg mb-1">Accelerated Cash Flow</h3>
+                <h3 className="font-medium text-lg mb-1">Enhanced Financial Accuracy</h3>
                 <p className="text-muted-foreground">
-                  Accelerated cash flow through reduced days sales outstanding (DSO).
+                  Enhanced financial statement accuracy and reliability through verified records.
                 </p>
               </div>
             </div>
@@ -157,13 +163,39 @@ export default function AccountsReceivablePayable() {
             <div className="flex gap-5">
               <div className="flex-shrink-0">
                 <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
-                  <Landmark className="h-8 w-8 text-[#fbc710]" />
+                  <AlertTriangle className="h-8 w-8 text-[#fbc710]" />
                 </div>
               </div>
               <div>
-                <h3 className="font-medium text-lg mb-1">Improved Working Capital</h3>
+                <h3 className="font-medium text-lg mb-1">Reduced Risk</h3>
                 <p className="text-muted-foreground">
-                  Improved working capital efficiency and reduced financing requirements.
+                  Reduced risk of undetected errors or fraud in financial records.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <FileCheck className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Prevention of Duplicates</h3>
+                <p className="text-muted-foreground">Prevention of duplicate payments and captured vendor discounts.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <LineChart className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Improved Cash Flow Forecasting</h3>
+                <p className="text-muted-foreground">
+                  Improved cash flow forecasting through accurate receivables data.
                 </p>
               </div>
             </div>
@@ -175,37 +207,9 @@ export default function AccountsReceivablePayable() {
                 </div>
               </div>
               <div>
-                <h3 className="font-medium text-lg mb-1">Enhanced Customer Relationships</h3>
+                <h3 className="font-medium text-lg mb-1">Stronger Relationships</h3>
                 <p className="text-muted-foreground">
-                  Enhanced customer relationships through professional, consistent collection practices.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-5">
-              <div className="flex-shrink-0">
-                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
-                  <Shield className="h-8 w-8 text-[#fbc710]" />
-                </div>
-              </div>
-              <div>
-                <h3 className="font-medium text-lg mb-1">Optimized Vendor Relationships</h3>
-                <p className="text-muted-foreground">
-                  Optimized vendor relationships through strategic payment management.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-5">
-              <div className="flex-shrink-0">
-                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
-                  <FileText className="h-8 w-8 text-[#fbc710]" />
-                </div>
-              </div>
-              <div>
-                <h3 className="font-medium text-lg mb-1">Reduced Processing Costs</h3>
-                <p className="text-muted-foreground">
-                  Reduced processing costs through automation and process improvement.
+                  Stronger vendor and customer relationships through transaction accuracy.
                 </p>
               </div>
             </div>
@@ -217,9 +221,9 @@ export default function AccountsReceivablePayable() {
                 </div>
               </div>
               <div>
-                <h3 className="font-medium text-lg mb-1">Improved Financial Visibility</h3>
+                <h3 className="font-medium text-lg mb-1">Streamlined Month-End Close</h3>
                 <p className="text-muted-foreground">
-                  Improved financial visibility through comprehensive reporting and analytics.
+                  Streamlined month-end close processes through regular reconciliation.
                 </p>
               </div>
             </div>
@@ -229,27 +233,26 @@ export default function AccountsReceivablePayable() {
         {/* Methodology Section */}
         <section className="py-16">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Approach</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Reconciliation Approach</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Our team combines accounting expertise with practical business knowledge to transform your receivables and
-              payables function from an administrative necessity to a strategic financial advantage.
+              Our reconciliation specialists bring meticulous attention to detail and systematic methodology to ensure
+              your financial records accurately reflect your business transactions.
             </p>
           </div>
 
           <div className="relative max-w-6xl mx-auto px-4">
-            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#FFB800] -translate-x-1/2"></div>
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#fbc710] -translate-x-1/2"></div>
 
             <div className="space-y-16 relative">
               {/* Analysis Step */}
               <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
                 <div className="lg:text-right mb-8 lg:mb-0 relative">
-                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
-                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
-                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">01</span>
-                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Process Assessment</h3>
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#fbc710] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#fbc710] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#fbc710] text-4xl font-bold mb-4">01</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Data Collection</h3>
                     <p className="text-gray-600 text-lg">
-                      Comprehensive evaluation of your current receivables and payables processes to identify
-                      inefficiencies and opportunities.
+                      Comprehensive gathering of accounting records, statements, and supporting documentation.
                     </p>
                   </div>
                 </div>
@@ -260,13 +263,12 @@ export default function AccountsReceivablePayable() {
               <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
                 <div className="hidden lg:block"></div>
                 <div className="lg:text-left mb-8 lg:mb-0 relative">
-                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
-                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
-                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">02</span>
-                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Strategy Development</h3>
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#fbc710] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#fbc710] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#fbc710] text-4xl font-bold mb-4">02</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Systematic Comparison</h3>
                     <p className="text-gray-600 text-lg">
-                      Creation of tailored receivables and payables strategies aligned with your cash flow objectives
-                      and business requirements.
+                      Detailed reconciliation of ledger balances with external statements and supporting documentation.
                     </p>
                   </div>
                 </div>
@@ -275,13 +277,13 @@ export default function AccountsReceivablePayable() {
               {/* Forecast Development Step */}
               <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
                 <div className="lg:text-right mb-8 lg:mb-0 relative">
-                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
-                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
-                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">03</span>
-                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Implementation</h3>
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#fbc710] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#fbc710] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#fbc710] text-4xl font-bold mb-4">03</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Discrepancy Investigation</h3>
                     <p className="text-gray-600 text-lg">
-                      Systematic deployment of optimized processes, policies, and technologies to enhance receivables
-                      and payables management.
+                      Thorough investigation of identified variances to determine root causes and appropriate
+                      corrections.
                     </p>
                   </div>
                 </div>
@@ -292,13 +294,13 @@ export default function AccountsReceivablePayable() {
               <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
                 <div className="hidden lg:block"></div>
                 <div className="lg:text-left mb-8 lg:mb-0 relative">
-                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
-                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
-                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">04</span>
-                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Monitoring & Optimization</h3>
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#fbc710] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#fbc710] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#fbc710] text-4xl font-bold mb-4">04</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Resolution & Documentation</h3>
                     <p className="text-gray-600 text-lg">
-                      Ongoing performance tracking with continuous improvement to maximize cash flow efficiency and
-                      working capital optimization.
+                      Implementation of necessary corrections with comprehensive documentation of reconciliation process
+                      and findings.
                     </p>
                   </div>
                 </div>
@@ -311,11 +313,11 @@ export default function AccountsReceivablePayable() {
         <section className="py-16 md:py-20 bg-[#fbc710] text-black w-full">
           <div className="max-w-3xl mx-auto text-center space-y-6 px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-              Ready to improve your cash flow and working capital efficiency?
+              Ready to ensure complete accuracy in your financial records?
             </h2>
             <p className="text-lg text-black/90 max-w-2xl mx-auto">
-              Contact Accounting Zone today to discuss how our Accounts Receivable and Payable Management services can
-              optimize your transaction processing and accelerate your cash conversion cycle.
+              Contact Accounting Zone today to discuss how our Accounts Payable/Receivable Reconciliation services can
+              strengthen your financial foundation and reporting reliability.
             </p>
             <Button size="lg" variant="secondary" className="group bg-black text-white hover:bg-black/90">
               Schedule a Consultation
@@ -326,7 +328,7 @@ export default function AccountsReceivablePayable() {
 
         {/* Footer */}
         <footer className="py-8 mt-12">
-          <Separator className="mb-8 bg-[#FFB800]/20" />
+          <Separator className="mb-8 bg-[#fbc710]/20" />
           <div className="text-center text-sm text-gray-600">
             <p>© {new Date().getFullYear()} AccountingZone. All rights reserved.</p>
             <p className="mt-2">

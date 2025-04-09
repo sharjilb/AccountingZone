@@ -121,7 +121,7 @@ export default function Navbar() {
             SERVICES
           </div>
           <div
-            className={`absolute text-[13px] z-10 -left-[170px] top-full w-[825px] py-12 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute text-[13px] z-10 -left-[170px] top-full w-[1089px] py-12 bg-white shadow-lg duration-300 transition-opacity ${
               servicesDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
@@ -130,14 +130,14 @@ export default function Navbar() {
             <ul className="grid grid-cols-5 text-[11px] divide-x divide-[#fbc710] justify-center w-full">
               <div className="space-y-3 px-4">
                 <li className="font-bold text-sm text-[#fbc710]">
-                  FINANCIAL - Accounting
+                  FINANCIAL
                 </li>
                 <li>
                   <Link
                     href="/services/financial-statements/budget-planning-and-forecasting"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Budget Planning and Forecasting
+                    Budget Forecasting
                   </Link>
                 </li>
                 <li>
@@ -145,7 +145,7 @@ export default function Navbar() {
                     href="/services/financial-statements/cash-flow-management"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Cash Flow Management
+                    Cash Management
                   </Link>
                 </li>
                 <li>
@@ -153,7 +153,7 @@ export default function Navbar() {
                     href="/services/financial-statements/audit-preparation-assistance"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Audit Preparation Assistance
+                    Audit Assistance
                   </Link>
                 </li>
                 <li>
@@ -161,7 +161,7 @@ export default function Navbar() {
                     href="/services/financial-statements/financial-analysis-and-strategy"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Financial Analysis and Strategy
+                    Financial Strategy
                   </Link>
                 </li>
                 <li>
@@ -169,7 +169,7 @@ export default function Navbar() {
                     href="/services/financial-statements/cost-accounting-services"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Cost Accounting Services
+                    Cost Accounting
                   </Link>
                 </li>
                 <li>
@@ -177,7 +177,7 @@ export default function Navbar() {
                     href="/services/financial-statements/financial-risk-assessment"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Financial Risk Assessment
+                    Risk Assessment
                   </Link>
                 </li>
                 <li>
@@ -185,7 +185,7 @@ export default function Navbar() {
                     href="/services/financial-statements/accounts-receivable-and-payable-mgt"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Accounts Receivable and Payable Management
+                    Receivable Management
                   </Link>
                 </li>
                 <li>
@@ -199,83 +199,83 @@ export default function Navbar() {
               </div>
               <div className="space-y-3 px-4">
                 <li className="font-bold text-sm text-[#fbc710]">
-                  RECORDS - Bookkeeping
+                  RECORDS
                 </li>
                 <li>
                   <Link
-                    href="/services/bookkeeping/accounts-reconciliation"
+                    href="/services/records/accounts-payable-receivable-reconciliation"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Accounts Payable/Receivable Reconciliation
+                    Receivable Reconciliation
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/services/bookkeeping/cloud-based-bookkeeping-solutions"
+                    href="/services/records/cloud-based-bookkeeping"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Cloud-Based Bookkeeping Solutions
+                    Cloud Bookkeeping
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/services/bookkeeping/real-time-financial-reporting"
+                    href="/services/records/real-time-financial-reporting"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Real-Time Financial Reporting
+                    Financial Reporting
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/services/bookkeeping/expense-tracking-and-mgt"
+                    href="/services/records/expense-tracking-management"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Expense Tracking and Management
+                    Expense Tracking
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/services/bookkeeping/fixed-asset-mgt"
+                    href="/services/records/fixed-asset-management"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Fixed Asset Management
+                    Asset Management
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/services/bookkeeping/audit-ready-documentation"
+                    href="/services/records/audit-ready-documentation"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Audit-Ready Documentation
+                    Audit Documentation
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/services/bookkeeping/integration-with-accounting-software"
+                    href="/services/records/accounting-software-integration"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Integration with Accounting Software
+                    Software Integration
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/services/bookkeeping/historical-bookkeeping-cleanup"
+                    href="/services/records/historical-bookkeeping-cleanup"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Historical Bookkeeping Cleanup
+                    Bookkeeping Cleanup
                   </Link>
                 </li>
               </div>
               <div className="space-y-3 px-4">
                 <li className="font-bold text-sm text-[#fbc710]">
-                  TAX - Tax planning
+                  TAX
                 </li>
                 <li>
                   <Link
                     href="/services/tax-planning/capital-gains-tax-planning"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Capital Gains Tax Planning
+                    Capital Gains
                   </Link>
                 </li>
                 <li>
@@ -283,7 +283,7 @@ export default function Navbar() {
                     href="/services/tax-planning/tax-saving-strategies-for-startups"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Tax Saving Strategies for Startups
+                    Startup Strategies
                   </Link>
                 </li>
                 <li>
@@ -291,7 +291,7 @@ export default function Navbar() {
                     href="/services/tax-planning/charitable-contributions-tax-optimization"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Charitable Contributions Tax Optimization
+                    Charitable Optimization
                   </Link>
                 </li>
                 <li>
@@ -299,7 +299,7 @@ export default function Navbar() {
                     href="/services/tax-planning/cryptocurrency-tax-reporting"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Cryptocurrency Tax Reporting
+                    Crypto Reporting
                   </Link>
                 </li>
                 <li>
@@ -307,7 +307,7 @@ export default function Navbar() {
                     href="/services/tax-planning/payroll-tax-calculation-and-filing"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Payroll Tax Calculation and Filing
+                    Payroll Filing
                   </Link>
                 </li>
                 <li>
@@ -315,7 +315,7 @@ export default function Navbar() {
                     href="/services/tax-planning/quarterly-tax-estimates-and-payments"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Quarterly Tax Estimates and Payments
+                    Tax Estimates
                   </Link>
                 </li>
                 <li>
@@ -323,7 +323,7 @@ export default function Navbar() {
                     href="/services/tax-planning/post-tax-consultation-and-review"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Post-Tax Season Consultation and Review
+                    Post-Consultation
                   </Link>
                 </li>
                 <li>
@@ -331,20 +331,20 @@ export default function Navbar() {
                     href="/services/tax-planning/estate-and-inheritance-tax-planning"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Estate and Inheritance Tax Planning
+                    Estate Planning
                   </Link>
                 </li>
               </div>
               <div className="space-y-3 px-4">
                 <li className="font-bold text-sm text-[#fbc710]">
-                  ADVISORY – Business Consulting
+                  ADVISORY
                 </li>
                 <li>
                   <Link
                     href="/services/advisory/financial-strategy-development"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Financial Strategy Development
+                    Strategy Development
                   </Link>
                 </li>
                 <li>
@@ -352,7 +352,7 @@ export default function Navbar() {
                     href="/services/advisory/business-performance-optimization"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Business Performance Optimization
+                    Performance Optimization
                   </Link>
                 </li>
                 <li>
@@ -360,7 +360,7 @@ export default function Navbar() {
                     href="/services/advisory/risk-management-consulting"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Risk Management Consulting
+                    Risk Consulting
                   </Link>
                 </li>
                 <li>
@@ -368,7 +368,7 @@ export default function Navbar() {
                     href="/services/advisory/business-valuation-services"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Business Valuation Services
+                    Valuation Services
                   </Link>
                 </li>
                 <li>
@@ -376,7 +376,7 @@ export default function Navbar() {
                     href="/services/advisory/mergers-and-acquisitions-support"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Mergers and Acquisitions Support
+                    M&A Support
                   </Link>
                 </li>
                 <li>
@@ -384,7 +384,7 @@ export default function Navbar() {
                     href="/services/advisory/cash-flow-optimization-strategies"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Cash Flow Optimization Strategies
+                    Cash Optimization 
                   </Link>
                 </li>
                 <li>
@@ -392,7 +392,7 @@ export default function Navbar() {
                     href="/services/advisory/start-up-financial-planning"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Start-Up Financial Planning
+                    Start-Up Planning
                   </Link>
                 </li>
                 <li>
@@ -400,20 +400,20 @@ export default function Navbar() {
                     href="/services/advisory/cost-reduction-and-planning"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Cost Reduction and Efficiency Planning
+                    Cost Efficiency
                   </Link>
                 </li>
               </div>
               <div className="space-y-3 px-4">
                 <li className="font-bold text-sm text-[#fbc710]">
-                  COMPLIANCE – Regulatory Services
+                  COMPLIANCE
                 </li>
                 <li>
                   <Link
                     href="/services/compliance/statutory-reporting-and-compliance"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Statutory Reporting and Compliance
+                    Statutory Compliance
                   </Link>
                 </li>
                 <li>
@@ -421,7 +421,7 @@ export default function Navbar() {
                     href="/services/compliance/corporate-governance-advisory"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Corporate Governance Advisory
+                    Governance Advisory
                   </Link>
                 </li>
                 <li>
@@ -429,7 +429,7 @@ export default function Navbar() {
                     href="/services/compliance/industry-regulatory-filings"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Industry-Specific Regulatory Filings
+                    Regulatory Filings
                   </Link>
                 </li>
                 <li>
@@ -437,7 +437,7 @@ export default function Navbar() {
                     href="/services/compliance/anti-money-laundering-compliance"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Anti-Money Laundering (AML) Compliance
+                    AML Compliance
                   </Link>
                 </li>
                 <li>
@@ -445,7 +445,7 @@ export default function Navbar() {
                     href="/services/compliance/internal-controls-and-auditing"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Internal Controls and Auditing
+                    Controls Auditing
                   </Link>
                 </li>
                 <li>
@@ -453,7 +453,7 @@ export default function Navbar() {
                     href="/services/compliance/employment-and-labor-law-compliance"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Employment and Labor Law Compliance
+                    Labor Compliance
                   </Link>
                 </li>
                 <li>
@@ -461,7 +461,7 @@ export default function Navbar() {
                     href="/services/compliance/corporate-secretarial-services"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Corporate Secretarial Services
+                    Secretarial Services
                   </Link>
                 </li>
                 <li>
@@ -469,7 +469,7 @@ export default function Navbar() {
                     href="/services/compliance/environmental-social-and-governance"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Environmental, Social, and Governance (ESG)
+                    ESG Reporting
                   </Link>
                 </li>
               </div>
@@ -490,7 +490,7 @@ export default function Navbar() {
             INDUSTRIES
           </Link>
           <div
-            className={`absolute z-10 -left-[225px] top-full w-[825px] py-12 bg-white shadow-lg duration-300 transition-opacity text-[13px] ${
+            className={`absolute z-10 -left-[225px] top-full w-[1089px] py-12 bg-white shadow-lg duration-300 transition-opacity text-[13px] ${
               industriesDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
@@ -504,7 +504,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/financial-and-legal-services"
+                      href="/industries/financial-and-legal-services/banking-financial-services"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Banking and Financial Services Insurance
@@ -512,7 +512,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/financial-and-legal-services"
+                      href="/industries/financial-and-legal-services/asset-management-and-hedge-funds-legal-firms"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Asset Management and Hedge Funds Legal Firms
@@ -520,7 +520,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/financial-and-legal-services"
+                      href="/industries/financial-and-legal-services/venture-capital-and-private-equity-firms"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Venture Capital and Private Equity Firms
@@ -754,7 +754,7 @@ export default function Navbar() {
             FEATURES
           </Link>
           <div
-            className={`absolute z-10 text-[13px] -left-[290px] top-full w-[825px] py-12 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 text-[13px] -left-[290px] top-full w-[1089px] py-12 bg-white shadow-lg duration-300 transition-opacity ${
               featuresDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
@@ -933,7 +933,7 @@ export default function Navbar() {
             INSIGHTS
           </div>
           <div
-            className={`absolute z-10 text-[13px] -left-[345px] top-full w-[825px] py-12 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 text-[13px] -left-[345px] top-full w-[1089px] py-12 bg-white shadow-lg duration-300 transition-opacity ${
               insightsDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
@@ -1160,7 +1160,7 @@ export default function Navbar() {
             RESOURCES
           </div>
           <div
-            className={`absolute z-10 text-[13px] -left-[400px] top-full w-[825px] py-12 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 text-[13px] -left-[400px] top-full w-[1089px] py-12 bg-white shadow-lg duration-300 transition-opacity ${
               resourcesDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"

@@ -1,180 +1,336 @@
-import React from "react";
-import ServicesGrid from "@/components/services/ServicesGrid";
-import ServicesFooter from "@/components/services/ServicesFooter";
-import OurApproach from "@/components/services/OurApproach";
-import Slider from "@/components/Slider";
+"use client"
 
-const KeyBenefitsCards = [
-  {
-    title: "Accurate Financial Reporting",
-    description:
-      "Ensures that inventory is accurately valued, improving the accuracy of financial statements, reports, and overall decision-making.",
-  },
-  {
-    title: "Optimized Inventory Levels",
-    description:
-      "Helps businesses maintain optimal inventory levels, reducing holding costs while ensuring products are always readily available when needed.",
-  },
-  {
-    title: "Cost Control",
-    description:
-      "Helps identify and manage inventory-related costs, such as storage, insurance, and obsolescence, allowing businesses to control expenses more effectively.",
-  },
-  {
-    title: "Improved Cash Flow",
-    description:
-      "Reduces capital tied up in excess inventory and helps businesses free up cash for other operational needs and strategic growth opportunities.",
-  },
-  {
-    title: "Compliance with Accounting Standards",
-    description:
-      "Ensures that inventory is accounted for in compliance with generally accepted accounting principles (GAAP) or international financial reporting standards (IFRS).",
-  },
-  {
-    title: "Enhanced Decision-Making",
-    description:
-      "Provides key insights into stock levels, turnover rates, and product margins, enabling businesses to make better procurement, sales, and pricing decisions.",
-  },
-];
-
-const CoreComponentsCards = [
-  {
-    title: "Inventory Valuation Methods",
-    description:
-      "Employing valuation methods like FIFO, LIFO, or weighted average cost to value inventory accurately.",
-  },
-  {
-    title: "Inventory Tracking",
-    description:
-      "Utilizing systems to track inventory movements, including purchases, sales, and adjustments, to ensure accurate records.",
-  },
-  {
-    title: "Cost of Goods Sold (COGS) Calculation",
-    description:
-      "Determining the cost of goods sold based on the inventory valuation method, helping businesses calculate profitability accurately.",
-  },
-  {
-    title: "Inventory Reconciliation",
-    description:
-      "Regularly reconciling physical inventory with accounting records to identify discrepancies and ensure inventory records are accurate.",
-  },
-  {
-    title: "Stock Turnover Ratio Analysis",
-    description:
-      "Analyzing how quickly inventory is sold and replaced to assess inventory management efficiency and identify slow-moving stock.",
-  },
-  {
-    title: "Inventory Write-offs and Adjustments",
-    description:
-      "Managing inventory obsolescence, shrinkage, and write-offs by adjusting inventory levels for damaged or unsellable goods.",
-  },
-];
-
-const WhyYouNeedCards = [
-  {
-    title: "Accurate Financial Reporting",
-    description:
-      "Ensures inventory values are reflected in financial statements, providing stakeholders with a true picture of the business.",
-  },
-  {
-    title: "Optimized Stock Management",
-    description:
-      "Prevents overstocking and understocking, reducing holding costs and lost sales opportunities.",
-  },
-  {
-    title: "Cost Control",
-    description:
-      "Helps businesses identify inefficiencies and manage inventory-related expenses more effectively.",
-  },
-  {
-    title: "Informed Business Decisions",
-    description:
-      "Provides critical data to inform strategic decisions on pricing, procurement, and sales strategies.",
-  },
-];
-
-const OurApproachCards = [
-  {
-    heading: "Tailored Inventory Systems",
-    description:
-      "We assess your inventory needs and implement systems that track and value inventory in a way that aligns with your business model.",
-  },
-  {
-    heading: "Comprehensive Reporting",
-    description:
-      "We provide detailed inventory reports and analysis, helping you make data-driven decisions and optimize your inventory management practices.",
-  },
-  {
-    heading: "Ongoing Monitoring and Adjustments",
-    description:
-      "We offer continuous support to monitor inventory levels and reconcile records, ensuring that your inventory accounting remains accurate and up-to-date.",
-  },
-];
+import {
+  Package,
+  BarChart,
+  ArrowRight,
+  Phone,
+  AlertTriangle,
+  BrainCircuit,
+  Shield,
+  LineChart,
+  ClipboardList,
+  Layers,
+  Scale,
+  TrendingUp,
+  DollarSign,
+} from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
 
 export default function InventoryAccounting() {
   return (
-    <main>
-      <Slider
-        images={["/consultation/consultation1.jpg"]}
-        title="Financial Clarity"
-        description="Simplifying Your Finances, Amplifying Your Growth."
-      />
+    <div className="min-h-screen bg-white">
+      <div className="h-16 md:h-20"></div>
+      <main className="container mx-auto px-4 max-w-7xl">
+        {/* Hero Section */}
+        <section className="pt-32 pb-16">
+          <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Inventory Accounting</h1>
+            <p className="text-lg text-gray-600">
+              Inventory Accounting provides accurate valuation, tracking, and optimization of your inventory investment.
+              Our methodical approach ensures compliance with accounting standards while delivering strategic insights
+              to balance inventory levels with business needs and financial objectives.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+              <Button size="lg" className="bg-[#FFB800] hover:bg-[#FFB800]/90 text-black gap-2">
+                Get Started
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+              <Button variant="outline" size="lg" className="border-[#FFB800] text-black hover:bg-[#FFB800]/10 gap-2">
+                <Phone className="h-4 w-4" />
+                Call (555) 123-4567
+              </Button>
+            </div>
+          </div>
+        </section>
 
-      <article className="overflow-hidden mb-[80px] md:mb-[120px] lg:mb-[160px] xl:mb-[210px] mx-8 sm:mx-20 lg:mx-auto p-[40px_0_60px] md:p-[60px_0_80px] lg:p-[100px_0_120px] xl:p-[150px_0_200px]">
-        <div className="flex flex-col mst-7 dsm:mts-[150px] mx-auto overflow-hidden lg:flex-row lg:justify-between">
-          <section className="w-full">
-            <div className="lg:max-w-[1100px] mx-auto container">
-              <div className="flex flex-col lg:flex-row">
-                <div className="w-full order-1 mx-auto lg:order-none">
-                  <h2 className="text-2xl lg:text-3xl lg:mst-12 mb-[35px] lg:mb-[66px] font-bold text-black">
-                    Inventory Accounting
-                  </h2>
+        {/* Services Section */}
+        <section className="py-12">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Our Inventory Accounting Services</h2>
+            <p className="text-gray-600">
+              We offer comprehensive inventory accounting solutions tailored to your business needs.
+            </p>
+          </div>
 
-                  <div className="text-sm text-gray-500 lg:text-base">
-                    <p className="mt-[15px] lg:mt-[26px]">
-                      Inventory Accounting is the process of tracking and
-                      managing a company&apos;s inventory, including raw
-                      materials, work-in-progress, and finished goods. Proper
-                      inventory accounting ensures accurate financial reporting,
-                      optimizes stock levels, and helps businesses avoid
-                      overstocking or stockouts. This service provides a
-                      systematic approach to valuing and accounting for
-                      inventory, ensuring compliance with financial reporting
-                      standards and improving overall operational efficiency.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Scale className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Inventory Valuation Method Assessment</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Analysis of FIFO, LIFO, weighted average, and specific identification methodologies to determine
+                  optimal approaches.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Package className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Costing System Implementation</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Development of perpetual or periodic inventory systems aligned with your operational requirements.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <ClipboardList className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Physical Count Procedures</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Design of efficient counting methodologies with reconciliation to book records.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <AlertTriangle className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Obsolescence Evaluation</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Systematic assessment of slow-moving or obsolete inventory with appropriate reserve calculations.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <TrendingUp className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">Inventory Turnover Analysis</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Calculation and interpretation of turnover metrics with strategies for improvement.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-all border-[#FFB800]/20">
+              <CardHeader>
+                <Layers className="h-8 w-8 text-[#FFB800] mb-2" />
+                <CardTitle className="text-gray-900">ERP System Integration</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Alignment of accounting methodologies with inventory management systems.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-12 bg-muted/30 rounded-lg p-8">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Benefits of Our Services</h2>
+            <p className="text-muted-foreground">
+              Experience these advantages when you choose our inventory accounting services.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Shield className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Accurate Financial Reporting</h3>
+                <p className="text-muted-foreground">
+                  Accurate financial reporting and tax compliance for your inventory assets.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <DollarSign className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Reduced Carrying Costs</h3>
+                <p className="text-muted-foreground">Reduced carrying costs through improved inventory management.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <Package className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Prevention of Stockouts</h3>
+                <p className="text-muted-foreground">
+                  Prevention of stockouts and excess inventory situations through better tracking.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <LineChart className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Enhanced Gross Margin</h3>
+                <p className="text-muted-foreground">Enhanced gross margin through strategic inventory control.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <BarChart className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Improved Working Capital</h3>
+                <p className="text-muted-foreground">
+                  Improved working capital efficiency and cash flow through optimized inventory levels.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-5">
+              <div className="flex-shrink-0">
+                <div className="h-14 w-14 rounded-full bg-[#fbc710]/10 flex items-center justify-center">
+                  <BrainCircuit className="h-8 w-8 text-[#fbc710]" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Better-Informed Decisions</h3>
+                <p className="text-muted-foreground">
+                  Better-informed purchasing, production, and sales decisions based on accurate inventory data.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Methodology Section */}
+        <section className="py-16">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Inventory Approach</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Our inventory specialists combine accounting expertise with operational understanding to deliver inventory
+              accounting solutions that balance compliance requirements with practical business needs.
+            </p>
+          </div>
+
+          <div className="relative max-w-6xl mx-auto px-4">
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#FFB800] -translate-x-1/2"></div>
+
+            <div className="space-y-16 relative">
+              {/* Analysis Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="lg:text-right mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">01</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Inventory Assessment</h3>
+                    <p className="text-gray-600 text-lg">
+                      Comprehensive evaluation of your current inventory accounting methods, systems, and controls.
                     </p>
                   </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
 
-                  <ServicesGrid
-                    title="Key Benefits"
-                    gridCards={KeyBenefitsCards}
-                  />
+              {/* Strategic Alignment Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="hidden lg:block"></div>
+                <div className="lg:text-left mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">02</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Method Selection & Design</h3>
+                    <p className="text-gray-600 text-lg">
+                      Selection and design of optimal inventory accounting methodologies aligned with your business
+                      model and reporting requirements.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-                  <ServicesGrid
-                    title="Our Core Components"
-                    gridCards={CoreComponentsCards}
-                  />
+              {/* Forecast Development Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="lg:text-right mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute right-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">03</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Implementation & Integration</h3>
+                    <p className="text-gray-600 text-lg">
+                      Systematic deployment of inventory accounting systems with integration to your existing financial
+                      and operational platforms.
+                    </p>
+                  </div>
+                </div>
+                <div className="hidden lg:block"></div>
+              </div>
 
-                  <ServicesGrid
-                    title="Why You Need Inventory Accounting"
-                    gridCards={WhyYouNeedCards}
-                  />
-
-                  <OurApproach
-                    title="Our Approach"
-                    ourApproach={OurApproachCards}
-                  />
-
-                  <ServicesFooter
-                    href="/services/bookkeeping"
-                    service="Bookkeeping Services"
-                    text="We are here to address any questions you may have as you implement your plan. Additionally, for clients seeking an ongoing partnership, we provide comprehensive"
-                  />
+              {/* Implementation Step */}
+              <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center group">
+                <div className="hidden lg:block"></div>
+                <div className="lg:text-left mb-8 lg:mb-0 relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#FFB800] transform transition-transform duration-300 hover:-translate-y-2">
+                    <div className="absolute left-0 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-x-1/2 -translate-y-1/2 lg:block hidden"></div>
+                    <span className="inline-block text-[#FFB800] text-4xl font-bold mb-4">04</span>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">Ongoing Optimization</h3>
+                    <p className="text-gray-600 text-lg">
+                      Continuous monitoring and refinement of inventory accounting practices to improve accuracy,
+                      efficiency, and strategic value.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </section>
-        </div>
-      </article>
-    </main>
-  );
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 md:py-20 bg-[#fbc710] text-black w-full">
+          <div className="max-w-3xl mx-auto text-center space-y-6 px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+              Is your inventory tying up too much capital?
+            </h2>
+            <p className="text-lg text-black/90 max-w-2xl mx-auto">
+              Contact Accounting Zone to discuss how our Inventory Accounting services can help optimize your inventory
+              investment while ensuring accurate financial reporting.
+            </p>
+            <Button size="lg" variant="secondary" className="group bg-black text-white hover:bg-black/90">
+              Request Inventory Efficiency Assessment
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="py-8 mt-12">
+          <Separator className="mb-8 bg-[#FFB800]/20" />
+          <div className="text-center text-sm text-gray-600">
+            <p>© {new Date().getFullYear()} AccountingZone. All rights reserved.</p>
+            <p className="mt-2">
+              123 Financial District, New York, NY 10001 | (555) 123-4567 | info@accountingzone.com
+            </p>
+          </div>
+        </footer>
+      </main>
+    </div>
+  )
 }
