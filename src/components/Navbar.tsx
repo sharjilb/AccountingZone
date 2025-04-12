@@ -203,7 +203,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/accounts-payable-receivable-reconciliation"
+                    href="/services/records/accounts-payable-receivable-reconciliation"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Receivable Reconciliation
@@ -211,7 +211,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/cloud-based-bookkeeping"
+                    href="/services/records/cloud-based-bookkeeping"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Cloud Bookkeeping
@@ -219,7 +219,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/real-time-financial-reporting"
+                    href="/services/records/real-time-financial-reporting"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Financial Reporting
@@ -227,7 +227,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/expense-tracking-management"
+                    href="/services/records/expense-tracking-management"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Expense Tracking
@@ -235,7 +235,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/fixed-asset-management"
+                    href="/services/records/fixed-asset-management"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Asset Management
@@ -243,7 +243,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/audit-ready-documentation"
+                    href="/services/records/audit-ready-documentation"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Audit Documentation
@@ -251,7 +251,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/accounting-software-integration"
+                    href="/services/records/accounting-software-integration"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Software Integration
@@ -259,7 +259,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/historical-bookkeeping-cleanup"
+                    href="/services/records/historical-bookkeeping-cleanup"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Bookkeeping Cleanup
@@ -272,7 +272,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning/capital-gains-tax-planning"
+                    href="/services/tax/capital-gains-tax-planning"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Capital Gains
@@ -280,7 +280,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning/tax-saving-strategies-for-startups"
+                    href="/services/tax/tax-saving-strategies"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Startup Strategies
@@ -288,7 +288,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning/charitable-contributions-tax-optimization"
+                    href="/services/tax/charitable-contributions-tax-optimization"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Charitable Optimization
@@ -296,7 +296,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning/cryptocurrency-tax-reporting"
+                    href="/services/tax/cryptocurrency-tax-reporting"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Crypto Reporting
@@ -304,7 +304,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning/payroll-tax-calculation-and-filing"
+                    href="/services/tax/payroll-tax-calculation"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Payroll Filing
@@ -312,7 +312,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning/quarterly-tax-estimates-and-payments"
+                    href="/services/tax/quarterly-tax-estimates"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Tax Estimates
@@ -320,7 +320,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning/post-tax-consultation-and-review"
+                    href="/services/tax/post-tax-season-consultation"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Post-Consultation
@@ -328,7 +328,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning/estate-and-inheritance-tax-planning"
+                    href="/services/tax/estate-inheritance-tax-planning"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Estate Planning
@@ -533,7 +533,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/consumer-services"
+                      href="/industries/retail/retail-wholesale"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Retail and Wholesale
@@ -541,7 +541,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/consumer-services"
+                      href="/industries/retail/hospitality"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Hospitality
@@ -549,7 +549,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/consumer-services"
+                      href="/industries/retail/ecommerce"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       E-commerce and Online Retailers
