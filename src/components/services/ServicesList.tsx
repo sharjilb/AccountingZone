@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import { urlFor } from '@/sanity/lib/image'
 
 interface Service {
@@ -49,11 +50,13 @@ export default function ServicesList() {
       {services.map((service) => (
         <div key={service.slug.current} className="card p-4 rounded-lg shadow-md">
           {service.imageUrl && (
-            <img
-              src={urlFor(service.imageUrl).width(400).url()}
-              alt={service.title}
-              className="w-full h-48 object-cover rounded-md"
-            />
+            <Image
+            src={urlFor(service.imageUrl).width(400).url()}
+            alt={service.title}
+            fill
+            className="object-cover rounded-md"
+            sizes="(max-width: 768px) 100vw, 33vw"
+          />
           )}
           <h3 className="text-xl font-bold mt-4">{service.title}</h3>
           <p className="text-gray-600 mt-2">{service.description}</p>

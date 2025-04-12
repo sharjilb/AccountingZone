@@ -515,7 +515,7 @@ export default function Navbar() {
                       href="/industries/financial-and-legal-services/asset-management-and-hedge-funds-legal-firms"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
-                      Asset Management and Hedge Funds Legal Firms
+                      Asset Mgt and Hedge Funds Legal Firms
                     </Link>
                   </li>
                   <li>
@@ -529,7 +529,7 @@ export default function Navbar() {
                 </div>
                 <div className="space-y-3">
                   <li className="font-bold text-sm text-[#fbc710]">
-                    Retail, Hospitality, and Consumer Services
+                    Retail, Hospitality, and Services
                   </li>
                   <li>
                     <Link
@@ -564,7 +564,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/government-and-public-sector"
+                      href="/industries/government-and-public-sector/government-agencies"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Government Agencies
@@ -572,7 +572,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/government-and-public-sector"
+                      href="/industries/government-and-public-sector/public-enterprises"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Public Enterprises
@@ -580,7 +580,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/government-and-public-sector"
+                      href="/industries/government-and-public-sector/publicly-listed-companies"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Publicly Listed Companies
@@ -593,7 +593,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/technology-and-start-ups"
+                      href="/industries/technology-and-start-ups/technology-and-startups"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Technology and Start-Ups
@@ -601,7 +601,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/technology-and-start-ups"
+                      href="/industries/technology-and-start-ups/engineering-and-it-consulting"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Engineering and IT Consulting
@@ -609,7 +609,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/technology-and-start-ups"
+                      href="/industries/technology-and-start-ups/cryptocurrency-and-blockchain"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Cryptocurrency and Blockchain Companies
@@ -620,11 +620,11 @@ export default function Navbar() {
               <div className="space-y-4 px-4">
                 <div className="space-y-3">
                   <li className="font-bold text-sm text-[#fbc710]">
-                    Non-Profit and Philanthropic Organizations
+                    Philanthropic Organizations
                   </li>
                   <li>
                     <Link
-                      href="/industries/non-profit-and-philanthropic-organizations"
+                      href="/industries/non-profit-and-philanthropic-organizations/non-profit-organizations"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Non-Profit Organizations
@@ -632,7 +632,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/non-profit-and-philanthropic-organizations"
+                      href="/industries/non-profit-and-philanthropic-organizations/charities-and-philanthropic-entities"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Charities and Philanthropic Entities
@@ -640,7 +640,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/non-profit-and-philanthropic-organizations"
+                      href="/industries/non-profit-and-philanthropic-organizations/religious-institutions"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Religious Institutions
@@ -649,11 +649,11 @@ export default function Navbar() {
                 </div>
                 <div className="space-y-3">
                   <li className="font-bold text-sm text-[#fbc710]">
-                    Healthcare, Education, and Professional Services
+                    Professional Services
                   </li>
                   <li>
                     <Link
-                      href="/industries/healthcare-education-and-professional-services"
+                      href="/industries/healthcare-education-and-professional-services/healthcare"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Healthcare
@@ -661,7 +661,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/healthcare-education-and-professional-services"
+                      href="/industries/healthcare-education-and-professional-services/education"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Education
@@ -669,7 +669,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/healthcare-education-and-professional-services"
+                      href="/industries/healthcare-education-and-professional-services/professional-services"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Professional Services
@@ -680,11 +680,11 @@ export default function Navbar() {
               <div className="space-y-4 px-4">
                 <div className="space-y-3">
                   <li className="font-bold text-sm text-[#fbc710]">
-                    Manufacturing, Construction, and Real Estate
+                    Real Estate industury
                   </li>
                   <li>
                     <Link
-                      href="/industries/manufacturing-construction-and-real-estate"
+                      href="/industries/manufacturing-construction-and-real-estate/manufacturing"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Manufacturing
@@ -692,7 +692,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/manufacturing-construction-and-real-estate"
+                      href="/industries/manufacturing-construction-and-real-estate/construction"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Construction
@@ -700,7 +700,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/manufacturing-construction-and-real-estate"
+                      href="/industries/manufacturing-construction-and-real-estate/real-estate"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Real Estate
@@ -709,11 +709,11 @@ export default function Navbar() {
                 </div>
                 <div className="space-y-3">
                   <li className="font-bold text-sm text-[#fbc710]">
-                    Energy, Environment, and Sustainability
+                    Environmental Industry
                   </li>
                   <li>
                     <Link
-                      href="/industries/energy-environment-and-sustainability"
+                      href="/industries/energy-environment-and-sustainability/energy-sector"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Energy Sector
@@ -721,7 +721,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/energy-environment-and-sustainability"
+                      href="/industries/energy-environment-and-sustainability/environmental"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Environmental and Sustainable Organizations
@@ -729,7 +729,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/energy-environment-and-sustainability"
+                      href="/industries/energy-environment-and-sustainability/cicular-economy"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Circular Economy Strategies
@@ -764,9 +764,9 @@ export default function Navbar() {
               <div className="space-y-3 px-4">
                 <li>
                   <Link
-                    href="/features"
+                    href="/features/tax-preparation-software"
                     className={`hover:text-[#fbc710] transition-colors ${
-                      pathname === "/features/smart-questionnaires"
+                      pathname === "/features/tax-preparation-software"
                         ? "text-[#fbc710]"
                         : "text-black"
                     }`}
@@ -780,7 +780,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/features"
+                    href="/features/scenario-modeling-software"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Scenario Modeling Software
@@ -792,7 +792,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/features"
+                    href="/features/tax-optimization-software"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Tax Optimization Software
@@ -806,7 +806,7 @@ export default function Navbar() {
               <div className="space-y-3 px-4">
                 <li>
                   <Link
-                    href="/features"
+                    href="/features/withholding-tax-calculators"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Withholding Tax Calculators
@@ -818,7 +818,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/features"
+                    href="/features/document-management-software"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Document Management Software
@@ -830,7 +830,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/features"
+                    href="/features/cross-border-tax-compliance-tools"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Cross-Border Tax Compliance Tools
@@ -844,7 +844,7 @@ export default function Navbar() {
               <div className="space-y-3 px-4">
                 <li>
                   <Link
-                    href="/features"
+                    href="/features/tax-dashboards"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Tax Dashboards
@@ -856,7 +856,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/features"
+                    href="/features/audit-trail-tools"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Audit Trail Tools
@@ -868,7 +868,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/features"
+                    href="/features/client-portal-solutions"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Client Portal Solutions
@@ -882,7 +882,7 @@ export default function Navbar() {
               <div className="space-y-3 px-4">
                 <li>
                   <Link
-                    href="/features"
+                    href="/features/payroll-tax-management-software"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Payroll Tax Management Software
@@ -894,7 +894,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/features"
+                    href="/features/industry-specific-tax-solutions"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Industry-Specific Tax Solutions
@@ -906,7 +906,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/features"
+                    href="/features/tax-filing-payment-platforms"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Tax Filing and Payment Platforms
@@ -954,14 +954,13 @@ export default function Navbar() {
                     <span>Compliance</span>
                     <p className="text-xs text-gray-500">
                       Ensuring adherence to local, national, and international
-                      tax regulations is critical for avoiding penalties and
-                      fostering trust with stakeholders.
+                      tax regulations is critical for avoiding penalties with stakeholders.
                     </p>
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/insights//tax-insights"
+                    href="/insights/tax-insights"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Strategic Planning
@@ -1003,8 +1002,7 @@ export default function Navbar() {
                   >
                     Globalization
                     <p className="text-xs text-gray-500">
-                      Cross-border taxation and regulatory requirements (e.g.,
-                      VAT, GST, and digital service taxes) are increasingly
+                      Cross-border taxation and regulatory requirements are increasingly
                       relevant for businesses operating globally.
                     </p>
                   </Link>
@@ -1022,7 +1020,7 @@ export default function Navbar() {
                     Holistic Financial View
                     <p className="text-xs text-gray-500">
                       Accounting provides an overarching view of an
-                      organization&apos;s financial health, aiding stakeholders
+                      organizations financial, aiding stakeholders
                       in making informed decisions.
                     </p>
                   </Link>
@@ -1059,7 +1057,7 @@ export default function Navbar() {
                     Technology Integration
                     <p className="text-xs text-gray-500">
                       Cloud accounting platforms and ERP systems have
-                      revolutionized financial reporting, making data accessible
+                      revolutionized reporting, making data accessible
                       in real time.
                     </p>
                   </Link>
@@ -1072,7 +1070,7 @@ export default function Navbar() {
                     Decision Support
                     <p className="text-xs text-gray-500">
                       Beyond numbers, accounting insights drive strategies like
-                      cost optimization, revenue diversification, and investment
+                      cost optimization, revenue, and investment
                       analysis.
                     </p>
                   </Link>
@@ -1170,11 +1168,11 @@ export default function Navbar() {
               <div className="space-y-4 px-4">
                 <div className="space-y-2">
                   <li className="font-bold text-sm text-[#fbc710]">
-                    Resources
+                  INFORMATION AND REFERENCE
                   </li>
                   <li>
                     <Link
-                      href="/resources/glossary"
+                      href="/resources/information-and-reference/glossary"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Glossary
@@ -1182,18 +1180,42 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/resources/blog"
+                      href="/resources/information-and-reference/state-tax-deadlines"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
-                      Blog
+                      State Tax Deadlines
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/resources/faq"
+                      href="/resources/information-and-reference/federal-tax-deadlines"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
-                      FAQ
+                      Federal Tax Deadlines
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/information-and-reference/tax-law-updates"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Tax Law Updates
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/information-and-reference/knowledge-base"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Knowledge Base
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/information-and-reference/regulatory-faqs"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Regulatory FAQs
                     </Link>
                   </li>
                 </div>
@@ -1201,22 +1223,54 @@ export default function Navbar() {
               <div className="space-y-4 px-4">
                 <div className="space-y-2">
                   <li className="font-bold text-sm text-[#fbc710]">
-                    Tax Resources
+                    SUPPORT AND COMMUNITY
                   </li>
                   <li>
                     <Link
-                      href="/resources/tax-guide"
+                      href="/resources/support-and-community/support-center"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
-                      Tax Guide
+                      Support
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/resources"
+                      href="/resources/support-and-community/faqs"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
-                      Tax Resources
+                      FAQs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/support-and-community/chat-email-support"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Chat or Email Support
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/support-and-community/community-forum"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Community Forum
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/support-and-community/troubleshooting-guides"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Troubleshooting Guides
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/support-and-community/customer-feedback"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Customer Feedback Portal
                     </Link>
                   </li>
                 </div>
@@ -1224,22 +1278,219 @@ export default function Navbar() {
               <div className="space-y-4 px-4">
                 <div className="space-y-2">
                   <li className="font-bold text-sm text-[#fbc710]">
-                    Support
+                  TOOLS AND TEMPLATES
                   </li>
                   <li>
                     <Link
-                      href="/resources/faq"
+                      href="/resources/tools-and-templates/tax-calculator"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
-                      Help Center
+                      Tax Calculator Tools
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/resources/blog"
+                      href="/resources/tools-and-templates/compliance-checklists"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
-                      Latest Updates
+                      Compliance Checklists
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/tools-and-templates/templates-and-forms"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Templates and Forms
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/tools-and-templates/tax-filing-assistance"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Tax Filing Assistance Tools
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/tools-and-templates/budgeting-planning-templates"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Budgeting and Planning Templates
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/tools-and-templates/real-time-reporting"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Real-Time Reporting Tools
+                    </Link>
+                  </li>
+                </div>
+              </div>
+              <div className="space-y-4 py-4 px-4">
+                <div className="space-y-2">
+                  <li className="font-bold text-sm text-[#fbc710]">
+                  TECHNOLOGY AND INTEGRATION
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/technology-and-integration/security"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Security
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/technology-and-/mobile-app-integration"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Mobile App Integration
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/technology-and-integration/cloud-based-document-storage"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Cloud-Based Document Storage
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/technology-and-integration/software-integration-guides"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Software Integration Guides
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/technology-and-integration/automation-tools"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Automation Tools for Bookkeeping
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/technology-and-integration/multi-device-syncing"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Multi-Device Syncing
+                    </Link>
+                  </li>
+                </div>
+              </div>
+              <div className="space-y-4 py-4 px-4">
+                <div className="space-y-2">
+                  <li className="font-bold text-sm text-[#fbc710]">
+                  EDUCATION AND LEARNING
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/education-and-learning/educational-webinars"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Educational Webinars
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/education-and-learning/interactive-guides"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Interactive Guides
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/education-and-/case-studies"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Case Studies
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/education-and-/online-courses"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Online Courses on Tax and Accounting
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/education-and-learning/e-books"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      E-books on Financial Management
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/education-and-learning/software-tutorials"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Tutorials for Software Use
+                    </Link>
+                  </li>
+                </div>
+              </div>
+              <div className="space-y-4 py-4 px-4">
+                <div className="space-y-2">
+                  <li className="font-bold text-sm text-[#fbc710]">
+                  INDUSTRY-SPECIFIC RESOURCES
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/industry-specific-resouces/resources-real-estate"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Resources for Real Estate
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/industry-specific-resouces/resources-healthcare"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Resources for Healthcare
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/industry-specific-resouces/resources-ecommerce"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Resources for E-commerce
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/industry-specific-/resources-manufacturing"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Resources for Manufacturing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/industry-specific-resouces/resources-non-profit"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Resources for Non-Profit Organizations
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/industry-specific-resouces/resources-startups"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Resources for Startups
                     </Link>
                   </li>
                 </div>

@@ -1,4 +1,6 @@
-export default {
+import type { Rule } from '@sanity/types'
+
+const serviceSchema = {
   name: 'service',
   title: 'Service',
   type: 'document',
@@ -7,7 +9,7 @@ export default {
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: (Rule: any) => Rule.required(),
+      validation: (Rule: Rule) => Rule.required(),
     },
     {
       name: 'slug',
@@ -17,7 +19,7 @@ export default {
         source: 'title',
         maxLength: 96,
       },
-      validation: (Rule: any) => Rule.required(),
+      validation: (Rule: Rule) => Rule.required(),
     },
     {
       name: 'description',
@@ -39,4 +41,6 @@ export default {
       of: [{ type: 'block' }],
     },
   ],
-} 
+}
+
+export default serviceSchema

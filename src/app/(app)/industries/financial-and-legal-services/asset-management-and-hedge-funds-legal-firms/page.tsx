@@ -434,9 +434,9 @@ export default function AssetManagementAndHedgeFundsLegalFirms() {
                   <CardContent className="pt-8 pb-8 px-6 md:px-8">
                     <div className="flex flex-col items-center text-center">
                       <blockquote className="border-l-4 border-[#fbc710] pl-6 py-2 italic bg-[#fbc710]/5 rounded-r-md">
-                        &quot;What sets Accounting Zone apart is their ability to translate complex fund structures and
+                        What sets Accounting Zone apart is their ability to translate complex fund structures and
                         investment strategies into clear, accurate financial reporting. Their team anticipates our
-                        auditors' questions before they arise, making our annual audit process remarkably smooth for a
+                        auditors&apos; questions before they arise, making our annual audit process remarkably smooth for a
                         fund with our complexity.&quot;
                       </blockquote>
                       <div className="mt-4">
@@ -617,10 +617,10 @@ export default function AssetManagementAndHedgeFundsLegalFirms() {
                   <CardContent className="pt-8 pb-8 px-6 md:px-8">
                     <div className="flex flex-col items-center text-center">
                       <blockquote className="border-l-4 border-[#fbc710] pl-6 py-2 italic bg-[#fbc710]/5 rounded-r-md">
-                        &quot;Beyond the exceptional trust accounting services they provide, Accounting Zone has
-                        transformed how we understand our firm's economics. Their matter profitability reporting has
+                        Beyond the exceptional trust accounting services they provide, Accounting Zone has
+                        transformed how we understand our firm&apos;s economics. Their matter profitability reporting has
                         influenced how we staff cases and structure fee arrangements, directly improving our bottom
-                        line.&quot;
+                        line.
                       </blockquote>
                       <div className="mt-4">
                         <p className="font-semibold">Managing Partner</p>

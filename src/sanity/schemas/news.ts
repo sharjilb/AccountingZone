@@ -1,4 +1,6 @@
-export default {
+import type { Rule } from '@sanity/types'
+
+const newsSchema = {
   name: 'news',
   title: 'News',
   type: 'document',
@@ -7,7 +9,7 @@ export default {
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: (Rule: any) => Rule.required(),
+      validation: (Rule: Rule) => Rule.required(),
     },
     {
       name: 'slug',
@@ -17,13 +19,13 @@ export default {
         source: 'title',
         maxLength: 96,
       },
-      validation: (Rule: any) => Rule.required(),
+      validation: (Rule: Rule) => Rule.required(),
     },
     {
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
-      validation: (Rule: any) => Rule.required(),
+      validation: (Rule: Rule) => Rule.required(),
     },
     {
       name: 'image',
@@ -40,4 +42,6 @@ export default {
       of: [{ type: 'block' }],
     },
   ],
-} 
+}
+
+export default newsSchema

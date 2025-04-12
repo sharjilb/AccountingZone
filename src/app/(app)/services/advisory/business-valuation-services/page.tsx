@@ -1,22 +1,21 @@
 "use client"
 
 import {
-  DollarSign,
   TrendingUp,
   ArrowRight,
   Phone,
-  BrainCircuit,
-  Shield,
   Target,
-  Scale,
-  Building,
+  BrainCircuit,
   Briefcase,
   FileSpreadsheet,
+  DollarSign,
+  Scale,
+  Building,
+  Shield,
   Calculator,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
 
 export default function BusinessValuationServices() {
   return (
@@ -322,7 +321,7 @@ export default function BusinessValuationServices() {
 
         {/* Footer */}
         <footer className="py-8 mt-12">
-          <Separator className="mb-8 bg-[#FFB800]/20" />
+          {/* <Separator className="mb-8 bg-[#FFB800]/20" /> */}
           <div className="text-center text-sm text-gray-600">
             <p>© {new Date().getFullYear()} AccountingZone. All rights reserved.</p>
             <p className="mt-2">

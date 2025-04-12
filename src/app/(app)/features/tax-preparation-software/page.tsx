@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -23,21 +25,24 @@ import {
   LineChart,
   ClipboardCheck,
   CheckCircle,
+  ArrowRight,
 } from "lucide-react"
 
-export default function HomePage() {
+export default function TaxPreparationSoftware() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="w-full py-16 md:py-24 bg-blue-50">
+      <section className="w-full py-16 md:py-24 bg-gradient-to-b from-muted/50 to-background">
         <div className="container px-4 md:px-6 mx-auto max-w-6xl">
           <div className="text-center space-y-4 mb-10">
-            <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-800">
+            <div className="inline-block rounded-lg bg-[#fbc710] px-3 py-1 text-sm text-black">
               In Collaboration with Prime Logic Solutions USA
             </div>
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">TAX PREPARATION SOFTWARE</h1>
-            <p className="mx-auto max-w-[800px] text-gray-600 md:text-xl">STREAMLINING YOUR TAX COMPLIANCE JOURNEY</p>
-            <p className="mx-auto max-w-[800px] text-gray-600">
+            <p className="mx-auto max-w-[800px] text-muted-foreground md:text-xl">
+              STREAMLINING YOUR TAX COMPLIANCE JOURNEY
+            </p>
+            <p className="mx-auto max-w-[800px] text-muted-foreground">
               Accounting Zone partners with Prime Logic Solutions USA to deliver powerful tax preparation software
               solutions that automate complex calculations, ensure compliance, and maximize deductions for businesses
               and individuals alike.
@@ -47,7 +52,7 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="w-full py-16 md:py-20 bg-white">
+      <section className="w-full py-16 md:py-20 bg-gradient-to-b from-background to-muted/20">
         <div className="container px-4 md:px-6 mx-auto max-w-6xl">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -56,45 +61,53 @@ export default function HomePage() {
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <div className="flex items-start gap-2">
-              <Shield className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+              <Shield className="h-6 w-6 text-[#fbc710] flex-shrink-0 mt-1" />
               <div>
                 <h3 className="font-bold">Accuracy Guaranteed</h3>
-                <p className="text-gray-600">Advanced algorithms and continuous tax code updates minimize errors</p>
+                <p className="text-muted-foreground">
+                  Advanced algorithms and continuous tax code updates minimize errors
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-2">
-              <Clock className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+              <Clock className="h-6 w-6 text-[#fbc710] flex-shrink-0 mt-1" />
               <div>
                 <h3 className="font-bold">Time-Saving Automation</h3>
-                <p className="text-gray-600">Reduce preparation time by up to 75% compared to manual methods</p>
+                <p className="text-muted-foreground">Reduce preparation time by up to 75% compared to manual methods</p>
               </div>
             </div>
             <div className="flex items-start gap-2">
-              <Search className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+              <Search className="h-6 w-6 text-[#fbc710] flex-shrink-0 mt-1" />
               <div>
                 <h3 className="font-bold">Maximum Deduction Discovery</h3>
-                <p className="text-gray-600">Intelligent systems identify often-overlooked tax-saving opportunities</p>
+                <p className="text-muted-foreground">
+                  Intelligent systems identify often-overlooked tax-saving opportunities
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-2">
-              <FileCheck className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+              <FileCheck className="h-6 w-6 text-[#fbc710] flex-shrink-0 mt-1" />
               <div>
                 <h3 className="font-bold">Audit Protection</h3>
-                <p className="text-gray-600">Built-in review tools flag potential audit triggers before filing</p>
+                <p className="text-muted-foreground">
+                  Built-in review tools flag potential audit triggers before filing
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-2">
-              <Link2 className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+              <Link2 className="h-6 w-6 text-[#fbc710] flex-shrink-0 mt-1" />
               <div>
                 <h3 className="font-bold">Seamless Integration</h3>
-                <p className="text-gray-600">Connect directly with your existing accounting and financial systems</p>
+                <p className="text-muted-foreground">
+                  Connect directly with your existing accounting and financial systems
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-2">
-              <Cloud className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+              <Cloud className="h-6 w-6 text-[#fbc710] flex-shrink-0 mt-1" />
               <div>
                 <h3 className="font-bold">Secure Cloud Access</h3>
-                <p className="text-gray-600">
+                <p className="text-muted-foreground">
                   Access your tax information securely from anywhere, anytime, on any device
                 </p>
               </div>
@@ -104,16 +117,31 @@ export default function HomePage() {
       </section>
 
       {/* Solutions Section */}
-      <section className="w-full py-16 md:py-20 bg-gray-50">
+      <section className="w-full py-16 md:py-20 bg-muted/30">
         <div className="container px-4 md:px-6 mx-auto max-w-6xl">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">COMPREHENSIVE SOLUTIONS FOR EVERY NEED</h2>
           </div>
           <Tabs defaultValue="individuals" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-8">
-              <TabsTrigger value="individuals">For Individuals</TabsTrigger>
-              <TabsTrigger value="small-business">For Small Businesses</TabsTrigger>
-              <TabsTrigger value="enterprise">For Enterprise</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-3 mb-8 bg-[#fbc710]/10 text-black">
+              <TabsTrigger
+                value="individuals"
+                className="data-[state=active]:bg-[#fbc710] data-[state=active]:text-black"
+              >
+                For Individuals
+              </TabsTrigger>
+              <TabsTrigger
+                value="small-business"
+                className="data-[state=active]:bg-[#fbc710] data-[state=active]:text-black"
+              >
+                For Small Businesses
+              </TabsTrigger>
+              <TabsTrigger
+                value="enterprise"
+                className="data-[state=active]:bg-[#fbc710] data-[state=active]:text-black"
+              >
+                For Enterprise
+              </TabsTrigger>
             </TabsList>
             <TabsContent value="individuals">
               <Card>
@@ -124,28 +152,28 @@ export default function HomePage() {
                   <div className="grid gap-4 md:grid-cols-2">
                     <div className="space-y-4">
                       <div className="flex items-start gap-2">
-                        <UserCheck className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <UserCheck className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                         <div>
                           <h4 className="font-semibold">User-Friendly Interface</h4>
-                          <p className="text-sm text-gray-600">
+                          <p className="text-sm text-muted-foreground">
                             Simple question-based approach guides you through the process
                           </p>
                         </div>
                       </div>
                       <div className="flex items-start gap-2">
-                        <ScanLine className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <ScanLine className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                         <div>
                           <h4 className="font-semibold">Document Scanning</h4>
-                          <p className="text-sm text-gray-600">
+                          <p className="text-sm text-muted-foreground">
                             Digitize W-2s, 1099s, and receipts with smartphone camera integration
                           </p>
                         </div>
                       </div>
                       <div className="flex items-start gap-2">
-                        <Home className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <Home className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                         <div>
                           <h4 className="font-semibold">Life Event Optimization</h4>
-                          <p className="text-sm text-gray-600">
+                          <p className="text-sm text-muted-foreground">
                             Special guidance for major changes (marriage, home purchase, etc.)
                           </p>
                         </div>
@@ -153,28 +181,28 @@ export default function HomePage() {
                     </div>
                     <div className="space-y-4">
                       <div className="flex items-start gap-2">
-                        <Building2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <Building2 className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                         <div>
                           <h4 className="font-semibold">Multi-State Filing</h4>
-                          <p className="text-sm text-gray-600">
+                          <p className="text-sm text-muted-foreground">
                             Manage complex state tax requirements for relocations or multi-state income
                           </p>
                         </div>
                       </div>
                       <div className="flex items-start gap-2">
-                        <Calendar className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <Calendar className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                         <div>
                           <h4 className="font-semibold">Year-Round Tax Planning</h4>
-                          <p className="text-sm text-gray-600">
+                          <p className="text-sm text-muted-foreground">
                             Access tax implications of financial decisions anytime
                           </p>
                         </div>
                       </div>
                       <div className="flex items-start gap-2">
-                        <RefreshCw className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <RefreshCw className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                         <div>
                           <h4 className="font-semibold">Refund Maximizer</h4>
-                          <p className="text-sm text-gray-600">
+                          <p className="text-sm text-muted-foreground">
                             Intelligent algorithms that identify every possible refund opportunity
                           </p>
                         </div>
@@ -193,49 +221,53 @@ export default function HomePage() {
                   <div className="grid gap-4 md:grid-cols-2">
                     <div className="space-y-4">
                       <div className="flex items-start gap-2">
-                        <Building2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <Building2 className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                         <div>
                           <h4 className="font-semibold">Business Structure Optimization</h4>
-                          <p className="text-sm text-gray-600">Compare tax implications across entity types</p>
+                          <p className="text-sm text-muted-foreground">Compare tax implications across entity types</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-2">
-                        <BarChart4 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <BarChart4 className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                         <div>
                           <h4 className="font-semibold">Expense Categorization</h4>
-                          <p className="text-sm text-gray-600">AI-powered classification of business expenses</p>
+                          <p className="text-sm text-muted-foreground">
+                            AI-powered classification of business expenses
+                          </p>
                         </div>
                       </div>
                       <div className="flex items-start gap-2">
-                        <Calendar className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <Calendar className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                         <div>
                           <h4 className="font-semibold">Quarterly Estimation Tools</h4>
-                          <p className="text-sm text-gray-600">Calculate and schedule quarterly tax payments</p>
+                          <p className="text-sm text-muted-foreground">Calculate and schedule quarterly tax payments</p>
                         </div>
                       </div>
                     </div>
                     <div className="space-y-4">
                       <div className="flex items-start gap-2">
-                        <UserCheck className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <UserCheck className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                         <div>
                           <h4 className="font-semibold">Self-Employment Specialization</h4>
-                          <p className="text-sm text-gray-600">Dedicated features for freelancers and contractors</p>
+                          <p className="text-sm text-muted-foreground">
+                            Dedicated features for freelancers and contractors
+                          </p>
                         </div>
                       </div>
                       <div className="flex items-start gap-2">
-                        <Search className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <Search className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                         <div>
                           <h4 className="font-semibold">Industry-Specific Guidance</h4>
-                          <p className="text-sm text-gray-600">
+                          <p className="text-sm text-muted-foreground">
                             Tailored deduction recommendations for your business type
                           </p>
                         </div>
                       </div>
                       <div className="flex items-start gap-2">
-                        <DollarSign className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <DollarSign className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                         <div>
                           <h4 className="font-semibold">Payroll Tax Management</h4>
-                          <p className="text-sm text-gray-600">
+                          <p className="text-sm text-muted-foreground">
                             Streamlined handling of payroll taxes with automated filing and payment reminders
                           </p>
                         </div>
@@ -254,24 +286,26 @@ export default function HomePage() {
                   <div className="grid gap-4 md:grid-cols-2">
                     <div className="space-y-4">
                       <div className="flex items-start gap-2">
-                        <Users className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <Users className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                         <div>
                           <h4 className="font-semibold">Multi-Entity Management</h4>
-                          <p className="text-sm text-gray-600">Consolidated view across multiple business entities</p>
+                          <p className="text-sm text-muted-foreground">
+                            Consolidated view across multiple business entities
+                          </p>
                         </div>
                       </div>
                       <div className="flex items-start gap-2">
-                        <Globe className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <Globe className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                         <div>
                           <h4 className="font-semibold">International Tax Compliance</h4>
-                          <p className="text-sm text-gray-600">Navigate global tax obligations and treaties</p>
+                          <p className="text-sm text-muted-foreground">Navigate global tax obligations and treaties</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-2">
-                        <Workflow className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <Workflow className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                         <div>
                           <h4 className="font-semibold">Custom Workflow Design</h4>
-                          <p className="text-sm text-gray-600">
+                          <p className="text-sm text-muted-foreground">
                             Tailored processes that match your approval hierarchies
                           </p>
                         </div>
@@ -279,26 +313,28 @@ export default function HomePage() {
                     </div>
                     <div className="space-y-4">
                       <div className="flex items-start gap-2">
-                        <Share2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <Share2 className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                         <div>
                           <h4 className="font-semibold">Collaborative Platforms</h4>
-                          <p className="text-sm text-gray-600">
+                          <p className="text-sm text-muted-foreground">
                             Secure document sharing between team members and advisors
                           </p>
                         </div>
                       </div>
                       <div className="flex items-start gap-2">
-                        <LineChart className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <LineChart className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                         <div>
                           <h4 className="font-semibold">Advanced Analytics</h4>
-                          <p className="text-sm text-gray-600">Strategic tax planning tools with scenario modeling</p>
+                          <p className="text-sm text-muted-foreground">
+                            Strategic tax planning tools with scenario modeling
+                          </p>
                         </div>
                       </div>
                       <div className="flex items-start gap-2">
-                        <ClipboardCheck className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <ClipboardCheck className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                         <div>
                           <h4 className="font-semibold">Compliance Reporting</h4>
-                          <p className="text-sm text-gray-600">
+                          <p className="text-sm text-muted-foreground">
                             Comprehensive reporting tools for regulatory compliance and audit preparation
                           </p>
                         </div>
@@ -317,7 +353,7 @@ export default function HomePage() {
         <div className="container px-4 md:px-6 mx-auto max-w-6xl">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">IMPLEMENTATION & SUPPORT</h2>
-            <p className="mx-auto max-w-[700px] text-gray-600 mt-2">
+            <p className="mx-auto max-w-[700px] text-muted-foreground mt-2">
               Our partnership with Prime Logic Solutions USA ensures you receive comprehensive support throughout your
               tax software journey.
             </p>
@@ -330,19 +366,19 @@ export default function HomePage() {
               <CardContent>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                     <p>System configuration aligned with your specific needs</p>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                     <p>Data migration from previous tax preparation systems</p>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                     <p>Integration with existing financial platforms</p>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                     <p>User training and adoption support</p>
                   </li>
                 </ul>
@@ -355,19 +391,19 @@ export default function HomePage() {
               <CardContent>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                     <p>Year-round technical support via phone, email, and chat</p>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                     <p>Automatic tax code updates as regulations change</p>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                     <p>Secure cloud backup of all documentation</p>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-[#fbc710] flex-shrink-0 mt-0.5" />
                     <p>Annual tax strategy reviews with certified professionals</p>
                   </li>
                 </ul>
@@ -378,35 +414,35 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="w-full py-16 md:py-20 bg-gray-50">
+      <section className="w-full py-16 md:py-20 bg-gradient-to-b from-muted/20 to-background">
         <div className="container px-4 md:px-6 mx-auto max-w-6xl">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">CLIENT SUCCESS STORIES</h2>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
-            <Card className="bg-white">
+            <Card className="bg-white border-l-4 border-[#fbc710]">
               <CardContent className="pt-6">
                 <div className="space-y-4">
                   <p className="italic">
-                    &quot;The tax preparation software recommended by Accounting Zone reduced our filing time by 60% while
-                    identifying deductions we had missed for years. The ROI was evident immediately.&quot;
+                    &quot;The tax preparation software recommended by Accounting Zone reduced our filing time by 60%
+                    while identifying deductions we had missed for years. The ROI was evident immediately.&quot;
                   </p>
                   <p className="font-semibold">— Manufacturing Company CFO</p>
                 </div>
               </CardContent>
             </Card>
-            <Card className="bg-white">
+            <Card className="bg-white border-l-4 border-[#fbc710]">
               <CardContent className="pt-6">
                 <div className="space-y-4">
                   <p className="italic">
-                    &quot;As someone with income from multiple states, my taxes were always a nightmare. This system made
-                    everything clear and straightforward, saving me both money and stress.&quot;
+                    &quot;As someone with income from multiple states, my taxes were always a nightmare. This system
+                    made everything clear and straightforward, saving me both money and stress.&quot;
                   </p>
                   <p className="font-semibold">— Healthcare Professional</p>
                 </div>
               </CardContent>
             </Card>
-            <Card className="bg-white">
+            <Card className="bg-white border-l-4 border-[#fbc710]">
               <CardContent className="pt-6">
                 <div className="space-y-4">
                   <p className="italic">
@@ -422,21 +458,22 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="w-full py-16 md:py-20 bg-blue-600 text-white">
+      <section className="w-full py-16 md:py-20 bg-[#fbc710] text-black">
         <div className="container px-4 md:px-6 mx-auto max-w-6xl">
           <div className="text-center space-y-4">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">GET STARTED TODAY</h2>
-            <p className="mx-auto max-w-[700px] md:text-xl">
+            <p className="mx-auto max-w-[700px] md:text-xl text-black/90">
               Transform your tax preparation experience with software solutions tailored to your specific needs. Contact
               Accounting Zone to schedule a personalized demonstration and discover how our partnership with Prime Logic
               Solutions USA can revolutionize your approach to tax compliance.
             </p>
             <div className="pt-4">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+              <Button size="lg" className="bg-black text-white hover:bg-black/90 group">
                 Schedule a Demo
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
-            <div className="text-sm pt-2">
+            <div className="text-sm pt-2 text-black/90">
               <p>Email: taxsolutions@accountingzone.com | Phone: (555) 123-4567</p>
             </div>
           </div>
@@ -445,4 +482,3 @@ export default function HomePage() {
     </div>
   )
 }
-

@@ -7,6 +7,11 @@ import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 
+// Explicitly type Link as a React functional component
+const TypedLink = Link as React.FC<
+  React.PropsWithChildren<React.AnchorHTMLAttributes<HTMLAnchorElement>>
+>;
+
 const supportCards = [
   {
     title: "Tax Planning",
@@ -49,24 +54,24 @@ export default function Support() {
                     <div className="lg:pt-8 lg:pb-16 lg:min-h-[400px] md:ml-56">
                       <div className="max-w-[520px] lg:p-20">
                         <div className="mb-4 xl:mb-12">
-                          <Link
+                          <TypedLink
                             href="tel:17606860609"
                             className="text-3xl font-bold text-black hover:outline-none focus:outline-none transition-colors hover:text-[#fbc710] focus:text-[#fbc710]"
                           >
                             +1 (760) 686 06 09
-                          </Link>
+                          </TypedLink>
                         </div>
                         <div className="text-[#787878] sm:flex mt-[30px]">
                           <div className="mb-1.5 text-black font-bold flex-shrink-0 sm:mb-0 sm:mr-2">
                             Email:
                           </div>
                           <div>
-                            <Link
+                            <TypedLink
                               href="mailto:info@accountingszone.com"
                               className="text-[#787878] focus:text-[#fbc710] focus:outline-none lg:focus:text-[#fbc710] lg:hover:text-[#fbc710]"
                             >
                               info@accountingszone.com
-                            </Link>
+                            </TypedLink>
                           </div>
                         </div>
                         <div className="text-[#787878] sm:flex sm:items-center mt-[30px]">
@@ -76,44 +81,44 @@ export default function Support() {
                           <div>
                             <ul className="fill-[#929292] flex flex-wrap items-end">
                               <li className="ml-0 sm:ml-7">
-                                <Link
+                                <TypedLink
                                   className="text-[#787878] focus:text-[#fbc710] focus:outline-none lg:focus:text-[#fbc710] lg:hover:text-[#fbc710] flex size-[17px] justify-center lg:focus:outline-none lg:hover:outline-none active:opacity-70"
                                   href="https://www.facebook.com/people/Accountings-Zone/100093148360065/"
                                   target="_blank"
                                   rel="noopener noreferrer"
                                 >
                                   <FaFacebookF />
-                                </Link>
+                                </TypedLink>
                               </li>
                               <li className="ml-4 sm:ml-7">
-                                <Link
+                                <TypedLink
                                   className="text-[#787878] focus:text-[#fbc710] focus:outline-none lg:focus:text-[#fbc710] lg:hover:text-[#fbc710] flex size-[17px] justify-center lg:focus:outline-none lg:hover:outline-none active:opacity-70"
                                   href="https://x.com/accountingszone"
                                   target="_blank"
                                   rel="noopener noreferrer"
                                 >
                                   <FaXTwitter />
-                                </Link>
+                                </TypedLink>
                               </li>
                               <li className="ml-4 sm:ml-7">
-                                <Link
+                                <TypedLink
                                   className="text-[#787878] focus:text-[#fbc710] focus:outline-none lg:focus:text-[#fbc710] lg:hover:text-[#fbc710] flex size-[17px] justify-center lg:focus:outline-none lg:hover:outline-none active:opacity-70"
                                   href="https://www.instagram.com/accountingszone/"
                                   target="_blank"
                                   rel="noopener noreferrer"
                                 >
                                   <FaInstagram />
-                                </Link>
+                                </TypedLink>
                               </li>
                               <li className="ml-4 sm:ml-7">
-                                <Link
+                                <TypedLink
                                   className="text-[#787878] focus:text-[#fbc710] focus:outline-none lg:focus:text-[#fbc710] lg:hover:text-[#fbc710] flex size-[17px] justify-center lg:focus:outline-none lg:hover:outline-none active:opacity-70"
                                   href="https://www.linkedin.com/company/accountingszone/?viewAsMember=true"
                                   target="_blank"
                                   rel="noopener noreferrer"
                                 >
                                   <FaLinkedin />
-                                </Link>
+                                </TypedLink>
                               </li>
                             </ul>
                           </div>
@@ -163,9 +168,9 @@ export default function Support() {
                     <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
                       {supportCards.map((item, index) => (
                         <li key={index}>
-                          <Link href={item.href}>
+                          <TypedLink href={item.href}>
                             <FSCard title={item.title} />
-                          </Link>
+                          </TypedLink>
                         </li>
                       ))}
                     </ul>

@@ -21,8 +21,17 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { IconType } from "react-icons";
 
-// const images = ["/contact/pexels-vlada-karpovich-7433853-s.jpg"];
+// Explicitly type Loader2 as a React functional component
+const LoaderIcon = Loader2 as React.FC<React.SVGProps<SVGSVGElement>>;
+
+// TypedLink for consistent Link usage
+const TypedLink = Link as React.FC<
+  React.PropsWithChildren<React.AnchorHTMLAttributes<HTMLAnchorElement>>
+>;
+
+const WrappedIcon: React.FC<{ Icon: IconType }> = ({ Icon }) => <Icon />;
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -93,24 +102,24 @@ export default function Contact() {
                 124 S Gemstone Street, Ridgecrest California 93555, USA.
               </address>
               <div className="mb-8 xl:mb-[84px]">
-                <Link
+                <TypedLink
                   href="tel:+9903449564050"
                   className="text-3xl font-bold hover:outline-none focus:outline-none hover:text-[#fbc710] focus:text-[#fbc710]"
                 >
                   +1 (760) 686 06 09
-                </Link>
+                </TypedLink>
               </div>
               <div className="text-[#787878] sm:flex mt-[30px]">
                 <div className="mb-1.5 text-black font-bold flex-shrink-0 sm:mb-0 sm:mr-2">
                   Email:
                 </div>
                 <div>
-                  <Link
+                  <TypedLink
                     href="mailto:info@accountingszone.com"
                     className="text-[#787878] focus:text-[#fbc710] focus:outline-none lg:focus:text-[#fbc710] lg:hover:text-[#fbc710]"
                   >
                     info@accountingszone.com
-                  </Link>
+                  </TypedLink>
                 </div>
               </div>
               <div className="text-[#787878] sm:flex sm:items-center mt-[30px]">
@@ -120,44 +129,44 @@ export default function Contact() {
                 <div>
                   <ul className="fill-[#929292] flex flex-wrap items-end">
                     <li className="ml-0 sm:ml-7">
-                      <Link
+                      <TypedLink
                         className="text-[#787878] focus:text-[#fbc710] focus:outline-none lg:focus:text-[#fbc710] lg:hover:text-[#fbc710] flex size-[17px] justify-center lg:focus:outline-none lg:hover:outline-none active:opacity-70"
                         href="https://www.facebook.com/people/Accountings-Zone/100093148360065/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <FaFacebookF />
-                      </Link>
+                      </TypedLink>
                     </li>
                     <li className="ml-4 sm:ml-7">
-                      <Link
+                      <TypedLink
                         className="text-[#787878] focus:text-[#fbc710] focus:outline-none lg:focus:text-[#fbc710] lg:hover:text-[#fbc710] flex size-[17px] justify-center lg:focus:outline-none lg:hover:outline-none active:opacity-70"
                         href="https://x.com/accountingszone"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <FaXTwitter />
-                      </Link>
+                      </TypedLink>
                     </li>
                     <li className="ml-4 sm:ml-7">
-                      <Link
+                      <TypedLink
                         className="text-[#787878] focus:text-[#fbc710] focus:outline-none lg:focus:text-[#fbc710] lg:hover:text-[#fbc710] flex size-[17px] justify-center lg:focus:outline-none lg:hover:outline-none active:opacity-70"
                         href="https://www.instagram.com/accountingszone/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <FaInstagram />
-                      </Link>
+                      </TypedLink>
                     </li>
                     <li className="ml-4 sm:ml-7">
-                      <Link
+                      <TypedLink
                         className="text-[#787878] focus:text-[#fbc710] focus:outline-none lg:focus:text-[#fbc710] lg:hover:text-[#fbc710] flex size-[17px] justify-center lg:focus:outline-none lg:hover:outline-none active:opacity-70"
                         href="https://www.linkedin.com/company/accountingszone/?viewAsMember=true"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <FaLinkedin />
-                      </Link>
+                      </TypedLink>
                     </li>
                   </ul>
                 </div>
@@ -321,7 +330,7 @@ export default function Contact() {
                 >
                   {isSubmitting ? (
                     <>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" /> PLEASE
+                      <LoaderIcon className="mr-2 h-4 w-4 animate-spin" /> PLEASE
                       WAIT
                     </>
                   ) : (

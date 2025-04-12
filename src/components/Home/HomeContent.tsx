@@ -1,16 +1,16 @@
-"use client";
-import dynamic from "next/dynamic";
-import AboutSection from "@/components/Home/AboutSection";
-import ServicesSection from "@/components/Home/ServicesSection";
-import Statistics from "@/components/Home/Statistics";
-import TaxCalculation from "@/components/Home/TaxCalculation";
-import WhyUs from "@/components/WhyUs";
-import "@/styles/animations.css";
+"use client"
+import dynamic from "next/dynamic"
+import AboutSection from "@/components/Home/AboutSection"
+import ServicesSection from "@/components/Home/ServicesSection"
+import Statistics from "@/components/Home/Statistics"
+import TaxCalculation from "@/components/Home/TaxCalculation"
+import WhyUs from "@/components/WhyUs"
+import "@/styles/animations.css"
 
 // Dynamically import the Slider component with SSR disabled
 const Slider = dynamic(() => import("@/components/Slider"), {
   ssr: false,
-});
+})
 
 const images = [
   "/consultation/consultation1.jpg",
@@ -18,12 +18,13 @@ const images = [
   "/consultation/consultation3.jpg",
   "/consultation/consultation4.jpg",
   "/consultation/consultation5.jpg",
-];
+]
 
 export default function HomeContent() {
   return (
-    <main>
-      <div className="fade-in">
+    <main className="overflow-hidden">
+      {/* Hero Section */}
+      <section className="fade-in">
         <Slider
           title="Home"
           description="Unlock your financial potential with expert guidance"
@@ -31,36 +32,43 @@ export default function HomeContent() {
           btnText="Get Started"
           btnHref="contact/get-a-consultation"
         />
-      </div>
+      </section>
 
-      <div className="fade-in fade-in-delay-1">
+      {/* About Section with light background */}
+      <section className="py-16 md:py-24 bg-white fade-in fade-in-delay-1">
         <AboutSection />
-      </div>
+      </section>
 
-      <div className="fade-in fade-in-delay-2">
+      {/* Services Section with subtle background */}
+      <section className="py-16 md:py-24 bg-gray-50 fade-in fade-in-delay-2">
         <ServicesSection />
-      </div>
+      </section>
 
-      <div className="fade-in fade-in-delay-3">
+      {/* Statistics Section */}
+      <section className="py-16 md:py-24 bg-white fade-in fade-in-delay-3">
         <Statistics />
-      </div>
+      </section>
 
-      <div className="fade-in fade-in-delay-4">
+      {/* Tax Calculation Section */}
+      <section className="py-16 md:py-24 bg-gray-50 fade-in fade-in-delay-4">
         <TaxCalculation />
-      </div>
+      </section>
 
-      <div className="fade-in fade-in-delay-4">
+      {/* Why Us Section */}
+      <section className="py-16 md:py-24 bg-white fade-in fade-in-delay-4">
         <WhyUs />
-      </div>
+      </section>
 
-      <div className="fade-in fade-in-delay-5">
+      {/* Building Wealth Slider */}
+      <section className="fade-in fade-in-delay-5">
         <Slider
           description="Building wealth, creating futures."
           images={["/contact/GettyImages-1440181617-scaled.jpg"]}
         />
-      </div>
+      </section>
 
-      <div className="fade-in fade-in-delay-6">
+      {/* Team Slider */}
+      <section className="fade-in fade-in-delay-6 mb-16 md:mb-24">
         <Slider
           title="Team"
           description="Get to know the incredible individuals behind our company"
@@ -68,7 +76,7 @@ export default function HomeContent() {
           btnText="Our People"
           btnHref="about"
         />
-      </div>
+      </section>
     </main>
-  );
-} 
+  )
+}

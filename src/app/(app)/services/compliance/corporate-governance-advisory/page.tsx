@@ -303,7 +303,7 @@ export default function CorporateGovernanceAdvisory() {
                     <h3 className="text-2xl font-bold mb-4 text-gray-900">Governance Framework Design</h3>
                     <p className="text-gray-600 text-lg">
                       Development of comprehensive governance structures, policies, and processes tailored to your
-                      organization's specific needs.
+                      organization&apos;s specific needs.
                     </p>
                   </div>
                 </div>

@@ -4,20 +4,21 @@ import {
   TrendingUp,
   ArrowRight,
   Phone,
-  BrainCircuit,
   Target,
   LineChart,
-  PieChart,
   BarChart3,
   Layers,
-  Gauge,
-  Zap,
   Repeat,
   ArrowUpDown,
+  PieChart,
+  Gauge,
+  Zap,
+  BrainCircuit,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
+
 
 export default function BusinessPerformanceOptimization() {
   return (
@@ -31,7 +32,7 @@ export default function BusinessPerformanceOptimization() {
               Business Performance Optimization
             </h1>
             <p className="text-lg text-gray-600">
-              Systematically enhance your organization's operational and financial results through data-driven analysis
+              Systematically enhance your organization&apos;s operational and financial results through data-driven analysis
               and strategic intervention. Our comprehensive approach identifies and addresses performance gaps while
               capitalizing on untapped opportunities to drive sustainable improvements.
             </p>
@@ -228,7 +229,7 @@ export default function BusinessPerformanceOptimization() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Optimization Methodology</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Our performance optimization specialists combine analytical rigor with practical business experience to
-              deliver measurable, sustainable improvements to your organization's operational and financial performance.
+              deliver measurable, sustainable improvements to your organization&apos;s operational and financial performance.
             </p>
           </div>
 

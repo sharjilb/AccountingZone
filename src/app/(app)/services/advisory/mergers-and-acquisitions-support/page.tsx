@@ -101,7 +101,7 @@ export default function MergersAcquisitionsSupport() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Detailed assessment of target company's sustainable earnings capacity and adjustments.
+                  Detailed assessment of target company&apos;s sustainable earnings capacity and adjustments.
                 </p>
               </CardContent>
             </Card>

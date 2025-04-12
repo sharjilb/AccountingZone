@@ -29,7 +29,7 @@ export default function FinancialRiskAssessment() {
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Financial Risk Assessment</h1>
             <p className="text-lg text-gray-600">
               Financial Risk Assessment systematically identifies, quantifies, and mitigates threats to your
-              organization's financial stability and performance. Our comprehensive approach transforms uncertainty into
+              organization&apos;s financial stability and performance. Our comprehensive approach transforms uncertainty into
               defined risk parameters that can be strategically managed to protect and enhance business value.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">

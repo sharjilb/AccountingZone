@@ -18,6 +18,9 @@ import { Input } from "@/components/ui/input";
 import { Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// Explicitly type Loader2 as a React functional component
+const LoaderIcon = Loader2 as React.FC<React.SVGProps<SVGSVGElement>>;
+
 export default function GetAConsultation() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -201,7 +204,7 @@ export default function GetAConsultation() {
                 >
                   {isSubmitting ? (
                     <>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" /> PLEASE
+                      <LoaderIcon className="mr-2 h-4 w-4 animate-spin" /> PLEASE
                       WAIT
                     </>
                   ) : (

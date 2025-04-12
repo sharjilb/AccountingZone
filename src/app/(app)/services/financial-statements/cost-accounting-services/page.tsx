@@ -1,6 +1,6 @@
 "use client"
 
-import { Calculator, BarChart, ArrowRight, Phone, AlertTriangle, BrainCircuit, Shield, Target, LineChart, PieChart, Layers, Scale, TrendingUp, DollarSign } from 'lucide-react'
+import { Calculator, BarChart, ArrowRight, Phone, BrainCircuit, Shield, Target, LineChart, PieChart, Layers, Scale, TrendingUp, DollarSign } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
@@ -307,7 +307,7 @@ export default function CostAccountingServices() {
               Do you know the true profitability of each product, service, or customer?
             </h2>
             <p className="text-lg text-black/90 max-w-2xl mx-auto">
-              Discover hidden profit opportunities with Accounting Zone's Cost Accounting Services.
+              Discover hidden profit opportunities with Accounting Zone&apos;s Cost Accounting Services.
             </p>
             <Button size="lg" variant="secondary" className="group bg-black text-white hover:bg-black/90">
               Request Complimentary Assessment

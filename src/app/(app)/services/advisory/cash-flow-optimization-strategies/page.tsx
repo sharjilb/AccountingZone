@@ -32,7 +32,7 @@ export default function CashFlowOptimizationStrategies() {
               Cash Flow Optimization Strategies
             </h1>
             <p className="text-lg text-gray-600">
-              Transform your business's liquidity management from reactive to strategic, enhancing financial stability
+              Transform your business&apos;s liquidity management from reactive to strategic, enhancing financial stability
               and operational flexibility. Our comprehensive approach addresses the entire cash conversion cycle to
               accelerate collections, optimize disbursements, and maximize the productive use of available funds.
             </p>
@@ -233,7 +233,7 @@ export default function CashFlowOptimizationStrategies() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Cash Flow Optimization Approach</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Our cash flow specialists combine financial expertise with practical business knowledge to deliver
-              customized strategies that enhance your organization's financial agility and strength.
+              customized strategies that enhance your organization&apos;s financial agility and strength.
             </p>
           </div>
 
@@ -314,7 +314,7 @@ export default function CashFlowOptimizationStrategies() {
             </h2>
             <p className="text-lg text-black/90 max-w-2xl mx-auto">
               Contact Accounting Zone to discuss how our Cash Flow Optimization Strategies can enhance your
-              organization's financial flexibility while improving operational performance.
+              organization&apos;s financial flexibility while improving operational performance.
             </p>
             <Button size="lg" variant="secondary" className="group bg-black text-white hover:bg-black/90">
               Schedule a Consultation
