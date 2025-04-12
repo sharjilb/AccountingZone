@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { CheckCircle, FileText, ArrowRight, HardHat, ClipboardList, ShieldAlert } from "lucide-react"
 
-export default function ConstructionPage() {
+export default function Construction() {
   return (
     <div className="min-h-screen bg-background">
       {/* Top Padding Div */}

@@ -51,8 +51,8 @@ export default function Navbar() {
         setInsightsDropdownOpen(false);
         setServicesDropdownOpen(false);
         setContactDropdownOpen(false);
-        setAboutDropdownOpen(false);
         setResourcesDropdownOpen(false);
+        setAboutDropdownOpen(false);
         break;
       case "contact":
         setContactDropdownOpen(!contactDropdownOpen);
