@@ -12,7 +12,7 @@ export default function CaseStudies() {
             <div className="flex flex-col justify-center items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">Case Studies</h1>
-                <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl">
+                <p className="mx-auto max-w-[600px] text-muted-foregrounxd md:text-xl">
                   Our real-world case studies showcase successful tax strategies, financial planning techniques, and
                   business accounting solutions, helping users learn from practical examples.
                 </p>

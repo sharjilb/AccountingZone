@@ -203,7 +203,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/records/accounts-payable-receivable-reconciliation"
+                    href="/services/accounts-payable-receivable-reconciliation"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Receivable Reconciliation
@@ -211,7 +211,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/records/cloud-based-bookkeeping"
+                    href="/services/cloud-based-bookkeeping"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Cloud Bookkeeping
@@ -219,7 +219,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/records/real-time-financial-reporting"
+                    href="/services/real-time-financial-reporting"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Financial Reporting
@@ -227,7 +227,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/records/expense-tracking-management"
+                    href="/services/expense-tracking-management"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Expense Tracking
@@ -235,7 +235,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/records/fixed-asset-management"
+                    href="/services/fixed-asset-management"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Asset Management
@@ -243,7 +243,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/records/audit-ready-documentation"
+                    href="/services/audit-ready-documentation"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Audit Documentation
@@ -251,7 +251,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/records/accounting-software-integration"
+                    href="/services/accounting-software-integration"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Software Integration
@@ -259,7 +259,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/records/historical-bookkeeping-cleanup"
+                    href="/services/historical-bookkeeping-cleanup"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Bookkeeping Cleanup
@@ -1345,7 +1345,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/resources/technology-and-/mobile-app-integration"
+                      href="/resources/technology-and-integration/mobile-app-integration"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Mobile App Integration
@@ -1408,7 +1408,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/resources/education-and-/case-studies"
+                      href="/resources/education-and-learning/case-studies"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Case Studies
@@ -1416,7 +1416,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/resources/education-and-/online-courses"
+                      href="/resources/education-and-learning/online-courses"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Online Courses on Tax and Accounting
@@ -1471,7 +1471,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/resources/industry-specific-/resources-manufacturing"
+                      href="/resources/industry-specific-resouces/resources-manufacturing"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Resources for Manufacturing
