@@ -729,7 +729,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/industries/energy-environment-and-sustainability/cicular-economy"
+                      href="/industries/energy-environment-and-sustainability/circular-economy"
                       className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Circular Economy Strategies
