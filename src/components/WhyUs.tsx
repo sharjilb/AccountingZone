@@ -3,14 +3,14 @@ import Image from "next/image";
 
 export default function WhyUs() {
   return (
-    <section className="flex flex-wrap sm:flex-col mx-auto container">
+    <section className="flex flex-wrap flex-col items-center mx-auto container px-4">
       <h2
-        className="w-full md:w-1/2 flex lg:w-[60%] mx-auto mb-4 md:mb-8 text-[#fbc710] uppercase font-semibold tracking-widest text-sm lg:text-base fade-in"
+        className="w-full text-center mb-4 md:mb-8 text-[#fbc710] uppercase font-semibold tracking-widest text-sm lg:text-base fade-in"
       >
         WHY US
       </h2>
-      <div className="w-full md:w-1/2 flex gap-20 lg:w-[60%] mx-auto mb-8 md:mb-0">
-        <div className="mb-6 sm:mb-14 flex flex-col gap-3 fade-in fade-in-delay-1">
+      <div className="w-full flex flex-col lg:flex-row items-center gap-8 lg:gap-20 lg:w-[80%] mx-auto">
+        <div className="mb-6 sm:mb-14 flex flex-col gap-3 text-center lg:text-left fade-in fade-in-delay-1">
           <h3 className="text-2xl sm:text-3xl font-semibold lg:text-4xl">
             Trusted experts with
             <span className="text-[#fbc710]"> years of experience</span> and
@@ -33,7 +33,7 @@ export default function WhyUs() {
           </div>
         </div>
 
-        <div className="relative w-full mx-auto">
+        <div className="relative w-full max-w-[400px] lg:max-w-[50%] mx-auto">
           <Image
             src="/why-us/why-us-man.svg"
             width="800"
