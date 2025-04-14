@@ -44,8 +44,7 @@ import {
               <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center space-y-4 text-center">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Overview</h2>
                 <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-                  Our Frequently Asked Questions (FAQs) section provides quick answers to common tax and support-related
-                  inquiries, helping users resolve issues efficiently.
+                  Our Frequently Asked Questions (FAQs) section provides quick answers to common tax and support-related inquiries, helping users resolve issues efficiently.
                 </p>
               </div>
               <div className="mx-auto grid justify-center gap-8 sm:grid-cols-3 mt-12 max-w-6xl">
@@ -71,14 +70,16 @@ import {
                     </p>
                   </div>
                 </div>
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#fbc710] text-black">
-                  <RefreshCw className="h-8 w-8" />
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-xl font-bold">Up-to-Date Information</h3>
-                  <p className="text-muted-foreground">
-                    Regularly updated content that reflects the latest tax laws, regulations, and software features.
-                  </p>
+                <div className="flex flex-col items-center space-y-4 text-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#fbc710] text-black">
+                    <RefreshCw className="h-8 w-8" />
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold">Up-to-Date Information</h3>
+                    <p className="text-muted-foreground">
+                      Regularly updated content that reflects the latest tax laws, regulations, and software features.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -187,4 +188,3 @@ import {
       </div>
     )
   }
-  
