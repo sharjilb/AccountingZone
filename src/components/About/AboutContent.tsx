@@ -4,8 +4,9 @@ import dynamic from "next/dynamic"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { motion } from "framer-motion"
-import { ChevronRight, CheckCircle, Users, Briefcase, Award, Target } from "lucide-react"
+import { ChevronRight, CheckCircle, Users, Briefcase, Award, Target, ArrowRight } from "lucide-react"
 import "@/styles/animations.css"
+import { Button } from "@/components/ui/button"
 
 // Dynamically import the AboutSection component with SSR disabled
 const AboutSection = dynamic(() => import("@/components/Home/AboutSection"), {
@@ -253,26 +254,27 @@ export default function AboutContent() {
           </div>
         </motion.section>
 
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInVariants}
-          custom={15}
-          className="max-w-4xl mx-auto text-center"
-        >
-          <Card className="bg-[#fbc710] text-black border-none shadow-lg rounded-xl">
-            <CardContent className="pt-6 pb-6">
-              <p className="text-lg md:text-xl mb-6">
-                Join us on the journey to financial clarity and growth. Whether you're an entrepreneur, an established
-                business, or an individual seeking financial guidance, Accountings Zone is here to support you every
-                step of the way.
+        <section className="w-full py-16 md:py-20 bg-[#fbc710] text-black rounded-lg">
+          <div className="container px-4 md:px-6 mx-auto max-w-6xl">
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Join Us on the Journey to Financial Clarity and Growth</h2>
+              <p className="mx-auto max-w-[700px] md:text-xl text-black/90">
+                Whether you're an entrepreneur, an established business, or an individual seeking financial guidance, 
+                Accountings Zone is here to support you every step of the way. Let us help you achieve your financial 
+                goals with tailored solutions and expert advice.
               </p>
-              <p className="text-lg md:text-xl font-medium">
-                Contact us today to learn more about how we can help you achieve your financial goals.
-              </p>
-            </CardContent>
-          </Card>
-        </motion.div>
+              <div className="pt-4">
+                <Button size="lg" className="bg-black text-white hover:bg-black/90 group">
+                  Contact Us
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </div>
+              <div className="text-sm pt-2 text-black/90">
+                <p>Email: support@accountingzone.com | Phone: (555) 123-4567</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </article>
     </main>
   )
