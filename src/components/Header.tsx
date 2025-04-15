@@ -1,12 +1,20 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Navbar from "./Navbar";
 import Image from "next/image";
 
 export default function Header() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
-    <header className="relative w-full z-40">
-      <div className="flex fixed top-0 left-0 bg-white items-center justify-between w-full mx-auto py-2 px-1 sm:px-4 md:py-3 sm:px-8 shadow-sm">
+    <header className={`relative w-full z-40 ${isMounted ? "opacity-100" : "opacity-0"}`}>
+      <div className="flex fixed top-0 left-0 bg-white items-center justify-between w-full mx-auto py-2 px-1 sm:px-4 md:py-3 sm:px-8 shadow-sm transition-opacity duration-300">
         <Link
           href="/"
           className="relative pl-[10px] before:content-[''] before:absolute before:top-0 before:left-0 before:w-[32px] before:h-full before:border-[1.5px] before:border-solid before:border-[#fbc710] before:border-r-0 overflow-hidden max-w-[110px]"
