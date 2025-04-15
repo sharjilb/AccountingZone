@@ -1533,7 +1533,7 @@ export default function Navbar() {
               CONTACT
             </Link>
             <div
-              className={`absolute z-10 text-[13px] right-0 top-full w-[300px] py-6 bg-white shadow-lg duration-300 transition-opacity ${
+              className={`absolute text-[13px] z-10 left-1/2 top-full w-[300px] py-6 bg-white shadow-lg duration-300 transition-opacity transform -translate-x-1/2 ${
                 contactDropdownOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
               }`}
             >
@@ -3071,6 +3071,7 @@ export default function Navbar() {
                       Office Locations
                     </Link>
                   </li>
+                  
                 </div>
               </div>
             </li>
